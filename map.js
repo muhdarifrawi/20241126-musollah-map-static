@@ -12,15 +12,18 @@ document.addEventListener("DOMContentLoaded", (event) => {
 });
 
 function loadMosques(){
-    var markers = new L.MarkerClusterGroup();
+    var layerControl = L.control.layers().addTo(map);
+    var mosqueMarkers = new L.MarkerClusterGroup();
     // const axios = require('axios');
     axios.get("/data/mosque.json")
     .then(function(response){
         console.log(response.data);
         let data = response.data;
         for(const p in data){
-            markers.addLayer(L.marker([data[p]["coordinates"][0], data[p]["coordinates"][1]]));
+            mosqueMarkers.addLayer(L.marker([data[p]["coordinates"][0], data[p]["coordinates"][1]]));
         }
-        map.addLayer(markers);
+        map.addLayer(mosqueMarkers);
+        // let mosques = L.layerGroup(mosqueMarkers);
+        layerControl.addOverlay(mosqueMarkers, "Mosques");
     })
 }
