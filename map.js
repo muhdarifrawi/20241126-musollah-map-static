@@ -3,7 +3,8 @@ let layerControl
 document.addEventListener("DOMContentLoaded", (event) => {
     map = L.map('map').setView([1.3521, 103.8198], 12);
     map.locate({setView: true, maxZoom: 12});
-
+    map.on('locationfound', onLocationFound);
+    map.on('locationerror', onLocationError);
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
         maxZoom: 19,
         attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
@@ -14,7 +15,18 @@ document.addEventListener("DOMContentLoaded", (event) => {
     loadMusollah();
 });
 
+function onLocationFound(e) {
+    var radius = e.accuracy;
 
+    L.marker(e.latlng).addTo(map)
+        .bindPopup("You are within " + radius + " meters from this point").openPopup();
+
+    L.circle(e.latlng, radius).addTo(map);
+}
+
+function onLocationError(e) {
+    alert(e.message);
+}
 
 function openModalMusollah(data) {
     console.log("modal open", data);
