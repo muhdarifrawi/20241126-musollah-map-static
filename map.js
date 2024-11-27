@@ -1,5 +1,19 @@
 let map;
-let layerControl
+let layerControl;
+
+function onLocationFound(e) {
+    var radius = e.accuracy;
+
+    L.marker(e.latlng).addTo(map)
+        .bindPopup("You are within " + radius + " meters from this point").openPopup();
+
+    L.circle(e.latlng, radius).addTo(map);
+}
+
+function onLocationError(e) {
+    alert(e.message);
+}
+
 document.addEventListener("DOMContentLoaded", (event) => {
     map = L.map('map').setView([1.3521, 103.8198], 12);
     map.locate({setView: true, maxZoom: 12});
@@ -15,18 +29,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     loadMusollah();
 });
 
-function onLocationFound(e) {
-    var radius = e.accuracy;
 
-    L.marker(e.latlng).addTo(map)
-        .bindPopup("You are within " + radius + " meters from this point").openPopup();
-
-    L.circle(e.latlng, radius).addTo(map);
-}
-
-function onLocationError(e) {
-    alert(e.message);
-}
 
 function openModalMusollah(data) {
     console.log("modal open", data);
