@@ -37,9 +37,23 @@
                     <li class="nav-item">
                         <a class="nav-link" href="/support.html">Support and Feedback</a>
                     </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control ms-auto me-2" list="datalistOptions" id="exampleDataList"
+                        placeholder="Type to search...">
+                    <datalist id="datalistOptions">
+                        <option value="San Francisco">
+                        <option value="New York">
+                        <option value="Seattle">
+                        <option value="Los Angeles">
+                        <option value="Chicago">
+                    </datalist>
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
             </div>
         </div>
     </nav>
+    
     <div id="map"></div>
     <div class="modal" tabindex="-1" id="myModal">
         <div class="modal-dialog">
@@ -51,22 +65,7 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body" id="modal-body">
-                    <!-- <h6>Address</h6>
-                    <p id="modal-address"></p>
-                    <h6>Status Description</h6>
-                    <p id="modal-status-description"></p>
-                    <h6>Layout Type</h6>
-                    <p id="modal-layout-type"></p>
-                    <h6>Layout Description</h6>
-                    <p id="modal-layout-description"></p>
-                    <h6>Wudhu Area</h6>
-                    <p id="modal-wudhu-area"></p>
-                    <h6>Directions</h6>
-                    <ol id="modal-directions"></ol>
-                    <h6>Prayer Items</h6>
-                    <p id="modal-prayer-items"></p>
-                    <h6>Important Notes</h6>
-                    <p id="modal-important-notes"></p> -->
+                    <!-- render via JS -->
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
