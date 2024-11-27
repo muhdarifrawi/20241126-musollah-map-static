@@ -113,7 +113,7 @@ function loadMosques() {
         popupAnchor: [0, -14] // point from which the popup should open relative to the iconAnchor
     });
     var mosqueMarkers = new L.MarkerClusterGroup();
-    axios.get("https://github.com/muhdarifrawi/20241126-musollah-map-static/blob/master/data/mosque.json")
+    axios.get("https://raw.githubusercontent.com/muhdarifrawi/20241126-musollah-map-static/refs/heads/master/data/mosque.json")
         .then(function (response) {
             console.log(response.data);
             let data = response.data;
@@ -150,7 +150,7 @@ function loadMusollah() {
         popupAnchor: [0, -14] // point from which the popup should open relative to the iconAnchor
     });
     var musollahMarkers = new L.MarkerClusterGroup();
-    axios.get("https://github.com/muhdarifrawi/20241126-musollah-map-static/blob/master/data/musollah.json")
+    axios.get("https://raw.githubusercontent.com/muhdarifrawi/20241126-musollah-map-static/refs/heads/master/data/musollah.json")
         .then(function (response) {
             console.log(response.data);
             let data = response.data;
