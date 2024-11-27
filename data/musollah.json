@@ -34,7 +34,12 @@
             "Be mindful to remove your shoes before stepping on to the wood veneers."
         ],
 		"prayerItems": "Yes. But adviced to carry your own.",
-		"images": "",
+		"images": [
+			"https://ucarecdn.com/85d00500-afb1-4105-919f-c3ad72b02634/international_plaza_photo_3_20241127_120600.jpg",
+			"https://ucarecdn.com/0505115b-bdeb-431d-9da7-4dbfc88d3188/international_plaza_photo_2_20241127_120600.jpg",
+			"https://ucarecdn.com/30fa6fac-7ba0-46c1-99d6-5776d9949e29/international_plaza_photo_1_20241127_120600.jpg",
+			"https://ucarecdn.com/17e53dd7-c6dc-454c-8dba-dbaa488ccbba/international_plaza_photo_4_20241127_120600.jpg"
+		],
 		"importantNotes": "",
 		"coordinates": [1.2761446986302132, 103.84583528491281]
 	}
