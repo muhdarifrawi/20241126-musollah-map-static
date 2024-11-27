@@ -2,6 +2,7 @@ let map;
 let layerControl
 document.addEventListener("DOMContentLoaded", (event) => {
     map = L.map('map').setView([1.3521, 103.8198], 12);
+    map.locate({setView: true, maxZoom: 12});
 
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
         maxZoom: 19,
