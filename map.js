@@ -4,8 +4,7 @@ let layerControl;
 function onLocationFound(e) {
     var radius = e.accuracy;
 
-    L.marker(e.latlng).addTo(map)
-        .bindPopup("You are within " + radius + " meters from this point").openPopup();
+    L.marker(e.latlng).addTo(map);
 
     L.circle(e.latlng, radius).addTo(map);
 }
