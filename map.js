@@ -4,10 +4,18 @@ let layerControl;
 function onLocationFound(e) {
     var radius = e.accuracy;
 
-    L.marker(e.latlng).addTo(map);
+    let userIcon = L.icon({
+        iconUrl: 'icons/user-coloured.png',
 
-    L.circle(e.latlng, radius).addTo(map);
-    map.setView(e.latlng, 15);
+        iconSize: [45, 45], // size of the icon
+        iconAnchor: [20, 31], // point of the icon which will correspond to marker's location
+        popupAnchor: [0, -14] // point from which the popup should open relative to the iconAnchor
+    });
+
+    L.marker(e.latlng, {icon: userIcon}).addTo(map);
+
+    L.circle(e.latlng, radius).setStyle({color: '#FED401'}).addTo(map);
+    map.setView(e.latlng, 18);
 }
 
 function onLocationError(e) {
