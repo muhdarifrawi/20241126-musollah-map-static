@@ -12,7 +12,9 @@ function onLocationFound(e) {
         popupAnchor: [0, -14] // point from which the popup should open relative to the iconAnchor
     });
 
-    L.marker(e.latlng, {icon: userIcon}).addTo(map);
+    L.marker(e.latlng, {icon: userIcon}).addTo(map).on('click', function(e){
+        map.setView(e.latlng, 18);
+    });;
 
     L.circle(e.latlng, radius).setStyle({color: '#FED401'}).addTo(map);
     map.setView(e.latlng, 18);
