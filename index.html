@@ -15,13 +15,13 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.3.0/dist/MarkerCluster.Default.css" />
     <!-- Personal CSS -->
     <link rel="stylesheet" href="styles.css">
-    <title>Musollah Map</title>
+    <title>Pray Here - Your Musollah Map Companion</title>
 </head>
 
 <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Musollah Nav</a>
+            <a class="navbar-brand" href="#">Pray Here</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#musollahNavbar"
                 aria-controls="musollahNavbar" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -35,7 +35,10 @@
                         <a class="nav-link" href="/about.html">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/support.html">Support and Feedback</a>
+                        <a class="nav-link" href="/support.html">Support & Suggestions</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="/docs.html">Docs</a>
                     </li>
                 </ul>
                 <form class="d-flex" role="search">
@@ -53,7 +56,12 @@
             </div>
         </div>
     </nav>
-    
+    <div id="custom-alert" class="alert alert-info alert-dismissible fade show" role="alert">
+        <span class="spinner-border spinner-border-sm" aria-hidden="true" id="spinner"></span>
+        <span role="status" id="alert-text">Searching Location ...</span>      
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+
     <div id="map"></div>
     <div class="modal" tabindex="-1" id="myModal">
         <div class="modal-dialog">
@@ -73,6 +81,15 @@
             </div>
         </div>
     </div>
+    <!-- <div id="location-loading">
+        <div>
+            <span class="spinner-border spinner-border-sm" aria-hidden="true">
+            </span>
+            <span>
+                Searching Location ...
+            </span>
+        </div>
+    </div> -->
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
@@ -86,6 +103,13 @@
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <!-- Map -->
     <script src="map.js"></script>
+    <!-- Search function -->
+    <script src="search.js"></script>
+    <!-- Buy Me A Coffee -->
+    <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js"
+        data-id="vaKVhHC" data-description="Support me on Buy me a coffee!"
+        data-message="Jazakallah khair. Thanks for dropping by 😊" data-color="#FF813F" data-position="Right"
+        data-x_margin="18" data-y_margin="18"></script>
 </body>
 
 </html>

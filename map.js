@@ -4,13 +4,30 @@ let layerControl;
 function onLocationFound(e) {
     var radius = e.accuracy;
 
-    L.marker(e.latlng).addTo(map);
+    let userIcon = L.icon({
+        iconUrl: 'icons/user-coloured.png',
 
-    L.circle(e.latlng, radius).addTo(map);
+        iconSize: [45, 45], // size of the icon
+        iconAnchor: [20, 31], // point of the icon which will correspond to marker's location
+        popupAnchor: [0, -14] // point from which the popup should open relative to the iconAnchor
+    });
+
+    L.marker(e.latlng, {icon: userIcon}).addTo(map).on('click', function(e){
+        map.setView(e.latlng, 18);
+    });;
+
+    L.circle(e.latlng, radius).setStyle({color: '#FED401'}).addTo(map);
+    map.setView(e.latlng, 18);
+
+    document.querySelector("#custom-alert").style.display = "none";
 }
 
 function onLocationError(e) {
-    alert(e.message);
+    console.error(e.message);
+    document.querySelector("#custom-alert").classList.remove("alert-info");
+    document.querySelector("#spinner").remove();
+    document.querySelector("#custom-alert").classList.add("alert-danger");
+    document.querySelector("#alert-text").innerText = "Could not find user location.";
 }
 
 document.addEventListener("DOMContentLoaded", (event) => {
@@ -31,7 +48,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
 
 function openModalMusollah(data) {
-    console.log("modal open", data);
+    // console.log("modal open", data);
     const myModal = new bootstrap.Modal('#myModal', {
         keyboard: false
     })
@@ -95,7 +112,7 @@ function openModalMusollah(data) {
 }
 
 function openModalMosque(data) {
-    console.log("modal open", data);
+    // console.log("modal open", data);
     const myModal = new bootstrap.Modal('#myModal', {
         keyboard: false
     })
@@ -130,7 +147,7 @@ function loadMosques() {
     var mosqueMarkers = new L.MarkerClusterGroup();
     axios.get("https://raw.githubusercontent.com/muhdarifrawi/20241126-musollah-map-static/refs/heads/master/data/mosque.json")
         .then(function (response) {
-            console.log(response.data);
+            // console.log(response.data);
             let data = response.data;
             for (const p in data) {
                 const popup = L.popup().setContent('The New Delight');
@@ -146,7 +163,7 @@ function loadMosques() {
                     if (link) {
                         link.addEventListener('click', (event) => {
                             event.preventDefault();
-                            console.log('Clicked link id:', event.target.id);
+                            // console.log('Clicked link id:', event.target.id);
                             openModalMosque(data[p])
                         });
                     }
@@ -167,21 +184,21 @@ function loadMusollah() {
     var musollahMarkers = new L.MarkerClusterGroup();
     axios.get("https://raw.githubusercontent.com/muhdarifrawi/20241126-musollah-map-static/refs/heads/master/data/musollah.json")
         .then(function (response) {
-            console.log(response.data);
+            // console.log(response.data);
             let data = response.data;
             for (const p in data) {
                 musollahMarkers.addLayer(L.marker([data[p]["coordinates"][0], data[p]["coordinates"][1]], { icon: musollahIcon })
                     .bindPopup(`<span>${data[p]["name"]}</span>
                     <br><a href="#" id="musollah-${p}">see more ...</a>`));
 
-                console.log("musollah-" + p)
+                // console.log("musollah-" + p)
 
                 map.on('popupopen', () => {
                     const link = document.querySelector(`#musollah-${p}`);
                     if (link) {
                         link.addEventListener('click', (event) => {
                             event.preventDefault();
-                            console.log('Clicked link id:', event.target.id);
+                            // console.log('Clicked link id:', event.target.id);
                             openModalMusollah(data[p])
                         });
                     }
