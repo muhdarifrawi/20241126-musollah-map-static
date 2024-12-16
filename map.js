@@ -18,10 +18,16 @@ function onLocationFound(e) {
 
     L.circle(e.latlng, radius).setStyle({color: '#FED401'}).addTo(map);
     map.setView(e.latlng, 18);
+
+    document.querySelector("#custom-alert").style.display = "none";
 }
 
 function onLocationError(e) {
-    alert(e.message);
+    console.error(e.message);
+    document.querySelector("#custom-alert").classList.remove("alert-info");
+    document.querySelector("#spinner").remove();
+    document.querySelector("#custom-alert").classList.add("alert-danger");
+    document.querySelector("#alert-text").innerText = "Could not find user location.";
 }
 
 document.addEventListener("DOMContentLoaded", (event) => {
