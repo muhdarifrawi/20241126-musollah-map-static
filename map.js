@@ -7,6 +7,7 @@ function onLocationFound(e) {
     L.marker(e.latlng).addTo(map);
 
     L.circle(e.latlng, radius).addTo(map);
+    map.setView(e.latlng, 15);
 }
 
 function onLocationError(e) {
@@ -31,7 +32,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
 
 function openModalMusollah(data) {
-    console.log("modal open", data);
+    // console.log("modal open", data);
     const myModal = new bootstrap.Modal('#myModal', {
         keyboard: false
     })
@@ -95,7 +96,7 @@ function openModalMusollah(data) {
 }
 
 function openModalMosque(data) {
-    console.log("modal open", data);
+    // console.log("modal open", data);
     const myModal = new bootstrap.Modal('#myModal', {
         keyboard: false
     })
@@ -130,7 +131,7 @@ function loadMosques() {
     var mosqueMarkers = new L.MarkerClusterGroup();
     axios.get("https://raw.githubusercontent.com/muhdarifrawi/20241126-musollah-map-static/refs/heads/master/data/mosque.json")
         .then(function (response) {
-            console.log(response.data);
+            // console.log(response.data);
             let data = response.data;
             for (const p in data) {
                 const popup = L.popup().setContent('The New Delight');
@@ -146,7 +147,7 @@ function loadMosques() {
                     if (link) {
                         link.addEventListener('click', (event) => {
                             event.preventDefault();
-                            console.log('Clicked link id:', event.target.id);
+                            // console.log('Clicked link id:', event.target.id);
                             openModalMosque(data[p])
                         });
                     }
@@ -167,21 +168,21 @@ function loadMusollah() {
     var musollahMarkers = new L.MarkerClusterGroup();
     axios.get("https://raw.githubusercontent.com/muhdarifrawi/20241126-musollah-map-static/refs/heads/master/data/musollah.json")
         .then(function (response) {
-            console.log(response.data);
+            // console.log(response.data);
             let data = response.data;
             for (const p in data) {
                 musollahMarkers.addLayer(L.marker([data[p]["coordinates"][0], data[p]["coordinates"][1]], { icon: musollahIcon })
                     .bindPopup(`<span>${data[p]["name"]}</span>
                     <br><a href="#" id="musollah-${p}">see more ...</a>`));
 
-                console.log("musollah-" + p)
+                // console.log("musollah-" + p)
 
                 map.on('popupopen', () => {
                     const link = document.querySelector(`#musollah-${p}`);
                     if (link) {
                         link.addEventListener('click', (event) => {
                             event.preventDefault();
-                            console.log('Clicked link id:', event.target.id);
+                            // console.log('Clicked link id:', event.target.id);
                             openModalMusollah(data[p])
                         });
                     }
