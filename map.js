@@ -41,8 +41,9 @@ document.addEventListener("DOMContentLoaded", (event) => {
     }).addTo(map);
     layerControl = L.control.layers().addTo(map);
 
-    loadMosques();
-    loadMusollah();
+    let country = "singapore";
+    loadMosques(country);
+    loadMusollah(country);
 });
 
 
@@ -137,7 +138,7 @@ function openModalMosque(data) {
     modalMosqueTypeEl.innerText = `${data["mosqueType"]}`;
 }
 
-function loadMosques() {
+function loadMosques(country) {
     var moqueIcon = L.icon({
         iconUrl: 'icons/mosque.png',
 
@@ -148,7 +149,7 @@ function loadMosques() {
     axios.get("https://raw.githubusercontent.com/muhdarifrawi/20241126-musollah-map-static/refs/heads/master/data/mosque.json")
         .then(function (response) {
             // console.log(response.data);
-            let data = response.data;
+            let data = response.data[country];
             for (const p in data) {
                 const popup = L.popup().setContent('The New Delight');
                 popup.markerid = `musollah-${p}`
@@ -174,7 +175,7 @@ function loadMosques() {
         })
 }
 
-function loadMusollah() {
+function loadMusollah(country) {
     var musollahIcon = L.icon({
         iconUrl: 'icons/praying.png',
 
@@ -185,7 +186,7 @@ function loadMusollah() {
     axios.get("https://raw.githubusercontent.com/muhdarifrawi/20241126-musollah-map-static/refs/heads/master/data/musollah.json")
         .then(function (response) {
             // console.log(response.data);
-            let data = response.data;
+            let data = response.data[country];
             for (const p in data) {
                 musollahMarkers.addLayer(L.marker([data[p]["coordinates"][0], data[p]["coordinates"][1]], { icon: musollahIcon })
                     .bindPopup(`<span>${data[p]["name"]}</span>

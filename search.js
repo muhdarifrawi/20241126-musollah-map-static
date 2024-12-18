@@ -16,8 +16,9 @@ async function search() {
     await axios.all(searchEndpoints.map((endpoint) => axios.get(endpoint))).then(
         (response) => {
             // console.log(response);
-            mosqueData = response[0]["data"];
-            musollahData = response[1]["data"];
+            let country = "singapore";
+            mosqueData = response[0]["data"][country];
+            musollahData = response[1]["data"][country];
         }
     );
     // console.log(musollahData);
