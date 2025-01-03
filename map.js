@@ -1,6 +1,21 @@
 let map;
 let layerControl;
 
+let mosqueURL;
+let musollahURL;
+
+let state = "dev";
+
+if (state = "dev") {
+    mosqueURL = "data/mosque.json";
+    musollahURL = "data/musollah.json";
+}
+else {
+    mosqueURL = "https://raw.githubusercontent.com/muhdarifrawi/20241126-musollah-map-static/refs/heads/master/data/mosque.json";
+    musollahURL = "https://raw.githubusercontent.com/muhdarifrawi/20241126-musollah-map-static/refs/heads/master/data/musollah.json";
+}
+
+
 function onLocationFound(e) {
     var radius = e.accuracy;
 
@@ -146,7 +161,7 @@ function loadMosques(country) {
         popupAnchor: [0, -14] // point from which the popup should open relative to the iconAnchor
     });
     var mosqueMarkers = new L.MarkerClusterGroup();
-    axios.get("https://raw.githubusercontent.com/muhdarifrawi/20241126-musollah-map-static/refs/heads/master/data/mosque.json")
+    axios.get(mosqueURL)
         .then(function (response) {
             // console.log(response.data);
             let data = response.data[country];
@@ -183,9 +198,9 @@ function loadMusollah(country) {
         popupAnchor: [0, -14] // point from which the popup should open relative to the iconAnchor
     });
     var musollahMarkers = new L.MarkerClusterGroup();
-    axios.get("https://raw.githubusercontent.com/muhdarifrawi/20241126-musollah-map-static/refs/heads/master/data/musollah.json")
+    axios.get(musollahURL)
         .then(function (response) {
-            // console.log(response.data);
+            console.log(response.data);
             let data = response.data[country];
             for (const p in data) {
                 musollahMarkers.addLayer(L.marker([data[p]["coordinates"][0], data[p]["coordinates"][1]], { icon: musollahIcon })
