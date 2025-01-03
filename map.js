@@ -6,7 +6,7 @@ let musollahURL;
 
 let state = "dev";
 
-if (state = "dev") {
+if (state == "dev") {
     mosqueURL = "data/mosque.json";
     musollahURL = "data/musollah.json";
 }
