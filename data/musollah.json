@@ -55,6 +55,29 @@
 				1.2761446986302132,
 				103.84583528491281
 			]
+		},
+		"2": {
+			"name": "Singapore General Hospital (SGH) Surau",
+			"address": [
+				"10 College Rd, Singapore 169851",
+				""
+			],
+			"layoutType": "Shared (Partitioned)",
+			"layoutDescription": "",
+			"status": "Opened",
+			"statusDescription": "Opening Hours are as per Mall hours.",
+			"wudhuArea": "Built-In",
+			"directions": [
+				"In SGH Campus."
+			],
+			"prayerItems": "Provided. But advised to carry your own.",
+			"images": [
+			],
+			"importantNotes": "",
+			"coordinates": [
+				1.2818897, 
+				103.8349575
+			]
 		}
 	}
 }
