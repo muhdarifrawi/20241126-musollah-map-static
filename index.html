@@ -19,43 +19,63 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="/">Pray Here</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#musollahNavbar"
-                aria-controls="musollahNavbar" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="musollahNavbar">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link" href="/map.html">Map</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/about.html">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/support.html">Support & Suggestions</a>
-                    </li>
-                    <li>
-                        <a class="nav-link" href="/docs.html">Docs</a>
-                    </li>
-                </ul>
+    <div id="section-1">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="/">Pray Here</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#musollahNavbar"
+                    aria-controls="musollahNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="musollahNavbar">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/map.html">Map</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/support.html">Support & Suggestions</a>
+                        </li>
+                        <li>
+                            <a class="nav-link" href="/docs.html">Docs</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container-fluid d-flex flex-column justify-content-center align-items-center cta-group">
+            <h1 class="display-1">Pray Here</h1>
+            <p class="display-6 text-center">
+                Welcome to Pray Here, the only prayer area finder you will need!
+            </p>
+            <a href="/map.html" class="btn btn-success mb-5" role="button">Locate Now!</a>
+            <a href="#section-2" role="button" class="mt-5 down-arrow-link">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                    class="bi bi-arrow-down-circle-fill custom-arrow-down-box" viewBox="0 0 100 100">
+                    <path class="custom-arrow-down-icon"
+                        d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293z" />
+                </svg>
+            </a>
+        </div>
+    </div>
+    <div id="section-2" class="d-flex align-items-center">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col">
+                    <h1>Easy Locate</h1>
+                    <p>
+                        Locate your current location and find the nearest prayer
+                        space!
+                    </p>
+                </div>
+                <div class="col">
+                    <img src="images/map-promo-1.png" alt="image of map" class="img-thumbnail map-promo">
+                </div>
             </div>
         </div>
-    </nav>
-    <div class="container-fluid d-flex flex-column justify-content-center align-items-center" id="section-1">
-        <h1 class="display-1">Pray Here</h1>
-        <p class="display-6 text-center">
-            Welcome to Pray Here, the only prayer area finder you will need!
-        </p>
-        <div>
-            <a href="/map.html" class="btn btn-primary" role="button">Locate Now!</a>
-        </div>
-        
-
     </div>
-
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
@@ -63,7 +83,7 @@
     <!-- Buy Me A Coffee -->
     <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js"
         data-id="vaKVhHC" data-description="Support me on Buy me a coffee!"
-        data-message="Jazakallah khair. Thanks for dropping by 😊" data-color="#FF813F" data-position="Right"
+        data-message="Jazakallah khair. Thank you for dropping by 😊" data-color="#FF813F" data-position="Right"
         data-x_margin="18" data-y_margin="18"></script>
 </body>
 
