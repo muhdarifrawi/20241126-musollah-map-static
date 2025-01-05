@@ -127,7 +127,8 @@ function openModalMusollah(data) {
     data["importantNotes"] == "" ? modalImportantNotesEl.innerText = "No Info" : modalImportantNotesEl.innerText = `${data["importantNotes"]}`;
 
     modalButtonsArea.innerHTML = `
-                    <a href="http://maps.apple.com/?q='${data["address"][0]}'" target="_blank" role="button" class="btn btn-success">Google Maps</a>
+                    <a href="http://maps.apple.com/?daddr='${data["address"][0]}'" target="_blank" role="button" class="btn btn-success">Apple Navigation</a>
+                    <a href="https://www.google.com/maps/dir/?api=1&destination='${data["address"][0]}'" target="_blank" role="button" class="btn btn-success">Google Navigation</a>
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>`
 
 
