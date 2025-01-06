@@ -4,7 +4,7 @@ let layerControl;
 let mosqueURL;
 let musollahURL;
 
-let state = "dev";
+let state = "prod";
 
 if (state == "dev") {
     mosqueURL = "data/mosque.json";
