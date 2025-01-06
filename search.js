@@ -85,6 +85,7 @@ function checkNearby() {
     // Get user's current location
     navigator.geolocation.getCurrentPosition((position) => {
         const userLocation = L.latLng(position.coords.latitude, position.coords.longitude);
+        let distanceData = {};
         for (country in mosqueData) {
             console.log(country);
             for (i in mosqueData[country]) {
@@ -98,11 +99,39 @@ function checkNearby() {
                 let location = [lat, long];
                 const distance = userLocation.distanceTo(location);
 
-                if (distance <= radius) {
-                    console.log(`${locationName} is within ${radius} meters`);
-                }
+                // distanceData[distance]["name"] = locationName;
+                // distanceData[distance]["location"] = [lat, long];
+                distanceData[distance] = {"name": locationName, "location": [lat,long]}
+
+                // if (distance <= radius) {
+                //     console.log(`${locationName} is within ${radius} meters. Distance: ${distance}`);
+                // }
                 // else {
-                //     console.log(`Marker at ${location} is outside ${radius} meters`);
+                //     console.log(`${locationName} is outside ${radius} meters. Distance: ${distance}`);
+                // }
+            }
+        }
+
+        for (country in musollahData) {
+            console.log(country);
+            for (i in musollahData[country]) {
+                // console.log(i);
+                let obj = musollahData[country][i];
+                // console.log(obj);
+                let locationName = obj["mosque"] || obj["name"]
+                let lat = obj["coordinates"][0];
+                let long = obj["coordinates"][1];
+
+                let location = [lat, long];
+                const distance = userLocation.distanceTo(location);
+
+                distanceData[distance] = {"name": locationName, "location": [lat,long]}
+
+                // if (distance <= radius) {
+                //     console.log(`${locationName} is within ${radius} meters. Distance: ${distance}`);
+                // }
+                // else {
+                //     console.log(`${locationName} is outside ${radius} meters. Distance: ${distance}`);
                 // }
             }
         }
@@ -116,6 +145,8 @@ function checkNearby() {
         //         console.log(`Marker at ${markerLocation} is outside ${radius} meters`);
         //     }
         // });
+        console.log("=== compiled distance data ===");
+        console.log(distanceData);
     }, (error) => {
         console.error('Error fetching user location:', error.message);
     });
