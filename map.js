@@ -101,7 +101,7 @@ function openModalMusollah(data) {
     let modalDirectionsEl = document.querySelector("#modal-directions");
     let modalPrayerItemsEl = document.querySelector("#modal-prayer-items");
     let modalImportantNotesEl = document.querySelector("#modal-important-notes");
-
+    let modalButtonsArea = document.querySelector(".modal-footer");
     let statusPill = ``;
     if(data["status"].toLowerCase() == "opened"){
         statusPill = `<span class="badge rounded-pill text-bg-success">
@@ -125,6 +125,13 @@ function openModalMusollah(data) {
     });
     modalPrayerItemsEl.innerText = `${data["prayerItems"]}`;
     data["importantNotes"] == "" ? modalImportantNotesEl.innerText = "No Info" : modalImportantNotesEl.innerText = `${data["importantNotes"]}`;
+
+    modalButtonsArea.innerHTML = `
+                    <a href="http://maps.apple.com/?daddr='${data["address"][0]}'" target="_blank" role="button" class="btn btn-success">Apple Navigation</a>
+                    <a href="https://www.google.com/maps/dir/?api=1&destination='${data["address"][0]}'" target="_blank" role="button" class="btn btn-success">Google Navigation</a>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>`
+
+
 }
 
 function openModalMosque(data) {

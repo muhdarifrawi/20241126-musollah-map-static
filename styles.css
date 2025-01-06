@@ -1,23 +1,71 @@
-#map { 
-    height: 94vh; 
+#map {
+    height: 94vh;
 }
 
-#location-loading{
-    height:100vh;
-    width:100vw;
-    position:fixed;
-    top:0;
+#location-loading {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
     background-color: salmon;
-    display:flex;
+    display: flex;
     justify-content: center;
     align-items: center;
-    z-index:1000;
+    z-index: 1000;
 }
 
-#custom-alert{
-    width:80vw;
-    position:fixed;
-    top:67px;
-    left:47px;
-    z-index:1000;
+#custom-alert {
+    width: 80vw;
+    position: fixed;
+    top: 67px;
+    left: 47px;
+    z-index: 1000;
 }
+
+#myModal {
+    z-index:10000;
+}
+
+/* index.html */
+#section-1 {
+    background-image: url(images/boats-desat.jpg);
+    background-position: top center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+/* call to action group */
+.cta-group {
+    height:80%;
+}
+.down-arrow-link {
+    height:35px;
+}
+
+.custom-arrow-down-box {
+    color: white;
+    height: 100%;
+}
+
+.custom-arrow-down-icon {
+    transform: scale(6);
+}
+
+/* #section-2 {
+    height:100vh;
+
+} */
+
+.map-promo {
+    height:10%;
+}
+
+/* #section-3 {
+    height:100vh;
+
+}
+
+#section-4 {
+    height:100vh;
+
+} */
