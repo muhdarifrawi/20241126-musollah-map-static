@@ -207,7 +207,7 @@ function loadMusollah(country) {
     var musollahMarkers = new L.MarkerClusterGroup();
     axios.get(musollahURL)
         .then(function (response) {
-            console.log(response.data);
+            // console.log(response.data);
             let data = response.data[country];
             for (const p in data) {
                 musollahMarkers.addLayer(L.marker([data[p]["coordinates"][0], data[p]["coordinates"][1]], { icon: musollahIcon })
