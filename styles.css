@@ -15,7 +15,6 @@
 }
 
 #custom-alert {
-    width: 80vw;
     position: fixed;
     top: 67px;
     left: 47px;
@@ -60,12 +59,14 @@
     height:10%;
 }
 
-/* #section-3 {
-    height:100vh;
-
+#footer {
+    background-color: #B9BCBB;
+    color:white;
 }
 
-#section-4 {
-    height:100vh;
-
-} */
+#footer-blank {
+    background-color: #B9BCBB;
+    color:white;
+    position: absolute;
+    bottom: 0;
+}
