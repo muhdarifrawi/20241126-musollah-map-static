@@ -23,7 +23,8 @@
     <nav class="navbar navbar-expand-lg" style="background-color:#B9BCBB;">
         <div class="container-fluid">
             <a class="navbar-brand" href="/">
-                <img src="/icons/prayhere-logo.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+                <img src="/icons/prayhere-logo.png" alt="Logo" width="30" height="24"
+                    class="d-inline-block align-text-top">
                 Pray Here
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#musollahNavbar"
@@ -51,7 +52,7 @@
     <div id="search-btn" class="btn btn-primary">Search</div>
     <div id="custom-alert" class="alert alert-info alert-dismissible fade show" role="alert">
         <span class="spinner-border spinner-border-sm" aria-hidden="true" id="spinner"></span>
-        <span role="status" id="alert-text">Searching Location ...</span>      
+        <span role="status" id="alert-text" class="ms-1">Searching User Location</span>
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
 
@@ -95,10 +96,16 @@
                     </div>
                     <hr>
                     <div id="info-group">
+                        <div class="d-flex justify-content-center">
+                            <div>
+                                <span class="spinner-border spinner-border-sm" aria-hidden="true" id="spinner"></span>
+                                <span role="status" id="alert-text" class="ms-1">Searching Places Within 3km</span>
+                            </div>
+                        </div>
                         <!-- render via JS -->
                     </div>
                 </div>
-                
+
                 <div class="modal-footer" id="search-modal-footer">
                     <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
                 </div>

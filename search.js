@@ -1,6 +1,7 @@
 let musollahData;
 let mosqueData;
 let distanceData = {};
+// let sortedDistData;
 
 async function fetchData() {
     let mosqueCheck = true;
@@ -25,7 +26,7 @@ async function fetchData() {
     console.log(musollahData);
     console.log(mosqueData);
     // checkAddress();
-    checkNearby();
+    // checkNearby();
 }
 
 // search();
@@ -66,7 +67,7 @@ function checkNearby() {
     console.log("musollah data >>>");
     console.log(musollahData);
 
-    const radius = 1000; // in meters
+    const radius = 3000; // in meters
 
     // Get user's current location
     navigator.geolocation.getCurrentPosition((position) => {
@@ -84,8 +85,9 @@ function checkNearby() {
 
                 let location = [lat, long];
                 const distance = userLocation.distanceTo(location);
-
-                distanceData[distance] = { "name": locationName, "location": [lat, long] }
+                if(distance <= radius){
+                    distanceData[distance] = { "name": locationName, "location": [lat, long] }
+                }
             }
         }
 
@@ -101,13 +103,26 @@ function checkNearby() {
 
                 let location = [lat, long];
                 const distance = userLocation.distanceTo(location);
-
-                distanceData[distance] = { "name": locationName, "location": [lat, long] }
+                if(distance <= radius){
+                    distanceData[distance] = { "name": locationName, "location": [lat, long] }
+                }
             }
         }
         console.log("=== compiled distance data ===");
         console.log(distanceData);
         // renderCards(distanceData);
+        let sortedDistData = Object.keys(distanceData)
+            .sort((a,b) => { 
+                console.log(a,b);
+                return parseInt(a) - parseInt(b);
+            })
+            .reduce((Obj, key) => {
+                Obj[key] = distanceData[key];
+                return Obj;
+            }, {});
+        console.log(sortedDistData);
+        // distanceData = sortedDistData;
+        renderCards(sortedDistData);
     }, (error) => {
         console.error('Error fetching user location:', error.message);
     });
@@ -116,12 +131,19 @@ function checkNearby() {
 function renderCards(distanceData) {
     console.log("render cards")
     let infoGrp = document.querySelector("#info-group");
+    // clear info grp before populating again
+    infoGrp.innerHTML = "";
+
     for (each in distanceData) {
         console.log(each);
         infoGrp.innerHTML += `<div class="card mb-3" style="width: 100%;">
                         <div class="card-body">
                             <h5 class="card-title">${distanceData[each]["name"]}</h5>
-                            <h6 class="card-subtitle mb-2 text-body-secondary">${each} meters</h6>
+                            <h6 class="card-subtitle mb-2 text-body-secondary">
+                            ${parseFloat(each) < 500 ? "less than 500m" : ""}
+                            ${parseFloat(each) >= 500 &&  parseFloat(each) < 1000 ? "less than 1km" : ""}
+                            ${parseFloat(each) >= 1000 ? (+(parseFloat(each) / 1000).toFixed(2)).toString() + "km" : ""}
+                            </h6>
                             <a href="#" class="card-link">Card link</a>
                             <a href="#" class="card-link">Another link</a>
                         </div>
@@ -138,8 +160,8 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     searchBtn.addEventListener("click", () => {
         console.log("clicked");
-        // checkNearby();
-        renderCards(distanceData);
+        checkNearby();
+        // renderCards(sortedDistData);
         const myModal = new bootstrap.Modal('#searchModal', {
             keyboard: false
         });
