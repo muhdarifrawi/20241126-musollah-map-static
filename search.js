@@ -1,6 +1,6 @@
 let musollahData;
 let mosqueData;
-let distanceData = {};
+// let distanceData = {};
 // let sortedDistData;
 
 async function fetchData() {
@@ -72,7 +72,7 @@ function checkNearby() {
     // Get user's current location
     navigator.geolocation.getCurrentPosition((position) => {
         const userLocation = L.latLng(position.coords.latitude, position.coords.longitude);
-        // let distanceData = {};
+        let distanceData = {};
         for (country in mosqueData) {
             console.log(country);
             for (i in mosqueData[country]) {
