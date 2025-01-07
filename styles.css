@@ -18,12 +18,20 @@
     position: fixed;
     top: 67px;
     left: 47px;
-    z-index: 1000;
+    z-index: 2000;
 }
 
 #myModal {
-    z-index:10000;
+    z-index: 10000;
 }
+
+#search-btn {
+    position: absolute;
+    top: 68px;
+    left: 50px;
+    z-index: 1000;
+}
+
 
 /* index.html */
 #section-1 {
@@ -33,12 +41,14 @@
     background-repeat: no-repeat;
     height: 100vh;
 }
+
 /* call to action group */
 .cta-group {
-    height:80%;
+    height: 80%;
 }
+
 .down-arrow-link {
-    height:35px;
+    height: 35px;
 }
 
 .custom-arrow-down-box {
@@ -56,17 +66,17 @@
 } */
 
 .map-promo {
-    height:10%;
+    height: 10%;
 }
 
 #footer {
     background-color: #B9BCBB;
-    color:white;
+    color: white;
 }
 
 #footer-blank {
     background-color: #B9BCBB;
-    color:white;
+    color: white;
     position: absolute;
     bottom: 0;
 }

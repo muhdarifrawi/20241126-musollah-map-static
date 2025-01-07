@@ -1,7 +1,8 @@
 let musollahData;
 let mosqueData;
+let distanceData = {};
 
-async function search() {
+async function fetchData() {
     let mosqueCheck = true;
     let musollahCheck = true;
     let searchEndpoints = [];
@@ -21,13 +22,13 @@ async function search() {
             musollahData = response[1]["data"];
         }
     );
-    // console.log(musollahData);
-    // console.log(mosqueData);
+    console.log(musollahData);
+    console.log(mosqueData);
     // checkAddress();
     checkNearby();
 }
 
-search();
+// search();
 
 function checkAddress() {
     let results = [];
@@ -65,27 +66,12 @@ function checkNearby() {
     console.log("musollah data >>>");
     console.log(musollahData);
 
-    // for (country in mosqueData) {
-    //     console.log(country);
-    //     for(i in mosqueData[country]){
-    //         console.log(i);
-    //         let obj = mosqueData[country][i];
-    //         console.log(obj);
-    //         let lat = obj["coordinates"][0];
-    //         let long = obj["coordinates"][1];
-
-
-    //     }
-    // }
-    // Assuming `map` is your Leaflet map instance and `markers` is an array of marker objects
-
-    // Radius in meters
     const radius = 1000; // in meters
 
     // Get user's current location
     navigator.geolocation.getCurrentPosition((position) => {
         const userLocation = L.latLng(position.coords.latitude, position.coords.longitude);
-        let distanceData = {};
+        // let distanceData = {};
         for (country in mosqueData) {
             console.log(country);
             for (i in mosqueData[country]) {
@@ -99,16 +85,7 @@ function checkNearby() {
                 let location = [lat, long];
                 const distance = userLocation.distanceTo(location);
 
-                // distanceData[distance]["name"] = locationName;
-                // distanceData[distance]["location"] = [lat, long];
-                distanceData[distance] = {"name": locationName, "location": [lat,long]}
-
-                // if (distance <= radius) {
-                //     console.log(`${locationName} is within ${radius} meters. Distance: ${distance}`);
-                // }
-                // else {
-                //     console.log(`${locationName} is outside ${radius} meters. Distance: ${distance}`);
-                // }
+                distanceData[distance] = { "name": locationName, "location": [lat, long] }
             }
         }
 
@@ -125,31 +102,50 @@ function checkNearby() {
                 let location = [lat, long];
                 const distance = userLocation.distanceTo(location);
 
-                distanceData[distance] = {"name": locationName, "location": [lat,long]}
-
-                // if (distance <= radius) {
-                //     console.log(`${locationName} is within ${radius} meters. Distance: ${distance}`);
-                // }
-                // else {
-                //     console.log(`${locationName} is outside ${radius} meters. Distance: ${distance}`);
-                // }
+                distanceData[distance] = { "name": locationName, "location": [lat, long] }
             }
         }
-        // markers.forEach((marker) => {
-        //     const markerLocation = marker.getLatLng();
-        //     const distance = userLocation.distanceTo(markerLocation);
-
-        //     if (distance <= radius) {
-        //         console.log(`Marker at ${markerLocation} is within ${radius} meters`);
-        //     } else {
-        //         console.log(`Marker at ${markerLocation} is outside ${radius} meters`);
-        //     }
-        // });
         console.log("=== compiled distance data ===");
         console.log(distanceData);
+        // renderCards(distanceData);
     }, (error) => {
         console.error('Error fetching user location:', error.message);
     });
 }
+
+function renderCards(distanceData) {
+    console.log("render cards")
+    let infoGrp = document.querySelector("#info-group");
+    for (each in distanceData) {
+        console.log(each);
+        infoGrp.innerHTML += `<div class="card mb-3" style="width: 100%;">
+                        <div class="card-body">
+                            <h5 class="card-title">${distanceData[each]["name"]}</h5>
+                            <h6 class="card-subtitle mb-2 text-body-secondary">${each} meters</h6>
+                            <a href="#" class="card-link">Card link</a>
+                            <a href="#" class="card-link">Another link</a>
+                        </div>
+                    </div>`
+    }
+}
+
+document.addEventListener("DOMContentLoaded", async () => {
+    await fetchData();
+    console.log("SEARCH CONTENT LOADING");
+
+    let searchBtn = document.querySelector("#search-btn");
+    let searchModal = document.querySelector("#searchModal");
+
+    searchBtn.addEventListener("click", () => {
+        console.log("clicked");
+        // checkNearby();
+        renderCards(distanceData);
+        const myModal = new bootstrap.Modal('#searchModal', {
+            keyboard: false
+        });
+
+        myModal.show();
+    });
+})
 
 

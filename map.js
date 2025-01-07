@@ -101,7 +101,7 @@ function openModalMusollah(data) {
     let modalDirectionsEl = document.querySelector("#modal-directions");
     let modalPrayerItemsEl = document.querySelector("#modal-prayer-items");
     let modalImportantNotesEl = document.querySelector("#modal-important-notes");
-    let modalButtonsArea = document.querySelector(".modal-footer");
+    let modalButtonsArea = document.querySelector("#modal-footer");
     let statusPill = ``;
     if(data["status"].toLowerCase() == "opened"){
         statusPill = `<span class="badge rounded-pill text-bg-success">
@@ -138,9 +138,9 @@ function openModalMosque(data) {
     // console.log("modal open", data);
     const myModal = new bootstrap.Modal('#myModal', {
         keyboard: false
-    })
-    const modalToggle = document.getElementById('toggleMyModal');
-    myModal.show(modalToggle);
+    });
+    
+    myModal.show();
 
     let modalBodyEl = document.querySelector("#modal-body");
 
