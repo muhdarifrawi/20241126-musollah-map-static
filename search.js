@@ -138,14 +138,23 @@ function renderCards(distanceData) {
         console.log(each);
         infoGrp.innerHTML += `<div class="card mb-3" style="width: 100%;">
                         <div class="card-body">
-                            <h5 class="card-title">${distanceData[each]["name"]}</h5>
-                            <h6 class="card-subtitle mb-2 text-body-secondary">
-                            ${parseFloat(each) < 500 ? "less than 500m" : ""}
-                            ${parseFloat(each) >= 500 &&  parseFloat(each) < 1000 ? "less than 1km" : ""}
-                            ${parseFloat(each) >= 1000 ? (+(parseFloat(each) / 1000).toFixed(2)).toString() + "km" : ""}
-                            </h6>
-                            <a href="#" class="card-link">Card link</a>
-                            <a href="#" class="card-link">Another link</a>
+                            <div class="row">
+                                <div class="col">
+                                    <h5 class="card-title">${distanceData[each]["name"]}</h5>
+                                    <h6 class="card-subtitle mb-2 
+                                    ${parseFloat(each) < 500 ? "text-success" : ""}
+                                    ${parseFloat(each) >= 500 &&  parseFloat(each) < 1000 ? "text-warning" : ""}
+                                    ${parseFloat(each) >= 1000 ? "text-danger" : ""}
+                                    ">
+                                    ${parseFloat(each) < 500 ? "less than 500m" : ""}
+                                    ${parseFloat(each) >= 500 &&  parseFloat(each) < 1000 ? "less than 1km" : ""}
+                                    ${parseFloat(each) >= 1000 ? (+(parseFloat(each) / 1000).toFixed(2)).toString() + "km" : ""}
+                                    </h6>
+                                </div>
+                                <div class="col-3 m-auto">
+                                    <button type="button" class="btn btn-primary">Locate</button>
+                                </div>
+                            </div>
                         </div>
                     </div>`
     }
