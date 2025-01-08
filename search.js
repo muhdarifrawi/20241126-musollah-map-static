@@ -1,7 +1,8 @@
 let musollahData;
 let mosqueData;
-// let distanceData = {};
-// let sortedDistData;
+let distanceData = {};
+let sortedDistData = {};
+let renderCount = 0;
 
 async function fetchData() {
     let mosqueCheck = true;
@@ -72,7 +73,7 @@ function checkNearby() {
     // Get user's current location
     navigator.geolocation.getCurrentPosition((position) => {
         const userLocation = L.latLng(position.coords.latitude, position.coords.longitude);
-        let distanceData = {};
+        // let distanceData = {};
         for (country in mosqueData) {
             console.log(country);
             for (i in mosqueData[country]) {
@@ -85,7 +86,7 @@ function checkNearby() {
 
                 let location = [lat, long];
                 const distance = userLocation.distanceTo(location);
-                if(distance <= radius){
+                if (distance <= radius) {
                     distanceData[distance] = { "name": locationName, "location": [lat, long] }
                 }
             }
@@ -103,7 +104,7 @@ function checkNearby() {
 
                 let location = [lat, long];
                 const distance = userLocation.distanceTo(location);
-                if(distance <= radius){
+                if (distance <= radius) {
                     distanceData[distance] = { "name": locationName, "location": [lat, long] }
                 }
             }
@@ -111,43 +112,50 @@ function checkNearby() {
         console.log("=== compiled distance data ===");
         console.log(distanceData);
         // renderCards(distanceData);
-        let sortedDistData = Object.keys(distanceData)
-            .sort((a,b) => { 
-                console.log(a,b);
+        sortingData = Object.keys(distanceData)
+            .sort((a, b) => {
+                console.log(a, b);
                 return parseInt(a) - parseInt(b);
             })
             .reduce((Obj, key) => {
                 Obj[key] = distanceData[key];
                 return Obj;
             }, {});
-        console.log(sortedDistData);
-        // distanceData = sortedDistData;
-        renderCards(sortedDistData);
+        console.log(">>>",sortedDistData);
+        sortedDistData = sortingData;
+        console.log(">>>",sortedDistData);
+        // renderCards(sortedDistData);
     }, (error) => {
         console.error('Error fetching user location:', error.message);
     });
 }
 
-function renderCards(distanceData) {
+function renderCards(sortedData) {
     console.log("render cards")
     let infoGrp = document.querySelector("#info-group");
-    // clear info grp before populating again
-    infoGrp.innerHTML = "";
+    // console.log(Object.keys(sortedDistData));
+    // console.log(Object.keys(sortedDistData).length == 0);
+    // console.log(Object.keys(sortedDistData).length);
+    console.log(`render count ${renderCount}`);
+    console.log(sortedData);
+    if (Object.keys(sortedData).length != 0) {
+        // clear info grp before populating again
+        infoGrp.innerHTML = "";
 
-    for (each in distanceData) {
-        console.log(each);
-        infoGrp.innerHTML += `<div class="card mb-3" style="width: 100%;">
+        for (each in sortedData) {
+            console.log(each);
+            infoGrp.innerHTML += `<div class="card mb-3" style="width: 100%;">
                         <div class="card-body">
                             <div class="row">
                                 <div class="col">
-                                    <h5 class="card-title">${distanceData[each]["name"]}</h5>
+                                    <h5 class="card-title">${sortedData[each]["name"]}</h5>
                                     <h6 class="card-subtitle mb-2 
                                     ${parseFloat(each) < 500 ? "text-success" : ""}
-                                    ${parseFloat(each) >= 500 &&  parseFloat(each) < 1000 ? "text-warning" : ""}
+                                    ${parseFloat(each) >= 500 && parseFloat(each) < 1000 ? "text-warning" : ""}
                                     ${parseFloat(each) >= 1000 ? "text-danger" : ""}
                                     ">
                                     ${parseFloat(each) < 500 ? "less than 500m" : ""}
-                                    ${parseFloat(each) >= 500 &&  parseFloat(each) < 1000 ? "less than 1km" : ""}
+                                    ${parseFloat(each) >= 500 && parseFloat(each) < 1000 ? "less than 1km" : ""}
                                     ${parseFloat(each) >= 1000 ? (+(parseFloat(each) / 1000).toFixed(2)).toString() + "km" : ""}
                                     </h6>
                                 </div>
@@ -157,7 +165,24 @@ function renderCards(distanceData) {
                             </div>
                         </div>
                     </div>`
+        }
     }
+    else if (renderCount >= 3){
+        infoGrp.innerHTML = `<div class="d-flex justify-content-center">
+                                <div>
+                                    <span role="status" id="alert-text" class="ms-1">Failed to fetch data.</span>
+                                </div>
+                            </div>`;
+    }
+    else {
+        renderCount ++;
+        setTimeout(()=>{
+            console.log("timeout")
+            renderCards(sortedDistData);
+        }, 5000);
+        
+    }
+
 }
 
 document.addEventListener("DOMContentLoaded", async () => {
@@ -169,13 +194,14 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     searchBtn.addEventListener("click", () => {
         console.log("clicked");
-        checkNearby();
-        // renderCards(sortedDistData);
+        // checkNearby();
+        
         const myModal = new bootstrap.Modal('#searchModal', {
             keyboard: false
         });
 
         myModal.show();
+        renderCards(sortedDistData);
     });
 })
 

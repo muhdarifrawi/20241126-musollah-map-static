@@ -34,6 +34,8 @@ function onLocationFound(e) {
     L.circle(e.latlng, radius).setStyle({color: '#FED401'}).addTo(map);
     map.setView(e.latlng, 18);
 
+    checkNearby();
+
     document.querySelector("#custom-alert").style.display = "none";
 }
 
