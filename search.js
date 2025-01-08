@@ -152,7 +152,7 @@ function renderCards(distanceData) {
                                     </h6>
                                 </div>
                                 <div class="col-3 m-auto">
-                                    <button type="button" class="btn btn-primary">Locate</button>
+                                    <button type="button" class="btn btn-outline-secondary">Locate</button>
                                 </div>
                             </div>
                         </div>
