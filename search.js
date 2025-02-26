@@ -95,9 +95,9 @@ function checkNearby() {
         const userLocation = L.latLng(position.coords.latitude, position.coords.longitude);
         // let distanceData = {};
         for (mosqueIndex in mosqueData) {
-            console.log(mosqueIndex);
+            // console.log(mosqueIndex);
             for (i in mosqueData[mosqueIndex]) {
-                console.log(i);
+                // console.log(mosqueIndex);
                 let obj = mosqueData[mosqueIndex];
                 console.log(obj);
                 let locationName = obj["mosque"] || obj["name"]
@@ -107,15 +107,15 @@ function checkNearby() {
                 let location = [lat, long];
                 const distance = userLocation.distanceTo(location);
                 if (distance <= radius) {
-                    distanceData[distance] = { "name": locationName, "location": [lat, long], "id": i }
+                    distanceData[distance] = { "name": locationName, "location": [lat, long], "id": mosqueIndex ,"type":"mosque"}
                 }
             }
         }
 
         for (musollahIndex in musollahData) {
-            console.log(musollahIndex);
+            // console.log(musollahIndex);
             for (i in musollahData[musollahIndex]) {
-                // console.log(i);
+                // console.log(musollahIndex);
                 let obj = musollahData[musollahIndex];
                 // console.log(obj);
                 let locationName = obj["mosque"] || obj["name"]
@@ -125,7 +125,7 @@ function checkNearby() {
                 let location = [lat, long];
                 const distance = userLocation.distanceTo(location);
                 if (distance <= radius) {
-                    distanceData[distance] = { "name": locationName, "location": [lat, long], "id": i }
+                    distanceData[distance] = { "name": locationName, "location": [lat, long], "id": musollahIndex, "type":"musollah" }
                 }
             }
         }
@@ -156,10 +156,21 @@ function findMarker() {
 
 function locatePlace(event) {
     let coordinates = event.target.dataset.coordinates;
+    let locationId;
+    console.log(event.target.dataset);
+    if(event.target.dataset.mosqueId){
+        locationId = event.target.dataset.mosqueId;
+    }
+    else if(event.target.dataset.musollahId){
+        locationId = event.target.dataset.musollahId;
+    }
+    console.log("LOCATION ID >>>> ",locationId);
     console.log("LOCATE PLACE COORDINATES >>>", coordinates);
     // map.panTo([coordinates.split(",")[0], coordinates.split(",")[1]]).marker().openPopup();
     map.panTo([coordinates.split(",")[0], coordinates.split(",")[1]]);
     myModal.hide();
+    document.querySelectorAll(`[title=${locationId}]`)[0].click();
+
 }
 
 function renderCards(sortedData) {
@@ -176,6 +187,14 @@ function renderCards(sortedData) {
 
         for (each in sortedData) {
             console.log(each);
+            console.log("type >>> ", sortedData[each]["type"]);
+            let type;
+            if (sortedData[each]["type"] == "mosque"){
+                type = "mosque";
+            }
+            else if (sortedData[each]["type"] == "musollah"){
+                type = "musollah";
+            }
             infoGrp.innerHTML += `<div class="card mb-3" style="width: 100%;">
                         <div class="card-body">
                             <div class="row">
@@ -194,7 +213,7 @@ function renderCards(sortedData) {
                                 <div class="col-3 m-auto">
                                     <button type="button" class="btn btn-outline-secondary locate"
                                     data-coordinates="${sortedData[each]["location"]}"
-                                    data-mosque-id = "mosque-${sortedData[each]["id"]}">Locate</button>
+                                    data-${type}-id = "${type}-${sortedData[each]["id"]}">Locate</button>
                                 </div>
                             </div>
                         </div>

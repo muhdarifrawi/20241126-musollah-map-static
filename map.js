@@ -216,7 +216,7 @@ function loadMusollah() {
             // console.log("MUSOLLAH DATA: ", response.data);
             let data = response.data;
             for (const p in data) {
-                musollahMarkers.addLayer(L.marker([data[p]["coordinates"][0], data[p]["coordinates"][1]], { icon: musollahIcon })
+                musollahMarkers.addLayer(L.marker([data[p]["coordinates"][0], data[p]["coordinates"][1]], { icon: musollahIcon, title:`musollah-${p}`})
                     .bindPopup(`<span>${data[p]["name"]}</span>
                     <br><a href="#" id="musollah-${p}">see more ...</a>`));
 
