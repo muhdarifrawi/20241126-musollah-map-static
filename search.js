@@ -4,22 +4,40 @@ let distanceData = {};
 let sortedDistData = {};
 let renderCount = 0;
 
+const myModal = new bootstrap.Modal('#searchModal', {
+    keyboard: false
+});
+
 async function fetchData() {
     let mosqueCheck = true;
     let musollahCheck = true;
     let searchEndpoints = [];
 
+    let state = "dev";
+
+    let mosqueURL;
+    let musollahURL;
+
+    if (state == "dev") {
+        mosqueURL = "data/mosque.json";
+        musollahURL = "data/musollah.json";
+    }
+    else {
+        mosqueURL = "https://raw.githubusercontent.com/muhdarifrawi/20241126-musollah-map-static/refs/heads/master/data/mosque.json";
+        musollahURL = "https://raw.githubusercontent.com/muhdarifrawi/20241126-musollah-map-static/refs/heads/master/data/musollah.json";
+    }
+
     if (mosqueCheck == true) {
-        searchEndpoints.push("https://raw.githubusercontent.com/muhdarifrawi/20241126-musollah-map-static/refs/heads/master/data/mosque.json");
+        searchEndpoints.push(mosqueURL);
     }
     if (musollahCheck == true) {
-        searchEndpoints.push("https://raw.githubusercontent.com/muhdarifrawi/20241126-musollah-map-static/refs/heads/master/data/musollah.json");
+        searchEndpoints.push(musollahURL);
     }
 
     await axios.all(searchEndpoints.map((endpoint) => axios.get(endpoint))).then(
         (response) => {
             // console.log(response);
-            let country = "singapore";
+            // let country = "singapore";
             mosqueData = response[0]["data"];
             musollahData = response[1]["data"];
         }
@@ -65,6 +83,8 @@ function checkNearby() {
     console.log("===== Checking Nearby =====");
     console.log("mosque data >>>");
     console.log(mosqueData);
+    console.log("===== Mosque Markers ====");
+    console.log(mosqueMarkers);
     console.log("musollah data >>>");
     console.log(musollahData);
 
@@ -74,12 +94,12 @@ function checkNearby() {
     navigator.geolocation.getCurrentPosition((position) => {
         const userLocation = L.latLng(position.coords.latitude, position.coords.longitude);
         // let distanceData = {};
-        for (country in mosqueData) {
-            console.log(country);
-            for (i in mosqueData[country]) {
-                // console.log(i);
-                let obj = mosqueData[country][i];
-                // console.log(obj);
+        for (mosqueIndex in mosqueData) {
+            console.log(mosqueIndex);
+            for (i in mosqueData[mosqueIndex]) {
+                console.log(i);
+                let obj = mosqueData[mosqueIndex];
+                console.log(obj);
                 let locationName = obj["mosque"] || obj["name"]
                 let lat = obj["coordinates"][0];
                 let long = obj["coordinates"][1];
@@ -87,16 +107,16 @@ function checkNearby() {
                 let location = [lat, long];
                 const distance = userLocation.distanceTo(location);
                 if (distance <= radius) {
-                    distanceData[distance] = { "name": locationName, "location": [lat, long] }
+                    distanceData[distance] = { "name": locationName, "location": [lat, long], "id": i }
                 }
             }
         }
 
-        for (country in musollahData) {
-            console.log(country);
-            for (i in musollahData[country]) {
+        for (musollahIndex in musollahData) {
+            console.log(musollahIndex);
+            for (i in musollahData[musollahIndex]) {
                 // console.log(i);
-                let obj = musollahData[country][i];
+                let obj = musollahData[musollahIndex];
                 // console.log(obj);
                 let locationName = obj["mosque"] || obj["name"]
                 let lat = obj["coordinates"][0];
@@ -105,7 +125,7 @@ function checkNearby() {
                 let location = [lat, long];
                 const distance = userLocation.distanceTo(location);
                 if (distance <= radius) {
-                    distanceData[distance] = { "name": locationName, "location": [lat, long] }
+                    distanceData[distance] = { "name": locationName, "location": [lat, long], "id": i }
                 }
             }
         }
@@ -121,13 +141,25 @@ function checkNearby() {
                 Obj[key] = distanceData[key];
                 return Obj;
             }, {});
-        console.log(">>>",sortedDistData);
+        console.log(">>>", sortedDistData);
         sortedDistData = sortingData;
-        console.log(">>>",sortedDistData);
+        console.log(">>>", sortedDistData);
         // renderCards(sortedDistData);
     }, (error) => {
         console.error('Error fetching user location:', error.message);
     });
+}
+
+function findMarker() {
+
+}
+
+function locatePlace(event) {
+    let coordinates = event.target.dataset.coordinates;
+    console.log("LOCATE PLACE COORDINATES >>>", coordinates);
+    // map.panTo([coordinates.split(",")[0], coordinates.split(",")[1]]).marker().openPopup();
+    map.panTo([coordinates.split(",")[0], coordinates.split(",")[1]]);
+    myModal.hide();
 }
 
 function renderCards(sortedData) {
@@ -160,14 +192,21 @@ function renderCards(sortedData) {
                                     </h6>
                                 </div>
                                 <div class="col-3 m-auto">
-                                    <button type="button" class="btn btn-outline-secondary">Locate</button>
+                                    <button type="button" class="btn btn-outline-secondary locate"
+                                    data-coordinates="${sortedData[each]["location"]}"
+                                    data-mosque-id = "mosque-${sortedData[each]["id"]}">Locate</button>
                                 </div>
                             </div>
                         </div>
                     </div>`
         }
+
+        let allLocationsBtn = document.querySelectorAll(".locate");
+        for (each of allLocationsBtn) {
+            each.addEventListener("click", locatePlace)
+        }
     }
-    else if (renderCount >= 3){
+    else if (renderCount >= 3) {
         infoGrp.innerHTML = `<div class="d-flex justify-content-center">
                                 <div>
                                     <span role="status" id="alert-text" class="ms-1">Failed to fetch data.</span>
@@ -175,18 +214,19 @@ function renderCards(sortedData) {
                             </div>`;
     }
     else {
-        renderCount ++;
-        setTimeout(()=>{
+        renderCount++;
+        setTimeout(() => {
             console.log("timeout")
             renderCards(sortedDistData);
         }, 5000);
-        
+
     }
 
 }
 
 document.addEventListener("DOMContentLoaded", async () => {
     await fetchData();
+
     console.log("SEARCH CONTENT LOADING");
 
     let searchBtn = document.querySelector("#search-btn");
@@ -195,10 +235,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     searchBtn.addEventListener("click", () => {
         console.log("clicked");
         // checkNearby();
-        
-        const myModal = new bootstrap.Modal('#searchModal', {
-            keyboard: false
-        });
 
         myModal.show();
         renderCards(sortedDistData);
