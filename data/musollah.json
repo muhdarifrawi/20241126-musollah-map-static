@@ -23,7 +23,8 @@
 			1.3527084189572554,
 			103.94466246748033
 		],
-		"country":"singapore"
+		"country": "singapore",
+		"id": "0"
 	},
 	"1": {
 		"name": "International Plaza",
@@ -55,7 +56,8 @@
 			1.2761446986302132,
 			103.84583528491281
 		],
-		"country":"singapore"
+		"country": "singapore",
+		"id": "1"
 	},
 	"2": {
 		"name": "Singapore General Hospital (SGH) Surau",
@@ -78,6 +80,7 @@
 			1.2818897,
 			103.8349575
 		],
-		"country":"singapore"
+		"country": "singapore",
+		"id": "2"
 	}
 }
