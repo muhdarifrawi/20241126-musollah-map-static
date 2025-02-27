@@ -181,7 +181,7 @@ function renderCards(sortedData) {
     console.log(sortedData);
     if (Object.keys(sortedData).length != 0) {
         // clear info grp before populating again
-        infoGrp.innerHTML = "";
+        infoGrp.innerHTML = `<h5 class="mb-3">Within 3 km</h5>`;
 
         for (each in sortedData) {
             console.log(each);
@@ -241,8 +241,90 @@ function renderCards(sortedData) {
 
 }
 
-function search(searchString) {
-    let searchQuery = document.getElementById("search-query");
+function renderSearchCards(data) {
+    console.log("render search cards")
+    let searchGrp = document.querySelector("#search-group");
+    searchGrp.innerHTML = `<div>
+                                <span class="spinner-border spinner-border-sm" aria-hidden="true" id="spinner"></span>
+                                <span role="status" id="alert-text" class="ms-1">Searching Places Within 3km</span>
+                            </div>`;
+    
+    // console.log(Object.keys(sortedDistData));
+    // console.log(Object.keys(sortedDistData).length == 0);
+    // console.log(Object.keys(sortedDistData).length);
+    // console.log(`render count ${renderCount}`);
+    console.log(data);
+    if (Object.keys(data).length != 0) {
+        // clear info grp before populating again
+        searchGrp.innerHTML = "";
+
+        for (each in data) {
+            console.log(each);
+            // console.log("type >>> ", data[each]["type"]);
+            let type;
+            let name;
+            if (data[each]["mosque"]) {
+                type = "mosque";
+                name = data[each]["mosque"];
+            }
+            else if (data[each]["name"]) {
+                type = "musollah";
+                name = data[each]["name"];
+            }
+            searchGrp.innerHTML += `<div class="card mb-3" style="width: 100%;">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col">
+                                    <h5 class="card-title">${name}</h5>
+                                    <h6 class="card-subtitle mb-2" >
+                                    ${data[each]["address"]}
+                                    </h6>
+                                </div>
+                                <div class="col-3 m-auto">
+                                    <button type="button" class="btn btn-outline-secondary locate"
+                                    data-coordinates="${data[each]["coordinates"]}"
+                                    data-${type}-id = "${type}-${data[each]["id"]}">Locate</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>`
+        }
+
+        let allLocationsBtn = document.querySelectorAll(".locate");
+        for (each of allLocationsBtn) {
+            each.addEventListener("click", locatePlace)
+        }
+    }
+    // else if (renderCount >= 3) {
+    //     infoGrp.innerHTML = `<div class="d-flex justify-content-center">
+    //                             <div>
+    //                                 <span role="status" id="alert-text" class="ms-1">Failed to fetch data.</span>
+    //                             </div>
+    //                         </div>`;
+    // }
+    // else {
+    //     renderCount++;
+    //     setTimeout(() => {
+    //         console.log("timeout")
+    //         renderCards(sortedDistData);
+    //     }, 5000);
+
+    // }
+    else {
+        searchGrp.innerHTML = `<div class="d-flex justify-content-center">
+                                    <div class="alert alert-warning alert-dismissible fade show mb-0" role="alert" style="width:100%;">
+                                    <span role="status" id="alert-text">Could not find location.</span>
+                                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                    </div>
+                                </div>`;
+    }
+
+}
+
+function search() {
+    console.log("search triggered");
+    let searchString = document.getElementById("search-query").value;
+
     let searchName = true;
     let searchAddress = true;
 
@@ -253,45 +335,74 @@ function search(searchString) {
         let mosqueName = mosqueData[each]["mosque"];
         let mosqueAddress = mosqueData[each]["address"];
         // console.log(mosqueName);
+        let searchNameData;
+        let searchAddressData;
         if (searchName && mosqueName.toString().toLowerCase().indexOf(searchString.toLowerCase()) >= 0) {
-            console.log("FOUND >>> ", mosqueData[each]);
+            console.log("FOUND MOSQUE A >>> ", mosqueData[each]);
             // foundInfo.push(mosqueData[each]);
-            if (!foundInfo.some(info => info.id === mosqueData[each]["id"])) {
-                foundInfo.push(mosqueData[each]);
-            }
+            // if (!foundInfo.some(info => info.id === mosqueData[each]["id"])) {
+            //     foundInfo.push(mosqueData[each]);
+            // }
+            searchNameData = mosqueData[each];
         };
 
         if (searchAddress && mosqueAddress.toString().toLowerCase().indexOf(searchString.toLowerCase()) >= 0) {
-            console.log("FOUND >>> ", mosqueData[each]);
+            console.log("FOUND MOSQUE B >>> ", mosqueData[each]);
             // foundInfo.push(mosqueData[each]);
-            if (!foundInfo.some(info => info.id === mosqueData[each]["id"])) {
-                foundInfo.push(mosqueData[each]);
-            }
+            // if (!foundInfo.some(info => info.id === mosqueData[each]["id"])) {
+            //     foundInfo.push(mosqueData[each]);
+            // }
+            searchAddressData = mosqueData[each];
         };
+
+        if(searchNameData && searchNameData.toString() === searchAddressData && searchAddressData.toString()){
+            foundInfo.push(mosqueData[each]);
+        }
+        else if (searchNameData){
+            foundInfo.push(mosqueData[each]);
+        }
+        else if(searchAddressData){
+            foundInfo.push(mosqueData[each]);
+        }
     }
 
     for (each in musollahData) {
         let musollahName = musollahData[each]["name"];
         let musollahAddress = musollahData[each]["address"];
         // console.log(mosqueName);
+        let searchNameData;
+        let searchAddressData;
         if (searchName && musollahName.toString().toLowerCase().indexOf(searchString.toLowerCase()) >= 0) {
-            console.log("FOUND >>> ", musollahData[each]);
+            console.log("FOUND MUSOLLAH A >>> ", musollahData[each]);
             // foundInfo.push(musollahData[each]);
-            if (!foundInfo.some(info => info.id === musollahData[each]["id"])) {
-                foundInfo.push(mosqueData[each]);
-            }
+            // if (!foundInfo.some(info => info.id === musollahData[each]["id"])) {
+            //     foundInfo.push(mosqueData[each]);
+            // }
+            searchNameData = musollahData[each];
         };
 
         if (searchAddress && musollahAddress.toString().toLowerCase().indexOf(searchString.toLowerCase()) >= 0) {
-            console.log("FOUND >>> ", musollahData[each]);
+            console.log("FOUND MUSOLLAH B >>> ", musollahData[each]);
             // foundInfo.push(musollahData[each]);
-            if (!foundInfo.some(info => info.id === musollahData[each]["id"])) {
-                foundInfo.push(mosqueData[each]);
-            }
+            // if (!foundInfo.some(info => info.id === musollahData[each]["id"])) {
+            //     foundInfo.push(mosqueData[each]);
+            // }
+            searchAddressData = musollahData[each];
         };
+
+        if(searchNameData && searchNameData.toString() === searchAddressData && searchAddressData.toString()){
+            foundInfo.push(musollahData[each]);
+        }
+        else if (searchNameData){
+            foundInfo.push(musollahData[each]);
+        }
+        else if(searchAddressData){
+            foundInfo.push(musollahData[each]);
+        }
     }
 
     console.log(foundInfo);
+    renderSearchCards(foundInfo);
 }
 
 document.addEventListener("DOMContentLoaded", async () => {
@@ -308,7 +419,13 @@ document.addEventListener("DOMContentLoaded", async () => {
 
         myModal.show();
         renderCards(sortedDistData);
+
+        
+        let findBtn = document.getElementById("find-btn");
+
+        findBtn.addEventListener("click", () => { search() });
     });
+
 })
 
 
