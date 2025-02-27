@@ -1,10 +1,12 @@
+let mosqueMarkers;
+let musollahMarkers;
 let map;
 let layerControl;
 
 let mosqueURL;
 let musollahURL;
 
-let state = "prod";
+let state = "dev";
 
 if (state == "dev") {
     mosqueURL = "data/mosque.json";
@@ -34,6 +36,8 @@ function onLocationFound(e) {
     L.circle(e.latlng, radius).setStyle({color: '#FED401'}).addTo(map);
     map.setView(e.latlng, 18);
 
+    checkNearby();
+
     document.querySelector("#custom-alert").style.display = "none";
 }
 
@@ -56,9 +60,11 @@ document.addEventListener("DOMContentLoaded", (event) => {
     }).addTo(map);
     layerControl = L.control.layers().addTo(map);
 
-    let country = "singapore";
-    loadMosques(country);
-    loadMusollah(country);
+    // let country = "singapore";
+    // loadMosques(country);
+    // loadMusollah(country);
+    loadMosques();
+    loadMusollah();
 });
 
 
@@ -101,7 +107,7 @@ function openModalMusollah(data) {
     let modalDirectionsEl = document.querySelector("#modal-directions");
     let modalPrayerItemsEl = document.querySelector("#modal-prayer-items");
     let modalImportantNotesEl = document.querySelector("#modal-important-notes");
-    let modalButtonsArea = document.querySelector(".modal-footer");
+    let modalButtonsArea = document.querySelector("#modal-footer");
     let statusPill = ``;
     if(data["status"].toLowerCase() == "opened"){
         statusPill = `<span class="badge rounded-pill text-bg-success">
@@ -138,9 +144,9 @@ function openModalMosque(data) {
     // console.log("modal open", data);
     const myModal = new bootstrap.Modal('#myModal', {
         keyboard: false
-    })
-    const modalToggle = document.getElementById('toggleMyModal');
-    myModal.show(modalToggle);
+    });
+    
+    myModal.show();
 
     let modalBodyEl = document.querySelector("#modal-body");
 
@@ -160,29 +166,30 @@ function openModalMosque(data) {
     modalMosqueTypeEl.innerText = `${data["mosqueType"]}`;
 }
 
-function loadMosques(country) {
+function loadMosques() {
     var moqueIcon = L.icon({
         iconUrl: 'icons/mosque.png',
 
         iconSize: [36, 36], // size of the icon
         popupAnchor: [0, -14] // point from which the popup should open relative to the iconAnchor
     });
-    var mosqueMarkers = new L.MarkerClusterGroup();
+    mosqueMarkers = new L.MarkerClusterGroup();
     axios.get(mosqueURL)
         .then(function (response) {
-            // console.log(response.data);
-            let data = response.data[country];
+            // console.log("MOSQUE DATA: ", response.data);
+            let data = response.data;
             for (const p in data) {
+                let mosqueId = data[p]["id"];
                 const popup = L.popup().setContent('The New Delight');
-                popup.markerid = `musollah-${p}`
+                popup.markerid = `mosque-${mosqueId}`
                 mosqueMarkers.addLayer(L.marker(
-                    [data[p]["coordinates"][0], data[p]["coordinates"][1]], { icon: moqueIcon })
+                    [data[p]["coordinates"][0], data[p]["coordinates"][1]], { icon: moqueIcon , title:`mosque-${mosqueId}`})
                     .bindPopup(`<span>${data[p]["mosque"]}</span>
                         <br><a href="#" id="mosque-${p}">see more ...</a>`)
                     .openPopup());
 
                 map.on('popupopen', () => {
-                    const link = document.querySelector(`#mosque-${p}`);
+                    const link = document.querySelector(`#mosque-${mosqueId}`);
                     if (link) {
                         link.addEventListener('click', (event) => {
                             event.preventDefault();
@@ -197,27 +204,28 @@ function loadMosques(country) {
         })
 }
 
-function loadMusollah(country) {
+function loadMusollah() {
     var musollahIcon = L.icon({
         iconUrl: 'icons/praying.png',
 
         iconSize: [36, 36], // size of the icon
         popupAnchor: [0, -14] // point from which the popup should open relative to the iconAnchor
     });
-    var musollahMarkers = new L.MarkerClusterGroup();
+    musollahMarkers = new L.MarkerClusterGroup();
     axios.get(musollahURL)
         .then(function (response) {
-            console.log(response.data);
-            let data = response.data[country];
+            // console.log("MUSOLLAH DATA: ", response.data);
+            let data = response.data;
             for (const p in data) {
-                musollahMarkers.addLayer(L.marker([data[p]["coordinates"][0], data[p]["coordinates"][1]], { icon: musollahIcon })
+                let musollahId = data[p]["id"];
+                musollahMarkers.addLayer(L.marker([data[p]["coordinates"][0], data[p]["coordinates"][1]], { icon: musollahIcon, title:`musollah-${musollahId}`})
                     .bindPopup(`<span>${data[p]["name"]}</span>
                     <br><a href="#" id="musollah-${p}">see more ...</a>`));
 
                 // console.log("musollah-" + p)
 
                 map.on('popupopen', () => {
-                    const link = document.querySelector(`#musollah-${p}`);
+                    const link = document.querySelector(`#musollah-${musollahId}`);
                     if (link) {
                         link.addEventListener('click', (event) => {
                             event.preventDefault();

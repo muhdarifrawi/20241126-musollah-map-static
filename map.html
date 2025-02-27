@@ -23,7 +23,8 @@
     <nav class="navbar navbar-expand-lg" style="background-color:#B9BCBB;">
         <div class="container-fluid">
             <a class="navbar-brand" href="/">
-                <img src="/icons/prayhere-logo.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+                <img src="/icons/prayhere-logo.png" alt="Logo" width="30" height="24"
+                    class="d-inline-block align-text-top">
                 Pray Here
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#musollahNavbar"
@@ -48,15 +49,16 @@
             </div>
         </div>
     </nav>
+    <div id="search-btn" class="btn btn-lg btn-success">Find</div>
     <div id="custom-alert" class="alert alert-info alert-dismissible fade show" role="alert">
         <span class="spinner-border spinner-border-sm" aria-hidden="true" id="spinner"></span>
-        <span role="status" id="alert-text">Searching Location ...</span>      
+        <span role="status" id="alert-text" class="ms-1">Searching User Location</span>
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
 
     <div id="map"></div>
     <div class="modal" tabindex="-1" id="myModal">
-        <div class="modal-dialog">
+        <div class="modal-dialog modal-dialog-scrollable">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="modal-title">
@@ -67,21 +69,52 @@
                 <div class="modal-body" id="modal-body">
                     <!-- render via JS -->
                 </div>
-                <div class="modal-footer">
+                <div class="modal-footer" id="modal-footer">
                     <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
                 </div>
             </div>
         </div>
     </div>
-    <!-- <div id="location-loading">
-        <div>
-            <span class="spinner-border spinner-border-sm" aria-hidden="true">
-            </span>
-            <span>
-                Searching Location ...
-            </span>
+    <div class="modal" tabindex="-1" id="searchModal">
+        <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modal-title">
+                        Search Location
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="search-modal-body">
+                    <div class="row ps-3 pe-5 mb-3">
+                        <div class="col">
+                            <label for="search-query" class="visually-hidden">Search Query</label>
+                            <input type="text" class="form-control" id="search-query" placeholder="Eg: Sultan">
+                        </div>
+                        <div class="col-3 m-auto">
+                            <button id="find-btn" type="submit" class="btn btn-success ms-3">Find</button>
+                        </div>
+                    </div>
+                    <div id="search-group">
+
+                    </div>
+                    <hr>
+                    <div id="info-group">
+                        <div class="d-flex justify-content-center">
+                            <div>
+                                <span class="spinner-border spinner-border-sm" aria-hidden="true" id="spinner"></span>
+                                <span role="status" id="alert-text" class="ms-1">Searching Places Within 3km</span>
+                            </div>
+                        </div>
+                        <!-- render via JS -->
+                    </div>
+                </div>
+
+                <!-- <div class="modal-footer" id="search-modal-footer"> -->
+                    <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
+                <!-- </div> -->
+            </div>
         </div>
-    </div> -->
+    </div>
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"

@@ -1,704 +1,842 @@
 {
-    "singapore": {
-        "0": {
-            "mosque": "Abdul Aleem Siddique",
-            "address": "90 Lorong K Telok Kurau Singapore 425723",
-            "telephoneNumber": "6346 0153",
-            "mosqueType": "Wakaf",
-            "coordinates": [
-                1.3133258190400678,
-                103.91276928282251
-            ]
-        },
-        "1": {
-            "mosque": "Abdul Gafoor",
-            "address": "41 Dunlop Street Singapore 209369",
-            "telephoneNumber": "6295 4209",
-            "mosqueType": "Wakaf",
-            "coordinates": [
-                1.3045195374110998,
-                103.8536989251516
-            ]
-        },
-        "2": {
-            "mosque": "Abdul Hamid Kampung Pasiran",
-            "address": "10 Gentle Road Singapore 309194",
-            "telephoneNumber": "6251 2729",
-            "mosqueType": "Wakaf",
-            "coordinates": [
-                1.3201003585602726,
-                103.8410555828224
-            ]
-        },
-        "3": {
-            "mosque": "Ahmad",
-            "address": "2 Lorong Sarhad Singapore 119173",
-            "telephoneNumber": "6479 6442",
-            "mosqueType": "Wakaf",
-            "coordinates": [
-                1.281080247961315,
-                103.78727722515161
-            ]
-        },
-        "4": {
-            "mosque": "Ahmad Ibrahim",
-            "address": "15 Jalan Ulu Seletar Singapore 769227",
-            "telephoneNumber": "6454 0848",
-            "mosqueType": "TOL",
-            "coordinates": [
-                1.4067273802162654,
-                103.8204594251513
-            ]
-        },
-        "5": {
-            "mosque": "Al-Abdul Razak",
-            "address": "30 Jalan Ismail Singapore 419285",
-            "telephoneNumber": "6846 8404",
-            "mosqueType": "Wakaf",
-            "coordinates": [
-                1.3235141623058642,
-                103.90731718282257
-            ]
-        },
-        "6": {
-            "mosque": "Al-Abrar",
-            "address": "192 Telok Ayer Street Singapore 068635",
-            "telephoneNumber": "6220 6306",
-            "mosqueType": "Wakaf",
-            "coordinates": [
-                1.280523891067053,
-                103.84728766932916
-            ]
-        },
-        "7": {
-            "mosque": "Al-Amin",
-            "address": "50 Telok Blangah Way Singapore 098801",
-            "telephoneNumber": "6272 5309",
-            "mosqueType": "MBMF",
-            "coordinates": [
-                1.2763472081897893,
-                103.81970088321084
-            ]
-        },
-        "8": {
-            "mosque": "Al-Ansar",
-            "address": "155 Bedok North Avenue 1 Singapore 469751",
-            "telephoneNumber": "6449 2420",
-            "mosqueType": "MBMF",
-            "coordinates": [
-                1.327116900436533,
-                103.92634428465796
-            ]
-        },
-        "9": {
-            "mosque": "Al-Falah",
-            "address": "22 Bideford Road #01-01 Singapore 229923",
-            "telephoneNumber": "6235 3172",
-            "mosqueType": "Leasehold",
-            "coordinates": [
-                1.3041556613719194,
-                103.8370028686592
-            ]
-        },
-        "10": {
-            "mosque": "Al-Firdaus",
-            "address": "11 Jalan Ibadat Singapore 698955",
-            "telephoneNumber": "6764 6334",
-            "mosqueType": "TOL",
-            "coordinates": [
-                1.3752638005510587,
-                103.71646757116453
-            ]
-        },
-        "11": {
-            "mosque": "Al-Huda",
-            "address": "34 Jalan Haji Alias Singapore 268534",
-            "telephoneNumber": "6468 4844",
-            "mosqueType": "Wakaf",
-            "coordinates": [
-                1.3270020479432707,
-                103.79503678196079
-            ]
-        },
-        "12": {
-            "mosque": "Al-Iman",
-            "address": "10 Bukit Panjang Ring Road Singapore 679943",
-            "telephoneNumber": "6769 0770",
-            "mosqueType": "MBMF",
-            "coordinates": [
-                1.3782561302052705,
-                103.77257790028963
-            ]
-        },
-        "13": {
-            "mosque": "Al-Islah",
-            "address": "30, Punggol Field Singapore 828812",
-            "telephoneNumber": "6312 5194",
-            "mosqueType": "MBMF",
-            "coordinates": [
-                1.4014245829984813,
-                103.90151045398679
-            ]
-        },
-        "14": {
-            "mosque": "Al-Istighfar",
-            "address": "2 Pasir Ris Walk Singapore 518239",
-            "telephoneNumber": "6426 7130",
-            "mosqueType": "MBMF",
-            "coordinates": [
-                1.37131233660281,
-                103.96401193864477
-            ]
-        },
-        "15": {
-            "mosque": "Al-Istiqamah",
-            "address": "2 Serangoon North Avenue 2 Singapore 555876",
-            "telephoneNumber": "6281 4287",
-            "mosqueType": "MBMF",
-            "coordinates": [
-                1.3771534984224776,
-                103.87440904889543
-            ]
-        },
-        "16": {
-            "mosque": "Alkaff Kampung Melayu",
-            "address": "200 Bedok Reservoir Road Singapore 479221",
-            "telephoneNumber": "6242 7244",
-            "mosqueType": "MBMF",
-            "coordinates": [
-                1.336854251696842,
-                103.9139186865065
-            ]
-        },
-        "17": {
-            "mosque": "Alkaff Upper Serangoon",
-            "address": "66 Pheng Geck Avenue Singapore 348261",
-            "telephoneNumber": "6280 0300",
-            "mosqueType": "Wakaf",
-            "coordinates": [
-                1.3331809654380335,
-                103.87049936563183
-            ]
-        },
-        "18": {
-            "mosque": "Al-Khair",
-            "address": "1 Teck Whye Crescent S’pore 688847",
-            "telephoneNumber": "6760 1139",
-            "mosqueType": "MBMF",
-            "coordinates": [
-                1.3828363357096416,
-                103.75002869816444
-            ]
-        },
-        "19": {
-            "mosque": "Al-Mawaddah",
-            "address": "151 Compassvale Bow Singapore 544997",
-            "telephoneNumber": "6489 0224",
-            "mosqueType": "MBMF",
-            "coordinates": [
-                1.3838657898748203,
-                103.89044812515131
-            ]
-        },
-        "20": {
-            "mosque": "Al-Mukminin",
-            "address": "271 Jurong East Street 21 S’pore 609603",
-            "telephoneNumber": "6567 7777",
-            "mosqueType": "MBMF",
-            "coordinates": [
-                1.3393483390415797,
-                103.74162458097388
-            ]
-        },
-        "21": {
-            "mosque": "Al-Muttaqin",
-            "address": "5140 Ang Mo Kio Avenue 6 Singapore 569840",
-            "telephoneNumber": "6454 7472",
-            "mosqueType": "MBMF",
-            "coordinates": [
-                1.3705763366596053,
-                103.84602698282234
-            ]
-        },
-        "22": {
-            "mosque": "Al-Taqua",
-            "address": "11A Jalan Bilal Singapore 468862",
-            "telephoneNumber": "6442 7704",
-            "mosqueType": "Wakaf",
-            "coordinates": [
-                1.3220860663156067,
-                103.9534468386449
-            ]
-        },
-        "23": {
-            "mosque": "Angullia",
-            "address": "265 Serangoon Road S’pore 218099",
-            "telephoneNumber": "6295 1478",
-            "mosqueType": "Wakaf",
-            "coordinates": [
-                1.3104795973788979,
-                103.85400885213846
-            ]
-        },
-        "24": {
-            "mosque": "An-Nahdhah",
-            "address": "9A Bishan Street 14 S’pore 579786",
-            "telephoneNumber": "6354 3138",
-            "mosqueType": "MBMF",
-            "coordinates": [
-                1.353506760439023,
-                103.85135662515142
-            ]
-        },
-        "25": {
-            "mosque": "An-Nur",
-            "address": "6 Admiralty Road S’pore 739983",
-            "telephoneNumber": "6363 1383",
-            "mosqueType": "MBMF",
-            "coordinates": [
-                1.4436795230081647,
-                103.77238861005308
-            ]
-        },
-        "26": {
-            "mosque": "Ar-Raudhah",
-            "address": "30 Bukit Batok East Avenue 2 S’pore 659919",
-            "telephoneNumber": "6899 5840",
-            "mosqueType": "MBMF",
-            "coordinates": [
-                1.3518490380945856,
-                103.75613255398697
-            ]
-        },
-        "27": {
-            "mosque": "Assyafaah",
-            "address": "1 Admiralty Lane Singapore 757620",
-            "telephoneNumber": "6756 3008",
-            "mosqueType": "MBMF",
-            "coordinates": [
-                1.455953780616793,
-                103.81935880980909
-            ]
-        },
-        "28": {
-            "mosque": "Assyakirin",
-            "address": "550 Yung An Road S’pore 618617",
-            "telephoneNumber": "6268 1846",
-            "mosqueType": "MBMF",
-            "coordinates": [
-                1.335741187470872,
-                103.71961763864488
-            ]
-        },
-        "29": {
-            "mosque": "Ba'alwie",
-            "address": "2 Lewis Road Singapore 258590",
-            "telephoneNumber": "6732 6795",
-            "mosqueType": "Wakaf",
-            "coordinates": [
-                1.3210979081423342,
-                103.82268418467106
-            ]
-        },
-        "30": {
-            "mosque": "Bencoolen",
-            "address": "59 Bencoolen Street, #01-01 S’pore 189633",
-            "telephoneNumber": "6333 3016",
-            "mosqueType": "Wakaf",
-            "coordinates": [
-                1.2995037376935805,
-                103.850207553987
-            ]
-        },
-        "31": {
-            "mosque": "Burhani",
-            "address": "39 Hill Street S’pore 179364",
-            "telephoneNumber": "6334 3712",
-            "mosqueType": "Wakaf",
-            "coordinates": [
-                1.2936690729386808,
-                103.85049371165806
-            ]
-        },
-        "32": {
-            "mosque": "Darul Aman",
-            "address": "1 Jalan Eunos S’pore 419493",
-            "telephoneNumber": "6744 5544",
-            "mosqueType": "MBMF",
-            "coordinates": [
-                1.3180955886363421,
-                103.90449823864499
-            ]
-        },
-        "33": {
-            "mosque": "Darul Ghufran",
-            "address": "503 Tampines Avenue 5 Singapore 529651",
-            "telephoneNumber": "6786 5545",
-            "mosqueType": "MBMF",
-            "coordinates": [
-                1.3556228569714484,
-                103.93987765186161
-            ]
-        },
-        "34": {
-            "mosque": "Darul Makmur",
-            "address": "950 Yishun Avenue 2 Singapore 769099",
-            "telephoneNumber": "6752 1402",
-            "mosqueType": "MBMF",
-            "coordinates": [
-                1.437547155084706,
-                103.83417982482983
-            ]
-        },
-        "35": {
-            "mosque": "Darussalam",
-            "address": "3002 Commonwealth Avenue West Singapore 129579",
-            "telephoneNumber": "6777 0028",
-            "mosqueType": "MBMF",
-            "coordinates": [
-                1.3127001190944037,
-                103.77107828282254
-            ]
-        },
-        "36": {
-            "mosque": "En-Naeem",
-            "address": "120 Tampines Road Singapore 535136",
-            "telephoneNumber": "6911 8140",
-            "mosqueType": "MBMF",
-            "coordinates": [
-                1.3612681438468377,
-                103.89269582699995
-            ]
-        },
-        "37": {
-            "mosque": "Haji Mohd Salleh (G)",
-            "address": "245 Geylang Road S’pore 389304",
-            "telephoneNumber": "6846 0857",
-            "mosqueType": "Wakaf",
-            "coordinates": [
-                1.31260604512405,
-                103.87694983864496
-            ]
-        },
-        "38": {
-            "mosque": "Haji Muhammad Salleh (P)",
-            "address": "37 Palmer Road S’pore 079424",
-            "telephoneNumber": "62209257",
-            "mosqueType": "Wakaf",
-            "coordinates": [
-                1.279782858156336,
-                103.84778519749885
-            ]
-        },
-        "39": {
-            "mosque": "Haji Yusoff",
-            "address": "2 Hillside Drive S’pore 548920",
-            "telephoneNumber": "6284 5459",
-            "mosqueType": "Wakaf",
-            "coordinates": [
-                1.3560031344498338,
-                103.87963118097379
-            ]
-        },
-        "40": {
-            "mosque": "Hajjah Fatimah",
-            "address": "4001 Beach Road Singapore 199584",
-            "telephoneNumber": "6297 2774",
-            "mosqueType": "Wakaf",
-            "coordinates": [
-                1.3030818635540327,
-                103.86292552515154
-            ]
-        },
-        "41": {
-            "mosque": "Hajjah Rahimabi",
-            "address": "76 Kim Keat Road Singapore 328835",
-            "telephoneNumber": "6255 8262",
-            "mosqueType": "Leasehold",
-            "coordinates": [
-                1.3263722477127424,
-                103.85471929631603
-            ]
-        },
-        "42": {
-            "mosque": "Hang Jebat",
-            "address": "100 Jalan Hang Jebat Singapore 139533",
-            "telephoneNumber": "6471 0728",
-            "mosqueType": "TOL",
-            "coordinates": [
-                1.2897589165944037,
-                103.79852999631609
-            ]
-        },
-        "43": {
-            "mosque": "Hasanah",
-            "address": "492 Teban Gardens Singapore 608878",
-            "telephoneNumber": "6561 7990",
-            "mosqueType": "Leasehold",
-            "coordinates": [
-                1.3218872403498612,
-                103.73822203679644
-            ]
-        },
-        "44": {
-            "mosque": "Hussein Sulaiman",
-            "address": "394 Pasir Panjang Road S’pore 118730",
-            "telephoneNumber": "",
-            "mosqueType": "Leasehold",
-            "coordinates": [
-                1.2915497903608935,
-                103.77174179816463
-            ]
-        },
-        "45": {
-            "mosque": "Jamae Chulia",
-            "address": "218 South Bridge Road S’pore 058767",
-            "telephoneNumber": "6221 4165",
-            "mosqueType": "Wakaf",
-            "coordinates": [
-                1.2834298954617929,
-                103.84547131165805
-            ]
-        },
-        "46": {
-            "mosque": "Jamek Queenstown",
-            "address": "946 Margaret Drive S’pore 149309",
-            "telephoneNumber": "6928 0442",
-            "mosqueType": "Leasehold",
-            "coordinates": [
-                1.2932041990865466,
-                103.81551413864493
-            ]
-        },
-        "47": {
-            "mosque": "Jamiyah Ar-Rabitah",
-            "address": "601 Tiong Bahru Road Singapore 158787",
-            "telephoneNumber": "6273 3848",
-            "mosqueType": "Leasehold",
-            "coordinates": [
-                1.288594221156482,
-                103.82012939632976
-            ]
-        },
-        "48": {
-            "mosque": "Kampong Delta",
-            "address": "10 Delta Avenue Singapore 169831",
-            "telephoneNumber": "6272 1750",
-            "mosqueType": "TOL",
-            "coordinates": [
-                1.2919353253206958,
-                103.82837136748057
-            ]
-        },
-        "49": {
-            "mosque": "Kampung Siglap",
-            "address": "451 Marine Parade Road Singapore 449283",
-            "telephoneNumber": "6243 7060",
-            "mosqueType": "MBMF",
-            "coordinates": [
-                1.3099639193316477,
-                103.92773784419069
-            ]
-        },
-        "50": {
-            "mosque": "Kassim",
-            "address": "450 Changi Road Singapore 419877",
-            "telephoneNumber": "6440 9434",
-            "mosqueType": "Wakaf",
-            "coordinates": [
-                1.319037552489208,
-                103.91233843864488
-            ]
-        },
-        "51": {
-            "mosque": "Khadijah",
-            "address": "583 Geylang Road S’pore 389522",
-            "telephoneNumber": "67475607",
-            "mosqueType": "Wakaf",
-            "coordinates": [
-                1.3143733929351997,
-                103.8860390944673
-            ]
-        },
-        "52": {
-            "mosque": "Khalid",
-            "address": "130 Joo Chiat Road S’pore 427727",
-            "telephoneNumber": "6345 2884",
-            "mosqueType": "Wakaf",
-            "coordinates": [
-                1.3137413669708888,
-                103.89913141165802
-            ]
-        },
-        "53": {
-            "mosque": "Maarof",
-            "address": "20 Jurong West Street 26 Singapore 648125",
-            "telephoneNumber": "6515 5033",
-            "mosqueType": "MBMF",
-            "coordinates": [
-                1.3487924452403788,
-                103.70512242884858
-            ]
-        },
-        "54": {
-            "mosque": "Malabar",
-            "address": "471 Victoria Street Singapore 198370",
-            "telephoneNumber": "6294 3862",
-            "mosqueType": "Leasehold",
-            "coordinates": [
-                1.3052555676330326,
-                103.85996066932906
-            ]
-        },
-        "55": {
-            "mosque": "Moulana Mohd Ali",
-            "address": "80 Raffles Place #B1-01, UOB Plaza Singapore 048624",
-            "telephoneNumber": "6536 5238",
-            "mosqueType": "Wakaf",
-            "coordinates": [
-                1.2857496073330168,
-                103.85003984180908
-            ]
-        },
-        "56": {
-            "mosque": "Muhajirin",
-            "address": "275 Braddell Road Singapore 579704",
-            "telephoneNumber": "6256 1166",
-            "mosqueType": "MBMF",
-            "coordinates": [
-                1.343298190519684,
-                103.85215446932898
-            ]
-        },
-        "57": {
-            "mosque": "Mujahidin",
-            "address": "590 Stirling Road Singapore 148952",
-            "telephoneNumber": "6473 7400",
-            "mosqueType": "MBMF",
-            "coordinates": [
-                1.2983645942497757,
-                103.80117272700004
-            ]
-        },
-        "58": {
-            "mosque": "Mydin",
-            "address": "67 Jalan Lapang Singapore 419007",
-            "telephoneNumber": "6243 2129",
-            "mosqueType": "Wakaf",
-            "coordinates": [
-                1.3227885740820038,
-                103.91520912515148
-            ]
-        },
-        "59": {
-            "mosque": "Omar Kg Melaka",
-            "address": "10 Keng Cheow Street Singapore 059607",
-            "telephoneNumber": "6532 6764",
-            "mosqueType": "Leasehold",
-            "coordinates": [
-                1.2879862122124828,
-                103.8442041251516
-            ]
-        },
-        "60": {
-            "mosque": "Omar Salmah",
-            "address": "441-B Jalan Mashor Singapore 299173",
-            "telephoneNumber": "6250 0120",
-            "mosqueType": "TOL",
-            "coordinates": [
-                1.334880126320235,
-                103.83198980218965
-            ]
-        },
-        "61": {
-            "mosque": "Petempatan Melayu Sembawang",
-            "address": "27-B Jalan Mempurong Singapore 759055",
-            "telephoneNumber": "6257 7614",
-            "mosqueType": "TOL",
-            "coordinates": [
-                1.4593350042367428,
-                103.84175522515103
-            ]
-        },
-        "62": {
-            "mosque": "Pulau Bukom",
-            "address": "Pulau Bukom PO Box 1908 Singapore 903808",
-            "telephoneNumber": "",
-            "mosqueType": "TOL",
-            "coordinates": [
-                1.227018337816664,
-                103.77758423483536
-            ]
-        },
-        "63": {
-            "mosque": "Pusara Aman",
-            "address": "11 Lim Chu Kang Road Singapore 719452",
-            "telephoneNumber": "6792 9378",
-            "mosqueType": "TOL",
-            "coordinates": [
-                1.3730016137415735,
-                103.69438405398692
-            ]
-        },
-        "64": {
-            "mosque": "Sallim Mattar",
-            "address": "1 Mattar Road Singapore 387725",
-            "telephoneNumber": "6749 2382",
-            "mosqueType": "Wakaf",
-            "coordinates": [
-                1.3258376804147738,
-                103.8812346251515
-            ]
-        },
-        "65": {
-            "mosque": "Sultan",
-            "address": "3 Muscat Street Singapore 198833",
-            "telephoneNumber": "6293 4405",
-            "mosqueType": "Wakaf",
-            "coordinates": [
-                1.3024784678488153,
-                103.85896359631604
-            ]
-        },
-        "66": {
-            "mosque": "Tasek Utara",
-            "address": "46 Bristol Road Singapore 219852",
-            "telephoneNumber": "6293 8351",
-            "mosqueType": "Wakaf",
-            "coordinates": [
-                1.3130716149846495,
-                103.84927076932911
-            ]
-        },
-        "67": {
-            "mosque": "Tentera Di Raja",
-            "address": "81 Clementi Road Singapore 129797",
-            "telephoneNumber": "6776 5612",
-            "mosqueType": "TOL",
-            "coordinates": [
-                1.2989406942027397,
-                103.7691331828225
-            ]
-        },
-        "68": {
-            "mosque": "Wak Tanjong",
-            "address": "25 Paya Lebar Road Singapore 409004",
-            "telephoneNumber": "6747 2743",
-            "mosqueType": "Wakaf",
-            "coordinates": [
-                1.317697866660704,
-                103.89235912090099
-            ]
-        },
-        "69": {
-            "mosque": "Yusof Ishak",
-            "address": "10 Woodlands Drive 17 Singapore 737740",
-            "telephoneNumber": "6893 0093",
-            "mosqueType": "MBMF",
-            "coordinates": [
-                1.4266499812247002,
-                103.79625156932879
-            ]
-        }
+    "0": {
+        "mosque": "Abdul Aleem Siddique",
+        "address": "90 Lorong K Telok Kurau Singapore 425723",
+        "telephoneNumber": "6346 0153",
+        "mosqueType": "Wakaf",
+        "coordinates": [
+            1.3133258190400678,
+            103.91276928282251
+        ],
+        "country": "singapore",
+        "id": "0"
+    },
+    "1": {
+        "mosque": "Abdul Gafoor",
+        "address": "41 Dunlop Street Singapore 209369",
+        "telephoneNumber": "6295 4209",
+        "mosqueType": "Wakaf",
+        "coordinates": [
+            1.3045195374110998,
+            103.8536989251516
+        ],
+        "country": "singapore",
+        "id": "1"
+    },
+    "2": {
+        "mosque": "Abdul Hamid Kampung Pasiran",
+        "address": "10 Gentle Road Singapore 309194",
+        "telephoneNumber": "6251 2729",
+        "mosqueType": "Wakaf",
+        "coordinates": [
+            1.3201003585602726,
+            103.8410555828224
+        ],
+        "country": "singapore",
+        "id": "2"
+    },
+    "3": {
+        "mosque": "Ahmad",
+        "address": "2 Lorong Sarhad Singapore 119173",
+        "telephoneNumber": "6479 6442",
+        "mosqueType": "Wakaf",
+        "coordinates": [
+            1.281080247961315,
+            103.78727722515161
+        ],
+        "country": "singapore",
+        "id": "3"
+    },
+    "4": {
+        "mosque": "Ahmad Ibrahim",
+        "address": "15 Jalan Ulu Seletar Singapore 769227",
+        "telephoneNumber": "6454 0848",
+        "mosqueType": "TOL",
+        "coordinates": [
+            1.4067273802162654,
+            103.8204594251513
+        ],
+        "country": "singapore",
+        "id": "4"
+    },
+    "5": {
+        "mosque": "Al-Abdul Razak",
+        "address": "30 Jalan Ismail Singapore 419285",
+        "telephoneNumber": "6846 8404",
+        "mosqueType": "Wakaf",
+        "coordinates": [
+            1.3235141623058642,
+            103.90731718282257
+        ],
+        "country": "singapore",
+        "id": "5"
+    },
+    "6": {
+        "mosque": "Al-Abrar",
+        "address": "192 Telok Ayer Street Singapore 068635",
+        "telephoneNumber": "6220 6306",
+        "mosqueType": "Wakaf",
+        "coordinates": [
+            1.280523891067053,
+            103.84728766932916
+        ],
+        "country": "singapore",
+        "id": "6"
+    },
+    "7": {
+        "mosque": "Al-Amin",
+        "address": "50 Telok Blangah Way Singapore 098801",
+        "telephoneNumber": "6272 5309",
+        "mosqueType": "MBMF",
+        "coordinates": [
+            1.2763472081897893,
+            103.81970088321084
+        ],
+        "country": "singapore",
+        "id": "7"
+    },
+    "8": {
+        "mosque": "Al-Ansar",
+        "address": "155 Bedok North Avenue 1 Singapore 469751",
+        "telephoneNumber": "6449 2420",
+        "mosqueType": "MBMF",
+        "coordinates": [
+            1.327116900436533,
+            103.92634428465796
+        ],
+        "country": "singapore",
+        "id": "8"
+    },
+    "9": {
+        "mosque": "Al-Falah",
+        "address": "22 Bideford Road #01-01 Singapore 229923",
+        "telephoneNumber": "6235 3172",
+        "mosqueType": "Leasehold",
+        "coordinates": [
+            1.3041556613719194,
+            103.8370028686592
+        ],
+        "country": "singapore",
+        "id": "9"
+    },
+    "10": {
+        "mosque": "Al-Firdaus",
+        "address": "11 Jalan Ibadat Singapore 698955",
+        "telephoneNumber": "6764 6334",
+        "mosqueType": "TOL",
+        "coordinates": [
+            1.3752638005510587,
+            103.71646757116453
+        ],
+        "country": "singapore",
+        "id": "10"
+    },
+    "11": {
+        "mosque": "Al-Huda",
+        "address": "34 Jalan Haji Alias Singapore 268534",
+        "telephoneNumber": "6468 4844",
+        "mosqueType": "Wakaf",
+        "coordinates": [
+            1.3270020479432707,
+            103.79503678196079
+        ],
+        "country": "singapore",
+        "id": "11"
+    },
+    "12": {
+        "mosque": "Al-Iman",
+        "address": "10 Bukit Panjang Ring Road Singapore 679943",
+        "telephoneNumber": "6769 0770",
+        "mosqueType": "MBMF",
+        "coordinates": [
+            1.3782561302052705,
+            103.77257790028963
+        ],
+        "country": "singapore",
+        "id": "12"
+    },
+    "13": {
+        "mosque": "Al-Islah",
+        "address": "30, Punggol Field Singapore 828812",
+        "telephoneNumber": "6312 5194",
+        "mosqueType": "MBMF",
+        "coordinates": [
+            1.4014245829984813,
+            103.90151045398679
+        ],
+        "country": "singapore",
+        "id": "13"
+    },
+    "14": {
+        "mosque": "Al-Istighfar",
+        "address": "2 Pasir Ris Walk Singapore 518239",
+        "telephoneNumber": "6426 7130",
+        "mosqueType": "MBMF",
+        "coordinates": [
+            1.37131233660281,
+            103.96401193864477
+        ],
+        "country": "singapore",
+        "id": "14"
+    },
+    "15": {
+        "mosque": "Al-Istiqamah",
+        "address": "2 Serangoon North Avenue 2 Singapore 555876",
+        "telephoneNumber": "6281 4287",
+        "mosqueType": "MBMF",
+        "coordinates": [
+            1.3771534984224776,
+            103.87440904889543
+        ],
+        "country": "singapore",
+        "id": "15"
+    },
+    "16": {
+        "mosque": "Alkaff Kampung Melayu",
+        "address": "200 Bedok Reservoir Road Singapore 479221",
+        "telephoneNumber": "6242 7244",
+        "mosqueType": "MBMF",
+        "coordinates": [
+            1.336854251696842,
+            103.9139186865065
+        ],
+        "country": "singapore",
+        "id": "16"
+    },
+    "17": {
+        "mosque": "Alkaff Upper Serangoon",
+        "address": "66 Pheng Geck Avenue Singapore 348261",
+        "telephoneNumber": "6280 0300",
+        "mosqueType": "Wakaf",
+        "coordinates": [
+            1.3331809654380335,
+            103.87049936563183
+        ],
+        "country": "singapore",
+        "id": "17"
+    },
+    "18": {
+        "mosque": "Al-Khair",
+        "address": "1 Teck Whye Crescent S’pore 688847",
+        "telephoneNumber": "6760 1139",
+        "mosqueType": "MBMF",
+        "coordinates": [
+            1.3828363357096416,
+            103.75002869816444
+        ],
+        "country": "singapore",
+        "id": "18"
+    },
+    "19": {
+        "mosque": "Al-Mawaddah",
+        "address": "151 Compassvale Bow Singapore 544997",
+        "telephoneNumber": "6489 0224",
+        "mosqueType": "MBMF",
+        "coordinates": [
+            1.3838657898748203,
+            103.89044812515131
+        ],
+        "country": "singapore",
+        "id": "19"
+    },
+    "20": {
+        "mosque": "Al-Mukminin",
+        "address": "271 Jurong East Street 21 S’pore 609603",
+        "telephoneNumber": "6567 7777",
+        "mosqueType": "MBMF",
+        "coordinates": [
+            1.3393483390415797,
+            103.74162458097388
+        ],
+        "country": "singapore",
+        "id": "20"
+    },
+    "21": {
+        "mosque": "Al-Muttaqin",
+        "address": "5140 Ang Mo Kio Avenue 6 Singapore 569840",
+        "telephoneNumber": "6454 7472",
+        "mosqueType": "MBMF",
+        "coordinates": [
+            1.3705763366596053,
+            103.84602698282234
+        ],
+        "country": "singapore",
+        "id": "21"
+    },
+    "22": {
+        "mosque": "Al-Taqua",
+        "address": "11A Jalan Bilal Singapore 468862",
+        "telephoneNumber": "6442 7704",
+        "mosqueType": "Wakaf",
+        "coordinates": [
+            1.3220860663156067,
+            103.9534468386449
+        ],
+        "country": "singapore",
+        "id": "22"
+    },
+    "23": {
+        "mosque": "Angullia",
+        "address": "265 Serangoon Road S’pore 218099",
+        "telephoneNumber": "6295 1478",
+        "mosqueType": "Wakaf",
+        "coordinates": [
+            1.3104795973788979,
+            103.85400885213846
+        ],
+        "country": "singapore",
+        "id": "23"
+    },
+    "24": {
+        "mosque": "An-Nahdhah",
+        "address": "9A Bishan Street 14 S’pore 579786",
+        "telephoneNumber": "6354 3138",
+        "mosqueType": "MBMF",
+        "coordinates": [
+            1.353506760439023,
+            103.85135662515142
+        ],
+        "country": "singapore",
+        "id": "24"
+    },
+    "25": {
+        "mosque": "An-Nur",
+        "address": "6 Admiralty Road S’pore 739983",
+        "telephoneNumber": "6363 1383",
+        "mosqueType": "MBMF",
+        "coordinates": [
+            1.4436795230081647,
+            103.77238861005308
+        ],
+        "country": "singapore",
+        "id": "25"
+    },
+    "26": {
+        "mosque": "Ar-Raudhah",
+        "address": "30 Bukit Batok East Avenue 2 S’pore 659919",
+        "telephoneNumber": "6899 5840",
+        "mosqueType": "MBMF",
+        "coordinates": [
+            1.3518490380945856,
+            103.75613255398697
+        ],
+        "country": "singapore",
+        "id": "26"
+    },
+    "27": {
+        "mosque": "Assyafaah",
+        "address": "1 Admiralty Lane Singapore 757620",
+        "telephoneNumber": "6756 3008",
+        "mosqueType": "MBMF",
+        "coordinates": [
+            1.455953780616793,
+            103.81935880980909
+        ],
+        "country": "singapore",
+        "id": "27"
+    },
+    "28": {
+        "mosque": "Assyakirin",
+        "address": "550 Yung An Road S’pore 618617",
+        "telephoneNumber": "6268 1846",
+        "mosqueType": "MBMF",
+        "coordinates": [
+            1.335741187470872,
+            103.71961763864488
+        ],
+        "country": "singapore",
+        "id": "28"
+    },
+    "29": {
+        "mosque": "Ba'alwie",
+        "address": "2 Lewis Road Singapore 258590",
+        "telephoneNumber": "6732 6795",
+        "mosqueType": "Wakaf",
+        "coordinates": [
+            1.3210979081423342,
+            103.82268418467106
+        ],
+        "country": "singapore",
+        "id": "29"
+    },
+    "30": {
+        "mosque": "Bencoolen",
+        "address": "59 Bencoolen Street, #01-01 S’pore 189633",
+        "telephoneNumber": "6333 3016",
+        "mosqueType": "Wakaf",
+        "coordinates": [
+            1.2995037376935805,
+            103.850207553987
+        ],
+        "country": "singapore",
+        "id": "30"
+    },
+    "31": {
+        "mosque": "Burhani",
+        "address": "39 Hill Street S’pore 179364",
+        "telephoneNumber": "6334 3712",
+        "mosqueType": "Wakaf",
+        "coordinates": [
+            1.2936690729386808,
+            103.85049371165806
+        ],
+        "country": "singapore",
+        "id": "31"
+    },
+    "32": {
+        "mosque": "Darul Aman",
+        "address": "1 Jalan Eunos S’pore 419493",
+        "telephoneNumber": "6744 5544",
+        "mosqueType": "MBMF",
+        "coordinates": [
+            1.3180955886363421,
+            103.90449823864499
+        ],
+        "country": "singapore",
+        "id": "32"
+    },
+    "33": {
+        "mosque": "Darul Ghufran",
+        "address": "503 Tampines Avenue 5 Singapore 529651",
+        "telephoneNumber": "6786 5545",
+        "mosqueType": "MBMF",
+        "coordinates": [
+            1.3556228569714484,
+            103.93987765186161
+        ],
+        "country": "singapore",
+        "id": "33"
+    },
+    "34": {
+        "mosque": "Darul Makmur",
+        "address": "950 Yishun Avenue 2 Singapore 769099",
+        "telephoneNumber": "6752 1402",
+        "mosqueType": "MBMF",
+        "coordinates": [
+            1.437547155084706,
+            103.83417982482983
+        ],
+        "country": "singapore",
+        "id": "34"
+    },
+    "35": {
+        "mosque": "Darussalam",
+        "address": "3002 Commonwealth Avenue West Singapore 129579",
+        "telephoneNumber": "6777 0028",
+        "mosqueType": "MBMF",
+        "coordinates": [
+            1.3127001190944037,
+            103.77107828282254
+        ],
+        "country": "singapore",
+        "id": "35"
+    },
+    "36": {
+        "mosque": "En-Naeem",
+        "address": "120 Tampines Road Singapore 535136",
+        "telephoneNumber": "6911 8140",
+        "mosqueType": "MBMF",
+        "coordinates": [
+            1.3612681438468377,
+            103.89269582699995
+        ],
+        "country": "singapore",
+        "id": "36"
+    },
+    "37": {
+        "mosque": "Haji Mohd Salleh (G)",
+        "address": "245 Geylang Road S’pore 389304",
+        "telephoneNumber": "6846 0857",
+        "mosqueType": "Wakaf",
+        "coordinates": [
+            1.31260604512405,
+            103.87694983864496
+        ],
+        "country": "singapore",
+        "id": "37"
+    },
+    "38": {
+        "mosque": "Haji Muhammad Salleh (P)",
+        "address": "37 Palmer Road S’pore 079424",
+        "telephoneNumber": "62209257",
+        "mosqueType": "Wakaf",
+        "coordinates": [
+            1.279782858156336,
+            103.84778519749885
+        ],
+        "country": "singapore",
+        "id": "38"
+    },
+    "39": {
+        "mosque": "Haji Yusoff",
+        "address": "2 Hillside Drive S’pore 548920",
+        "telephoneNumber": "6284 5459",
+        "mosqueType": "Wakaf",
+        "coordinates": [
+            1.3560031344498338,
+            103.87963118097379
+        ],
+        "country": "singapore",
+        "id": "39"
+    },
+    "40": {
+        "mosque": "Hajjah Fatimah",
+        "address": "4001 Beach Road Singapore 199584",
+        "telephoneNumber": "6297 2774",
+        "mosqueType": "Wakaf",
+        "coordinates": [
+            1.3030818635540327,
+            103.86292552515154
+        ],
+        "country": "singapore",
+        "id": "40"
+    },
+    "41": {
+        "mosque": "Hajjah Rahimabi",
+        "address": "76 Kim Keat Road Singapore 328835",
+        "telephoneNumber": "6255 8262",
+        "mosqueType": "Leasehold",
+        "coordinates": [
+            1.3263722477127424,
+            103.85471929631603
+        ],
+        "country": "singapore",
+        "id": "41"
+    },
+    "42": {
+        "mosque": "Hang Jebat",
+        "address": "100 Jalan Hang Jebat Singapore 139533",
+        "telephoneNumber": "6471 0728",
+        "mosqueType": "TOL",
+        "coordinates": [
+            1.2897589165944037,
+            103.79852999631609
+        ],
+        "country": "singapore",
+        "id": "42"
+    },
+    "43": {
+        "mosque": "Hasanah",
+        "address": "492 Teban Gardens Singapore 608878",
+        "telephoneNumber": "6561 7990",
+        "mosqueType": "Leasehold",
+        "coordinates": [
+            1.3218872403498612,
+            103.73822203679644
+        ],
+        "country": "singapore",
+        "id": "43"
+    },
+    "44": {
+        "mosque": "Hussein Sulaiman",
+        "address": "394 Pasir Panjang Road S’pore 118730",
+        "telephoneNumber": "",
+        "mosqueType": "Leasehold",
+        "coordinates": [
+            1.2915497903608935,
+            103.77174179816463
+        ],
+        "country": "singapore",
+        "id": "44"
+    },
+    "45": {
+        "mosque": "Jamae Chulia",
+        "address": "218 South Bridge Road S’pore 058767",
+        "telephoneNumber": "6221 4165",
+        "mosqueType": "Wakaf",
+        "coordinates": [
+            1.2834298954617929,
+            103.84547131165805
+        ],
+        "country": "singapore",
+        "id": "45"
+    },
+    "46": {
+        "mosque": "Jamek Queenstown",
+        "address": "946 Margaret Drive S’pore 149309",
+        "telephoneNumber": "6928 0442",
+        "mosqueType": "Leasehold",
+        "coordinates": [
+            1.2932041990865466,
+            103.81551413864493
+        ],
+        "country": "singapore",
+        "id": "46"
+    },
+    "47": {
+        "mosque": "Jamiyah Ar-Rabitah",
+        "address": "601 Tiong Bahru Road Singapore 158787",
+        "telephoneNumber": "6273 3848",
+        "mosqueType": "Leasehold",
+        "coordinates": [
+            1.288594221156482,
+            103.82012939632976
+        ],
+        "country": "singapore",
+        "id": "47"
+    },
+    "48": {
+        "mosque": "Kampong Delta",
+        "address": "10 Delta Avenue Singapore 169831",
+        "telephoneNumber": "6272 1750",
+        "mosqueType": "TOL",
+        "coordinates": [
+            1.2919353253206958,
+            103.82837136748057
+        ],
+        "country": "singapore",
+        "id": "48"
+    },
+    "49": {
+        "mosque": "Kampung Siglap",
+        "address": "451 Marine Parade Road Singapore 449283",
+        "telephoneNumber": "6243 7060",
+        "mosqueType": "MBMF",
+        "coordinates": [
+            1.3099639193316477,
+            103.92773784419069
+        ],
+        "country": "singapore",
+        "id": "49"
+    },
+    "50": {
+        "mosque": "Kassim",
+        "address": "450 Changi Road Singapore 419877",
+        "telephoneNumber": "6440 9434",
+        "mosqueType": "Wakaf",
+        "coordinates": [
+            1.319037552489208,
+            103.91233843864488
+        ],
+        "country": "singapore",
+        "id": "50"
+    },
+    "51": {
+        "mosque": "Khadijah",
+        "address": "583 Geylang Road S’pore 389522",
+        "telephoneNumber": "67475607",
+        "mosqueType": "Wakaf",
+        "coordinates": [
+            1.3143733929351997,
+            103.8860390944673
+        ],
+        "country": "singapore",
+        "id": "51"
+    },
+    "52": {
+        "mosque": "Khalid",
+        "address": "130 Joo Chiat Road S’pore 427727",
+        "telephoneNumber": "6345 2884",
+        "mosqueType": "Wakaf",
+        "coordinates": [
+            1.3137413669708888,
+            103.89913141165802
+        ],
+        "country": "singapore",
+        "id": "52"
+    },
+    "53": {
+        "mosque": "Maarof",
+        "address": "20 Jurong West Street 26 Singapore 648125",
+        "telephoneNumber": "6515 5033",
+        "mosqueType": "MBMF",
+        "coordinates": [
+            1.3487924452403788,
+            103.70512242884858
+        ],
+        "country": "singapore",
+        "id": "53"
+    },
+    "54": {
+        "mosque": "Malabar",
+        "address": "471 Victoria Street Singapore 198370",
+        "telephoneNumber": "6294 3862",
+        "mosqueType": "Leasehold",
+        "coordinates": [
+            1.3052555676330326,
+            103.85996066932906
+        ],
+        "country": "singapore",
+        "id": "54"
+    },
+    "55": {
+        "mosque": "Moulana Mohd Ali",
+        "address": "80 Raffles Place #B1-01, UOB Plaza Singapore 048624",
+        "telephoneNumber": "6536 5238",
+        "mosqueType": "Wakaf",
+        "coordinates": [
+            1.2857496073330168,
+            103.85003984180908
+        ],
+        "country": "singapore",
+        "id": "55"
+    },
+    "56": {
+        "mosque": "Muhajirin",
+        "address": "275 Braddell Road Singapore 579704",
+        "telephoneNumber": "6256 1166",
+        "mosqueType": "MBMF",
+        "coordinates": [
+            1.343298190519684,
+            103.85215446932898
+        ],
+        "country": "singapore",
+        "id": "56"
+    },
+    "57": {
+        "mosque": "Mujahidin",
+        "address": "590 Stirling Road Singapore 148952",
+        "telephoneNumber": "6473 7400",
+        "mosqueType": "MBMF",
+        "coordinates": [
+            1.2983645942497757,
+            103.80117272700004
+        ],
+        "country": "singapore",
+        "id": "57"
+    },
+    "58": {
+        "mosque": "Mydin",
+        "address": "67 Jalan Lapang Singapore 419007",
+        "telephoneNumber": "6243 2129",
+        "mosqueType": "Wakaf",
+        "coordinates": [
+            1.3227885740820038,
+            103.91520912515148
+        ],
+        "country": "singapore",
+        "id": "58"
+    },
+    "59": {
+        "mosque": "Omar Kg Melaka",
+        "address": "10 Keng Cheow Street Singapore 059607",
+        "telephoneNumber": "6532 6764",
+        "mosqueType": "Leasehold",
+        "coordinates": [
+            1.2879862122124828,
+            103.8442041251516
+        ],
+        "country": "singapore",
+        "id": "59"
+    },
+    "60": {
+        "mosque": "Omar Salmah",
+        "address": "441-B Jalan Mashor Singapore 299173",
+        "telephoneNumber": "6250 0120",
+        "mosqueType": "TOL",
+        "coordinates": [
+            1.334880126320235,
+            103.83198980218965
+        ],
+        "country": "singapore",
+        "id": "60"
+    },
+    "61": {
+        "mosque": "Petempatan Melayu Sembawang",
+        "address": "27-B Jalan Mempurong Singapore 759055",
+        "telephoneNumber": "6257 7614",
+        "mosqueType": "TOL",
+        "coordinates": [
+            1.4593350042367428,
+            103.84175522515103
+        ],
+        "country": "singapore",
+        "id": "61"
+    },
+    "62": {
+        "mosque": "Pulau Bukom",
+        "address": "Pulau Bukom PO Box 1908 Singapore 903808",
+        "telephoneNumber": "",
+        "mosqueType": "TOL",
+        "coordinates": [
+            1.227018337816664,
+            103.77758423483536
+        ],
+        "country": "singapore",
+        "id": "62"
+    },
+    "63": {
+        "mosque": "Pusara Aman",
+        "address": "11 Lim Chu Kang Road Singapore 719452",
+        "telephoneNumber": "6792 9378",
+        "mosqueType": "TOL",
+        "coordinates": [
+            1.3730016137415735,
+            103.69438405398692
+        ],
+        "country": "singapore",
+        "id": "63"
+    },
+    "64": {
+        "mosque": "Sallim Mattar",
+        "address": "1 Mattar Road Singapore 387725",
+        "telephoneNumber": "6749 2382",
+        "mosqueType": "Wakaf",
+        "coordinates": [
+            1.3258376804147738,
+            103.8812346251515
+        ],
+        "country": "singapore",
+        "id": "64"
+    },
+    "65": {
+        "mosque": "Sultan",
+        "address": "3 Muscat Street Singapore 198833",
+        "telephoneNumber": "6293 4405",
+        "mosqueType": "Wakaf",
+        "coordinates": [
+            1.3024784678488153,
+            103.85896359631604
+        ],
+        "country": "singapore",
+        "id": "65"
+    },
+    "66": {
+        "mosque": "Tasek Utara",
+        "address": "46 Bristol Road Singapore 219852",
+        "telephoneNumber": "6293 8351",
+        "mosqueType": "Wakaf",
+        "coordinates": [
+            1.3130716149846495,
+            103.84927076932911
+        ],
+        "country": "singapore",
+        "id": "66"
+    },
+    "67": {
+        "mosque": "Tentera Di Raja",
+        "address": "81 Clementi Road Singapore 129797",
+        "telephoneNumber": "6776 5612",
+        "mosqueType": "TOL",
+        "coordinates": [
+            1.2989406942027397,
+            103.7691331828225
+        ],
+        "country": "singapore",
+        "id": "67"
+    },
+    "68": {
+        "mosque": "Wak Tanjong",
+        "address": "25 Paya Lebar Road Singapore 409004",
+        "telephoneNumber": "6747 2743",
+        "mosqueType": "Wakaf",
+        "coordinates": [
+            1.317697866660704,
+            103.89235912090099
+        ],
+        "country": "singapore",
+        "id": "68"
+    },
+    "69": {
+        "mosque": "Yusof Ishak",
+        "address": "10 Woodlands Drive 17 Singapore 737740",
+        "telephoneNumber": "6893 0093",
+        "mosqueType": "MBMF",
+        "coordinates": [
+            1.4266499812247002,
+            103.79625156932879
+        ],
+        "country": "singapore",
+        "id": "69"
     }
 }
