@@ -1,0 +1,525 @@
+{
+    "1": {
+        "id": "1",
+        "address": "112 Bedok North Road",
+        "areaType": "Void Deck",
+        "info": [
+            "8 Rakaat + Witir",
+            "pending confirmation"
+        ],
+        "district": "east",
+        "coordinates": [
+            1.331346791919985,
+            103.93546550266994
+        ]
+    },
+    "2": {
+        "id": "2",
+        "address": "27A Balam Road",
+        "areaType": "Multi-Purpose Hall",
+        "info": [
+            "8 Rakaat + Witir",
+            "1, 2, 8, 9, 15, 16, 22, 23 & 29 March 2025 ONLY"
+        ],
+        "district": "east",
+        "coordinates": [
+            1.3305949175332223,
+            103.8858072528601
+        ]
+    },
+    "3": {
+        "id": "3",
+        "address": "775A Bedok Reservoir View",
+        "areaType": "Multi-Purpose Hall",
+        "info": [
+            "8 Rakaat + Witir",
+            "pending confirmation"
+        ],
+        "district": "east",
+        "coordinates": [
+            1.3367765874045254,
+            103.9360814528601
+        ]
+    },
+    "4": {
+        "id": "4",
+        "address": "15A Marine Terrace",
+        "areaType": "Communal Hall",
+        "info": [
+            "8 Rakaat + Witir",
+            "pending confirmation"
+        ],
+        "district": "east",
+        "coordinates": [
+            1.3050193416001288,
+            103.91426363936769
+        ]
+    },
+    "5": {
+        "id": "5",
+        "address": "611 Tampines North Drive 1",
+        "areaType": "Multi-Purpose Hall",
+        "info": [
+            "8 Rakaat + Witir",
+            "20 – 29 March 2025 ONLY",
+            "pending confirmation"
+        ],
+        "district": "east",
+        "coordinates": [
+            1.3650663370863405,
+            103.93473101053169
+        ]
+    },
+    "6": {
+        "id": "6",
+        "address": "286 Tampines Street 22",
+        "areaType": "Void Deck",
+        "info": [
+            "8 Rakaat + Witir",
+            "pending confirmation"
+        ],
+        "district": "east",
+        "coordinates": [
+            1.349785127449579,
+            103.95302840687484
+        ]
+    },
+    "7": {
+        "id": "7",
+        "address": "827A Tampines Street 81",
+        "areaType": "Multi-Purpose Hall",
+        "info": [
+            "8 Rakaat + Witir",
+            "pending confirmation"
+        ],
+        "district": "east",
+        "coordinates": [
+            1.3499797830875726,
+            103.93293256820331
+        ]
+    },
+    "8": {
+        "id": "8",
+        "address": "353 Tampines Street 33",
+        "areaType": "Void Deck",
+        "info": [
+            "20 Rakaat + Witir",
+            "pending confirmation"
+        ],
+        "district": "east",
+        "coordinates": [
+            1.3548638471388539,
+            103.96288145317774
+        ]
+    },
+    "9": {
+        "id": "9",
+        "address": "924 Tampines Street 91",
+        "areaType": "Void Deck",
+        "info": [
+            "8 Rakaat + Witir"
+        ],
+        "district": "east",
+        "coordinates": [
+            1.3469470147824236,
+            103.94067045251563
+        ]
+    },
+    "10": {
+        "id": "10",
+        "address": "847 Tampines Street 83",
+        "areaType": "Void Deck",
+        "info": [
+            "8 Rakaat + Witir",
+            "pending confirmation"
+        ],
+        "district": "east",
+        "coordinates": [
+            1.3527748382094817,
+            103.93508764817862
+        ]
+    },
+    "11": {
+        "id": "11",
+        "address": "498N Tampines Street 45",
+        "areaType": "Multi-Purpose Hall",
+        "info": [
+            "8 Rakaat + Witir",
+            "pending confirmation"
+        ],
+        "district": "east",
+        "coordinates": [
+            1.3619949889332013,
+            103.9577385816959
+        ]
+    },
+    "12": {
+        "id": "12",
+        "address": "450 Tampines Street 42",
+        "areaType": "Void Deck",
+        "info": [
+            "20 Rakaat + Witir",
+            "pending confirmation"
+        ],
+        "district": "east",
+        "coordinates": [
+            1.3577242667720897,
+            103.95162008169584
+        ]
+    },
+    "13": {
+        "id": "13",
+        "address": "116 Simei Street 1",
+        "areaType": "Void Deck",
+        "info": [
+            "8 Rakaat + Witir"
+        ],
+        "district": "east",
+        "coordinates": [
+            1.3436648422646336,
+            103.95094223751677
+        ]
+    },
+    "14": {
+        "id": "14",
+        "address": "757B Pasir Ris Street 71",
+        "areaType": "Multi-Purpose Hall",
+        "info": [
+            "8 Rakaat + Witir"
+        ],
+        "district": "east",
+        "coordinates": [
+            1.3774766192094536,
+            103.93350577334864
+        ]
+    },
+    "15": {
+        "id": "15",
+        "address": "62 Marine Drive",
+        "areaType": "Void Deck",
+        "info": [
+            "8 Rakaat + Witir",
+            "pending confirmation"
+        ],
+        "district": "east",
+        "coordinates": [
+            1.302818970712381,
+            103.90909305269243
+        ]
+    },
+    "16": {
+        "id": "16",
+        "address": "3 Geylang Serai",
+        "areaType": "Void Deck",
+        "info": [
+            "20 Rakaat + Witir",
+            "pending confirmation"
+        ],
+        "district": "east",
+        "coordinates": [
+            1.3176456486664765,
+            103.89868760868099
+        ]
+    },
+    "17": {
+        "id": "17",
+        "address": "42A Circuit Road",
+        "areaType": "Void Deck",
+        "info": [
+            "8 Rakaat + Witir"
+        ],
+        "district": "east",
+        "coordinates": [
+            1.327623479863169,
+            103.88644182884303
+        ]
+    },
+    "18": {
+        "id": "18",
+        "address": "702 Bedok Reservoir Road",
+        "areaType": "Void Deck",
+        "info": [
+            "8 Rakaat + Witir",
+            "8, 15, 22 & 29 March 2025 ONLY",
+            "pending confirmation"
+        ],
+        "district": "east",
+        "coordinates": [
+            1.337527934843477,
+            103.91886883021198
+        ]
+    },
+    "19": {
+        "id": "19",
+        "address": "973A Hougang Street 91",
+        "areaType": "Multi-Purpose Hall",
+        "info": [
+            "8 Rakaat + Witir",
+            "15 March 2025 ONLY"
+        ],
+        "district": "north",
+        "coordinates": [
+            1.3782202162021744,
+            103.8799432375167
+        ]
+    },
+    "20": {
+        "id": "20",
+        "address": "786E Woodlands Drive 60",
+        "areaType": "Void Deck",
+        "info": [
+            "8 Rakaat + Witir"
+        ],
+        "district": "north",
+        "coordinates": [
+            1.4471237154556837,
+            103.80056182470052
+        ]
+    },
+    "21": {
+        "id": "21",
+        "address": "658 Woodlands Ring Road",
+        "areaType": "Void Deck",
+        "info": [
+            "8 Rakaat + Witir"
+        ],
+        "district": "north",
+        "coordinates": [
+            1.4366751059775904,
+            103.7994752221732
+        ]
+    },
+    "22": {
+        "id": "22",
+        "address": "607 Yishun Street 61",
+        "areaType": "Void Deck",
+        "info": [
+            "8 Rakaat + Witir"
+        ],
+        "district": "north",
+        "coordinates": [
+            1.4216566858551516,
+            103.83567333936742
+        ]
+    },
+    "23": {
+        "id": "23",
+        "address": "732A Woodlands Circle",
+        "areaType": "Multi-Purpose Hall",
+        "info": [
+            "20 Rakaat + Witir"
+        ],
+        "district": "north",
+        "coordinates": [
+            1.4431011544436863,
+            103.79819866017365
+        ]
+    },
+    "24": {
+        "id": "24",
+        "address": "687D Woodlands Drive 75",
+        "areaType": "Link House",
+        "info": [
+            "8 Rakaat + Witir"
+        ],
+        "district": "north",
+        "coordinates": [
+            1.4418988564582234,
+            103.80753700868068
+        ]
+    },
+    "25": {
+        "id": "25",
+        "address": "524A Woodlands Drive 14",
+        "areaType": "Link House",
+        "info": [
+            "8 Rakaat + Witir"
+        ],
+        "district": "north",
+        "coordinates": [
+            1.4334338571825644,
+            103.79331929518825
+        ]
+    },
+    "26": {
+        "id": "26",
+        "address": "873 Woodlands Street 81",
+        "areaType": "Link House",
+        "info": [
+            "8 Rakaat + Witir"
+        ],
+        "district": "north",
+        "coordinates": [
+            1.4433951251420423,
+            103.78916814285648
+        ]
+    },
+    "27": {
+        "id": "27",
+        "address": "895E Woodlands Drive 50",
+        "areaType": "Link Hall",
+        "info": [
+            "8 Rakaat + Witir"
+        ],
+        "district": "north",
+        "coordinates": [
+            1.43603028467037,
+            103.79211437550804
+        ]
+    },
+    "28": {
+        "id": "28",
+        "address": "23C Kampung Lor Buang Kok",
+        "areaType": "Surau",
+        "info": [
+            "8 Rakaat + Witir"
+        ],
+        "district": "north",
+        "coordinates": [
+            1.3843905834900923,
+            103.87862134532583
+        ]
+    },
+    "29": {
+        "id": "29",
+        "address": "563 Choa Chu Kang Street 52",
+        "areaType": "Multi-Purpose Hall",
+        "info": [
+            "8 Rakaat + Witir",
+            "pending confirmation"
+        ],
+        "district": "west",
+        "coordinates": [
+            1.3960650398953407,
+            103.74568203751656
+        ]
+    },
+    "30": {
+        "id": "30",
+        "address": "660A Choa Chu Kang Crescent",
+        "areaType": "Multi-Purpose Hall",
+        "info": [
+            "8 Rakaat + Witir",
+            "pending confirmation"
+        ],
+        "district": "west",
+        "coordinates": [
+            1.4011397158058552,
+            103.75015532900167
+        ]
+    },
+    "31": {
+        "id": "31",
+        "address": "530 Jurong West Street 52",
+        "areaType": "Void Deck",
+        "info": [
+            "8 Rakaat + Witir",
+            "pending confirmation"
+        ],
+        "district": "west",
+        "coordinates": [
+            1.3486989755220575,
+            103.71551932396699
+        ]
+    },
+    "32": {
+        "id": "32",
+        "address": "404 Pandan Gardens",
+        "areaType": "Void Deck",
+        "info": [
+            "8 Rakaat + Witir",
+            "pending confirmation"
+        ],
+        "district": "west",
+        "coordinates": [
+            1.3199570125162228,
+            103.7497041560137
+        ]
+    },
+    "33": {
+        "id": "33",
+        "address": "432 Jurong West Street 42",
+        "areaType": "Void Deck",
+        "info": [
+            "8 Rakaat + Witir",
+            "pending confirmation"
+        ],
+        "district": "west",
+        "coordinates": [
+            1.3525932414296757,
+            103.72393396450168
+        ]
+    },
+    "34": {
+        "id": "34",
+        "address": "842 Jurong West Street 81",
+        "areaType": "Void Deck",
+        "info": [
+            "8 Rakaat + Witir",
+            "pending confirmation"
+        ],
+        "district": "west",
+        "coordinates": [
+            1.3448449694860543,
+            103.6936180551659
+        ]
+    },
+    "35": {
+        "id": "35",
+        "address": "706 Clementi West Street 2",
+        "areaType": "Void Deck",
+        "info": [
+            "8 Rakaat + Witir",
+            "pending confirmation"
+        ],
+        "district": "west",
+        "coordinates": [
+            1.3070184627766068,
+            103.76238962917854
+        ]
+    },
+    "36": {
+        "id": "36",
+        "address": "189A Boon Lay Drive",
+        "areaType": "Multi-Purpose Hall",
+        "info": [
+            "8 Rakaat + Witir",
+            "1 – 5, 23 – 29 March 2025 ONLY",
+            "pending confirmation"
+        ],
+        "district": "west",
+        "coordinates": [
+            1.3446593636369952,
+            103.71143895600474
+        ]
+    },
+    "37": {
+        "id": "37",
+        "address": "813 Choa Chu Kang Avenue 7",
+        "areaType": "Keat Hong Colours",
+        "info": [
+            "8 Rakaat + Witir",
+            "7, 8, 14, 15, 21, 22, 28, 29 March 2025 ONLY",
+            "pending confirmation"
+        ],
+        "district": "west",
+        "coordinates": [
+            1.374200965137507,
+            103.74493317984494
+        ]
+    },
+    "38": {
+        "id": "38",
+        "address": "508 West Coast Drive",
+        "areaType": "Void Deck",
+        "info": [
+            "8 Rakaat + Witir",
+            "pending confirmation"
+        ],
+        "district": "west",
+        "coordinates": [
+            1.3118888659337131,
+            103.76186623886429
+        ]
+    }
+}
