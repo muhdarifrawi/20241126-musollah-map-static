@@ -20,7 +20,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg" style="background-color:#B9BCBB;">
+    <nav class="navbar navbar-expand-lg" style="background-color:#B9BCBB;z-index: 1001;">
         <div class="container-fluid">
             <a class="navbar-brand" href="/">
                 <img src="/icons/prayhere-logo.png" alt="Logo" width="30" height="24"
@@ -50,6 +50,7 @@
         </div>
     </nav>
     <div id="search-btn" class="btn btn-lg btn-success">Find</div>
+    <div id="qaryah-btn" class="btn btn-lg btn-warning">Nearby Qaryah</div>
     <div id="custom-alert" class="alert alert-info alert-dismissible fade show" role="alert">
         <span class="spinner-border spinner-border-sm" aria-hidden="true" id="spinner"></span>
         <span role="status" id="alert-text" class="ms-1">Searching User Location</span>
@@ -99,6 +100,33 @@
                     </div>
                     <hr>
                     <div id="info-group">
+                        <div class="d-flex justify-content-center">
+                            <div>
+                                <span class="spinner-border spinner-border-sm" aria-hidden="true" id="spinner"></span>
+                                <span role="status" id="alert-text" class="ms-1">Searching Places Within 3km</span>
+                            </div>
+                        </div>
+                        <!-- render via JS -->
+                    </div>
+                </div>
+
+                <!-- <div class="modal-footer" id="search-modal-footer"> -->
+                    <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
+                <!-- </div> -->
+            </div>
+        </div>
+    </div>
+    <div class="modal" tabindex="-1" id="qaryahModal">
+        <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modal-title">
+                        Nearby Qaryah
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="qaryah-modal-body">
+                    <div id="info-group-qaryah">
                         <div class="d-flex justify-content-center">
                             <div>
                                 <span class="spinner-border spinner-border-sm" aria-hidden="true" id="spinner"></span>

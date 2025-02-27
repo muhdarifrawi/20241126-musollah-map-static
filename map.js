@@ -40,6 +40,7 @@ function onLocationFound(e) {
     map.setView(e.latlng, 18);
 
     checkNearby();
+    checkNearbyQaryah();
 
     document.querySelector("#custom-alert").style.display = "none";
 }
@@ -294,11 +295,11 @@ function loadTaraweeh(){
     taraweehMarkers = new L.MarkerClusterGroup();
     axios.get(taraweehURL)
         .then(function (response) {
-            console.log("TARAWEEH DATA: ", response.data);
+            // console.log("TARAWEEH DATA: ", response.data);
             let data = response.data;
             for (const p in data) {
                 let taraweehId = data[p]["id"];
-                taraweehMarkers.addLayer(L.marker([data[p]["coordinates"][0], data[p]["coordinates"][1]], { icon: taraweehIcon, title:`taraweeh-${taraweehId}`})
+                taraweehMarkers.addLayer(L.marker([data[p]["coordinates"][0], data[p]["coordinates"][1]], { icon: taraweehIcon, title:`qaryah-${taraweehId}`})
                     .bindPopup(`<span>Qaryah ${data[p]["id"]}</span>
                     <br><a href="#" id="taraweeh-${p}">see more ...</a>`));
 
@@ -317,7 +318,7 @@ function loadTaraweeh(){
                 });
             }
             map.addLayer(taraweehMarkers);
-            layerControl.addOverlay(taraweehMarkers, "Taraweeh");
+            layerControl.addOverlay(taraweehMarkers, "Qaryah");
         })
 }
 
