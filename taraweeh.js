@@ -88,7 +88,7 @@ function renderQaryahCards(sortedData) {
     // console.log(Object.keys(sortedDistData).length == 0);
     // console.log(Object.keys(sortedDistData).length);
     // console.log(`render count ${renderCount}`);
-    console.log(sortedDistDataQaryah);
+    // console.log(sortedDistDataQaryah);
     if (Object.keys(sortedData).length != 0) {
         // clear info grp before populating again
         infoGrp.innerHTML = `<h5 class="mb-3">Within 3 km</h5>`;
@@ -167,7 +167,7 @@ document.addEventListener("DOMContentLoaded", async() => {
     // let searchModal = document.querySelector("#searchModal");
 
     qaryahBtn.addEventListener("click", () => {
-        console.log("clicked");
+        // console.log("clicked");
 
         qaryahModal.show();
         renderQaryahCards(sortedDistDataQaryah);
