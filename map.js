@@ -179,16 +179,17 @@ function loadMosques() {
             // console.log("MOSQUE DATA: ", response.data);
             let data = response.data;
             for (const p in data) {
+                let mosqueId = data[p]["id"];
                 const popup = L.popup().setContent('The New Delight');
-                popup.markerid = `musollah-${p}`
+                popup.markerid = `mosque-${mosqueId}`
                 mosqueMarkers.addLayer(L.marker(
-                    [data[p]["coordinates"][0], data[p]["coordinates"][1]], { icon: moqueIcon , title:`mosque-${p}`})
+                    [data[p]["coordinates"][0], data[p]["coordinates"][1]], { icon: moqueIcon , title:`mosque-${mosqueId}`})
                     .bindPopup(`<span>${data[p]["mosque"]}</span>
                         <br><a href="#" id="mosque-${p}">see more ...</a>`)
                     .openPopup());
 
                 map.on('popupopen', () => {
-                    const link = document.querySelector(`#mosque-${p}`);
+                    const link = document.querySelector(`#mosque-${mosqueId}`);
                     if (link) {
                         link.addEventListener('click', (event) => {
                             event.preventDefault();
@@ -216,14 +217,15 @@ function loadMusollah() {
             // console.log("MUSOLLAH DATA: ", response.data);
             let data = response.data;
             for (const p in data) {
-                musollahMarkers.addLayer(L.marker([data[p]["coordinates"][0], data[p]["coordinates"][1]], { icon: musollahIcon, title:`musollah-${p}`})
+                let musollahId = data[p]["id"];
+                musollahMarkers.addLayer(L.marker([data[p]["coordinates"][0], data[p]["coordinates"][1]], { icon: musollahIcon, title:`musollah-${musollahId}`})
                     .bindPopup(`<span>${data[p]["name"]}</span>
                     <br><a href="#" id="musollah-${p}">see more ...</a>`));
 
                 // console.log("musollah-" + p)
 
                 map.on('popupopen', () => {
-                    const link = document.querySelector(`#musollah-${p}`);
+                    const link = document.querySelector(`#musollah-${musollahId}`);
                     if (link) {
                         link.addEventListener('click', (event) => {
                             event.preventDefault();
