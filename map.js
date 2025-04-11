@@ -5,19 +5,16 @@ let layerControl;
 
 let mosqueURL;
 let musollahURL;
-let taraweehURL;
 
 let state = "dev";
 
 if (state == "dev") {
     mosqueURL = "data/mosque.json";
     musollahURL = "data/musollah.json";
-    taraweehURL = "data/qaryah-sq-2025.json";
 }
 else {
     mosqueURL = "https://raw.githubusercontent.com/muhdarifrawi/20241126-musollah-map-static/refs/heads/master/data/mosque.json";
     musollahURL = "https://raw.githubusercontent.com/muhdarifrawi/20241126-musollah-map-static/refs/heads/master/data/musollah.json";
-    taraweehURL = "data/qaryah-sq-2025.json";
 }
 
 
@@ -40,7 +37,6 @@ function onLocationFound(e) {
     map.setView(e.latlng, 18);
 
     checkNearby();
-    checkNearbyQaryah();
 
     document.querySelector("#custom-alert").style.display = "none";
 }
@@ -69,7 +65,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     // loadMusollah(country);
     loadMosques();
     loadMusollah();
-    loadTaraweeh();
+    // loadTaraweeh();
 });
 
 
@@ -171,45 +167,7 @@ function openModalMosque(data) {
     modalMosqueTypeEl.innerText = `${data["mosqueType"]}`;
 }
 
-function openModalTaraweeh(data) {
-    console.log("modal open", data);
-    const myModal = new bootstrap.Modal('#myModal', {
-        keyboard: false
-    })
-    const modalToggle = document.getElementById('toggleMyModal');
-    myModal.show(modalToggle);
 
-    let modalBodyEl = document.querySelector("#modal-body");
-
-    modalBodyEl.innerHTML = `
-        <h6>Address</h6>
-        <p id="modal-address"></p>
-        <h6>Area Type</h6>
-        <p id="modal-area-type"></p>
-        <h6>Infos</h6>
-        <ol id="modal-infos"></ol>
-    `;
-
-    let modalTitleEl = document.querySelector("#modal-title");
-    let modalAddressEl = document.querySelector("#modal-address");
-    let modalAreaTypeEl = document.querySelector("#modal-area-type");
-    let modalInfosEl = document.querySelector("#modal-infos");
-    let modalButtonsArea = document.querySelector("#modal-footer");
-
-    modalTitleEl.innerHTML = `Qaryah ${data["id"]}`;
-    modalAddressEl.innerText = `${data["address"]}`;
-    modalAreaTypeEl.innerText = `${data["areaType"]}`;
-    data["info"].forEach((e) => {
-        modalInfosEl.innerHTML += `<li>${e}</li>`
-    });
-
-    modalButtonsArea.innerHTML = `
-                    <a href="http://maps.apple.com/?daddr='${data["address"]}'" target="_blank" role="button" class="btn btn-success">Apple Navigation</a>
-                    <a href="https://www.google.com/maps/dir/?api=1&destination='${data["address"]}'" target="_blank" role="button" class="btn btn-success">Google Navigation</a>
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>`
-
-
-}
 
 function loadMosques() {
     var moqueIcon = L.icon({
@@ -285,40 +243,4 @@ function loadMusollah() {
         })
 }
 
-function loadTaraweeh(){
-    var taraweehIcon = L.icon({
-        iconUrl: 'icons/prayer-rug.png',
-
-        iconSize: [36, 36], // size of the icon
-        popupAnchor: [0, -14] // point from which the popup should open relative to the iconAnchor
-    });
-    taraweehMarkers = new L.MarkerClusterGroup();
-    axios.get(taraweehURL)
-        .then(function (response) {
-            // console.log("TARAWEEH DATA: ", response.data);
-            let data = response.data;
-            for (const p in data) {
-                let taraweehId = data[p]["id"];
-                taraweehMarkers.addLayer(L.marker([data[p]["coordinates"][0], data[p]["coordinates"][1]], { icon: taraweehIcon, title:`qaryah-${taraweehId}`})
-                    .bindPopup(`<span>Qaryah ${data[p]["id"]}</span>
-                    <br><a href="#" id="taraweeh-${p}">see more ...</a>`));
-
-                // console.log("musollah-" + p)
-
-                map.on('popupopen', () => {
-                    const link = document.querySelector(`#taraweeh-${taraweehId}`);
-                    if (link) {
-                        link.addEventListener('click', (event) => {
-                            event.preventDefault();
-                            // console.log('Clicked link id:', event.target.id);
-                            console.log("taraweeh modal");
-                            openModalTaraweeh(data[p])
-                        });
-                    }
-                });
-            }
-            map.addLayer(taraweehMarkers);
-            layerControl.addOverlay(taraweehMarkers, "Qaryah");
-        })
-}
 
