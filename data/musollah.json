@@ -1,86 +1,145 @@
 {
-	"0": {
-		"name": "Tampines Mall",
-		"address": [
-			"4 Tampines Central 5, Singapore 529510",
-			"3rd Floor"
-		],
-		"layoutType": "Separated",
-		"layoutDescription": "Small cubicle like room. Can fit two Muslims.",
-		"status": "Opened",
-		"statusDescription": "Opening Hours are as per Mall hours.",
-		"wudhuArea": "Wudhu area is along the same corridor. Small, can only fit one at a time.",
-		"directions": [
-			"Keep in mind that the Musollah is close to the main entrance lift lobby of the Mall.",
-			"Enter Tampines mall and head to level 3.",
-			"Walk past the lift lobby between shops 03-23 and 03-24 (Prism and Uniqlo as of writing) to the toilet entrance.",
-			"You will see a cubicle with no doors."
-		],
-		"prayerItems": "Yes. But advised to carry your own.",
-		"images": "",
-		"importantNotes": "",
-		"coordinates": [
-			1.3527084189572554,
-			103.94466246748033
-		],
-		"country": "singapore",
-		"id": "0"
-	},
-	"1": {
-		"name": "International Plaza",
-		"address": [
-			"10 Anson Rd, #20-05 International Plaza, Singapore 079903",
-			"7th Floor"
-		],
-		"layoutType": "Combined",
-		"layoutDescription": "Small open spaced area in a carpark lot.",
-		"status": "Opened",
-		"statusDescription": "Opening Hours are as per Mall hours.",
-		"wudhuArea": "Wudhu to be taken in Toilet.",
-		"directions": [
-			"Keep in mind that the lifts are confusing. Use the lift nearer to the main entrance that serves till level 10 only.",
-			"Head up to level 7 via the main entrance lift.",
-			"Walk out of the lift lobby and turn right.",
-			"You should see a glass block wall and some metal cupboards.",
-			"Be mindful to remove your shoes before stepping on to the wood veneers."
-		],
-		"prayerItems": "Yes. But advised to carry your own.",
-		"images": [
-			"https://ucarecdn.com/85d00500-afb1-4105-919f-c3ad72b02634/international_plaza_photo_3_20241127_120600.jpg",
-			"https://ucarecdn.com/0505115b-bdeb-431d-9da7-4dbfc88d3188/international_plaza_photo_2_20241127_120600.jpg",
-			"https://ucarecdn.com/30fa6fac-7ba0-46c1-99d6-5776d9949e29/international_plaza_photo_1_20241127_120600.jpg",
-			"https://ucarecdn.com/17e53dd7-c6dc-454c-8dba-dbaa488ccbba/international_plaza_photo_4_20241127_120600.jpg"
-		],
-		"importantNotes": "",
-		"coordinates": [
-			1.2761446986302132,
-			103.84583528491281
-		],
-		"country": "singapore",
-		"id": "1"
-	},
-	"2": {
-		"name": "Singapore General Hospital (SGH) Surau",
-		"address": [
-			"10 College Rd, Singapore 169851",
-			""
-		],
-		"layoutType": "Shared (Partitioned)",
-		"layoutDescription": "",
-		"status": "Opened",
-		"statusDescription": "Opening Hours are as per Mall hours.",
-		"wudhuArea": "Built-In",
-		"directions": [
-			"In SGH Campus."
-		],
-		"prayerItems": "Provided. But advised to carry your own.",
-		"images": [],
-		"importantNotes": "",
-		"coordinates": [
-			1.2818897,
-			103.8349575
-		],
-		"country": "singapore",
-		"id": "2"
-	}
+    "0": {
+        "name": "Tampines Mall",
+        "address": [
+            "4 Tampines Central 5, Singapore 529510",
+            "3rd Floor"
+        ],
+        "layoutType": "Separated",
+        "layoutDescription": "Small cubicle like room. Can fit two Muslims.",
+        "status": "Opened",
+        "statusDescription": "Opening Hours are as per Mall hours.",
+        "wudhuArea": "Wudhu area is along the same corridor. Small, can only fit one at a time.",
+        "directions": [
+            "Keep in mind that the Musollah is close to the main entrance lift lobby of the Mall.",
+            "Enter Tampines mall and head to level 3.",
+            "Walk past the lift lobby between shops 03-23 and 03-24 (Prism and Uniqlo as of writing) to the toilet entrance.",
+            "You will see a cubicle with no doors."
+        ],
+        "prayerItems": "Yes. But advised to carry your own.",
+        "images": "",
+        "importantNotes": "",
+        "coordinates": [
+            1.3527084189572554,
+            103.94466246748033
+        ],
+        "country": "singapore",
+        "id": "0"
+    },
+    "1": {
+        "name": "International Plaza",
+        "address": [
+            "10 Anson Rd, #20-05 International Plaza, Singapore 079903",
+            "7th Floor"
+        ],
+        "layoutType": "Combined",
+        "layoutDescription": "Small open spaced area in a carpark lot.",
+        "status": "Opened",
+        "statusDescription": "Opening Hours are as per Mall hours.",
+        "wudhuArea": "Wudhu to be taken in Toilet.",
+        "directions": [
+            "Keep in mind that the lifts are confusing. Use the lift nearer to the main entrance that serves till level 10 only.",
+            "Head up to level 7 via the main entrance lift.",
+            "Walk out of the lift lobby and turn right.",
+            "You should see a glass block wall and some metal cupboards.",
+            "Be mindful to remove your shoes before stepping on to the wood veneers."
+        ],
+        "prayerItems": "Yes. But advised to carry your own.",
+        "images": [
+            "https://ucarecdn.com/85d00500-afb1-4105-919f-c3ad72b02634/international_plaza_photo_3_20241127_120600.jpg",
+            "https://ucarecdn.com/0505115b-bdeb-431d-9da7-4dbfc88d3188/international_plaza_photo_2_20241127_120600.jpg",
+            "https://ucarecdn.com/30fa6fac-7ba0-46c1-99d6-5776d9949e29/international_plaza_photo_1_20241127_120600.jpg",
+            "https://ucarecdn.com/17e53dd7-c6dc-454c-8dba-dbaa488ccbba/international_plaza_photo_4_20241127_120600.jpg"
+        ],
+        "importantNotes": "",
+        "coordinates": [
+            1.2761446986302132,
+            103.84583528491281
+        ],
+        "country": "singapore",
+        "id": "1"
+    },
+    "2": {
+        "name": "Singapore General Hospital (SGH) Surau",
+        "address": [
+            "10 College Rd, Singapore 169851",
+            ""
+        ],
+        "layoutType": "Shared (Partitioned)",
+        "layoutDescription": "",
+        "status": "Opened",
+        "statusDescription": "Opening Hours are as per Mall hours.",
+        "wudhuArea": "Built-In",
+        "directions": [
+            "In SGH Campus."
+        ],
+        "prayerItems": "Provided. But advised to carry your own.",
+        "images": [],
+        "importantNotes": "",
+        "coordinates": [
+            1.2818897,
+            103.8349575
+        ],
+        "country": "singapore",
+        "id": "2"
+    },
+    "3": {
+        "name": "Wisma Geylang Serai",
+        "address": [
+            "1 Engku Aman Turn, Singapore 408528",
+            "3rd Floor"
+        ],
+        "layoutType": "shared (partitioned)",
+        "layoutDescription": "A large room with two separate rooms for Muslimin and Muslimah. Separate ablution area inside.",
+        "status": "opened",
+        "statusDescription": "Opened from 12 Noon to 10 PM.",
+        "wudhuArea": "built-in",
+        "directions": [
+            "Take the lift to level 3.",
+            "If you took the service lift, you should see NTUC Health as you exit the lift.",
+            "Turn right and there should be a view of the SingPost centre. Walk towards that direction and turn right again. You should see the musollah door.",
+            "If you took the glass lift, turn right and walk towards NTUC Health. It's right at the end."
+        ],
+        "prayerItems": "Not provided. Please bring your own.",
+        "images": [
+            ""
+        ],
+        "importantNotes": "",
+        "coordinates": [
+            "1.3167297707542218",
+            "103.89656889518847"
+        ],
+        "country": "singapore",
+        "id": "3"
+    },
+    "4": {
+        "name": "E!Hub",
+        "address": [
+            "1 Pasir Ris Cl, Singapore 519599",
+            "1st Floor"
+        ],
+        "layoutType": "separated (within area)",
+        "layoutDescription": "Two small rooms with designated entrance for Muslimin and Muslimah.",
+        "status": "opened",
+        "statusDescription": "Opening hours not stated.",
+        "wudhuArea": "built-in",
+        "directions": [
+            "Locate E!Hub McDonalds at Level 1.",
+            "Once located, walk through between the McDonalds and the escalator. ",
+            "It should lead you to the loading bay but do not go there. ",
+            "The Muslimin entrance will be on your immediate right.",
+            "The Muslimah entrance is on the right turn after, towards the direction of the toilet."
+        ],
+        "prayerItems": "Provided. But advised to carry your own.",
+        "images": [
+            ""
+        ],
+        "importantNotes": "",
+        "coordinates": [
+            "1.3761847877127655",
+            "103.95554230868083"
+        ],
+        "country": "singapore",
+        "id": "4"
+    }
 }
