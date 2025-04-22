@@ -1,1 +1,40 @@
-{"0":{"mosque":"Abdul Aleem Siddique","address":"90 Lorong K Telok Kurau Singapore 425723","telephoneNumber":"6346 0153","mosqueType":"Wakaf","coordinates":[1.3133258190400678,103.91276928282251],"country":"singapore","id":"0"},"1":{"name":"test","address":["",""],"layoutType":"","layoutDescription":"","status":"","statusDescription":"","wudhuArea":"","directions":[""],"prayerItems":"","images":[""],"importantNotes":"","coordinates":["",""],"country":"","id":""}}
+{
+    "0": {
+        "mosque": "Abdul Aleem Siddique",
+        "address": "90 Lorong K Telok Kurau Singapore 425723",
+        "telephoneNumber": "6346 0153",
+        "mosqueType": "Wakaf",
+        "coordinates": [
+            1.3133258190400678,
+            103.91276928282251
+        ],
+        "country": "singapore",
+        "id": "0"
+    },
+    "1": {
+        "name": "test",
+        "address": [
+            "",
+            ""
+        ],
+        "layoutType": "",
+        "layoutDescription": "",
+        "status": "",
+        "statusDescription": "",
+        "wudhuArea": "",
+        "directions": [
+            ""
+        ],
+        "prayerItems": "",
+        "images": [
+            ""
+        ],
+        "importantNotes": "",
+        "coordinates": [
+            "",
+            ""
+        ],
+        "country": "",
+        "id": ""
+    }
+}
