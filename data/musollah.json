@@ -5,6 +5,7 @@
             "4 Tampines Central 5, Singapore 529510",
             "3rd Floor"
         ],
+        "areaCapacity": 2,
         "layoutType": "Separated",
         "layoutDescription": "Small cubicle like room. Can fit two Muslims.",
         "status": "Opened",
@@ -32,6 +33,7 @@
             "10 Anson Rd, #20-05 International Plaza, Singapore 079903",
             "7th Floor"
         ],
+        "areaCapacity": 4,
         "layoutType": "Combined",
         "layoutDescription": "Small open spaced area in a carpark lot.",
         "status": "Opened",
@@ -89,6 +91,7 @@
             "1 Engku Aman Turn, Singapore 408528",
             "3rd Floor"
         ],
+        "areaCapacity": 15,
         "layoutType": "shared (partitioned)",
         "layoutDescription": "A large room with two separate rooms for Muslimin and Muslimah. Separate ablution area inside.",
         "status": "opened",
@@ -118,6 +121,7 @@
             "1 Pasir Ris Cl, Singapore 519599",
             "1st Floor"
         ],
+        "areaCapacity": 3,
         "layoutType": "separated (within area)",
         "layoutDescription": "Two small rooms with designated entrance for Muslimin and Muslimah.",
         "status": "opened",
