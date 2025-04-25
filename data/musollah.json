@@ -145,5 +145,35 @@
         ],
         "country": "singapore",
         "id": "4"
+    },
+    "5": {
+        "name": "Raffles City",
+        "address": [
+            "252 N Bridge Rd, Singapore 179103",
+            "2nd Floor"
+        ],
+        "areaCapacity": "5",
+        "layoutType": "separated (within area)",
+        "layoutDescription": "Separate entrance for Muslimin and Muslimah. Both within visible distance from each other.",
+        "status": "opened",
+        "statusDescription": "Opening Hours follows mall operating hours.",
+        "wudhuArea": "nearest toilet",
+        "directions": [
+            "Get to level 2 and walk towards the direction of Fairmont Hotel Singapore. ",
+            "If you came from the direction of Raffles City mall, you should see a fairly opened space with carpeted steps on your left.",
+            "Ahead, you should see the two false walls a distant apart.",
+            "Muslimah entrance on the left and Muslimin entrance on the right."
+        ],
+        "prayerItems": "Provided. But advised to carry your own.",
+        "images": [
+            ""
+        ],
+        "importantNotes": "The male toilet has an ablution area made from the janitor room as of writing. Unfortunately there isn't one in the female toilet.",
+        "coordinates": [
+            "1.2941816162836781",
+            "103.85322239709556"
+        ],
+        "country": "singapore",
+        "id": "5"
     }
 }
