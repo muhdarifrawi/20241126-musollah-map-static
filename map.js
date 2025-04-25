@@ -70,12 +70,15 @@ document.addEventListener("DOMContentLoaded", (event) => {
 });
 
 function largeImageModal(url) {
+    console.log("click");
     // document.querySelectorAll('.modal-backdrop').forEach(el => el.remove());
-    const largeImageModalEl = new bootstrap.Modal('#large-image-modal', {
-        keyboard: false
-    })
+    // const largeImageModalEl = new bootstrap.Modal('#large-image-modal', {
+    //     keyboard: false
+    // })
 
-    largeImageModalEl.show();
+    // largeImageModalEl.show();
+    let largeImageModalEl = document.querySelector("#large-image-modal");
+    largeImageModalEl.style.display = "block";
     
     let modalImageBodyEl = document.querySelector("#modal-image-body");
     let closeButton = document.querySelector("#back-to-main");
@@ -87,16 +90,17 @@ function largeImageModal(url) {
     `;
 
     closeButton.addEventListener('click', function () {
-        const imageModalInstance = bootstrap.Modal.getInstance(document.getElementById('large-image-modal'));
-        imageModalInstance.hide();
-        const mainModal = new bootstrap.Modal(document.getElementById('myModal'));
-        mainModal.show();
-        document.querySelectorAll('.modal-backdrop').forEach(el => el.remove());
+        // const imageModalInstance = bootstrap.Modal.getInstance(document.getElementById('large-image-modal'));
+        // imageModalInstance.hide();
+        // const mainModal = new bootstrap.Modal(document.getElementById('myModal'));
+        // mainModal.show();
+        // document.querySelectorAll('.modal-backdrop').forEach(el => el.remove());
+        largeImageModalEl.display = "none";
     })
 }
 
 function openModalMusollah(data) {
-    // console.log("modal open", data);
+    // // console.log("modal open", data);
     const myModal = new bootstrap.Modal('#myModal', {
         keyboard: false
     })
@@ -176,15 +180,15 @@ function openModalMusollah(data) {
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>`
 
     modalImagesEl.addEventListener("click", (event) => {
-        console.log(event.target.src);
-        const mainModal = bootstrap.Modal.getInstance(document.getElementById('myModal'));
-        mainModal.hide();
+        // // console.log(event.target.src);
+        // const mainModal = bootstrap.Modal.getInstance(document.getElementById('myModal'));
+        // mainModal.hide();
         largeImageModal(event.target.src);
     })
 }
 
 function openModalMosque(data) {
-    // console.log("modal open", data);
+    // // console.log("modal open", data);
     const myModal = new bootstrap.Modal('#myModal', {
         keyboard: false
     });
@@ -219,7 +223,7 @@ function loadMosques() {
     mosqueMarkers = new L.MarkerClusterGroup();
     axios.get(mosqueURL)
         .then(function (response) {
-            // console.log("MOSQUE DATA: ", response.data);
+            // // console.log("MOSQUE DATA: ", response.data);
             let data = response.data;
             for (const p in data) {
                 let mosqueId = data[p]["id"];
@@ -236,7 +240,7 @@ function loadMosques() {
                     if (link) {
                         link.addEventListener('click', (event) => {
                             event.preventDefault();
-                            // console.log('Clicked link id:', event.target.id);
+                            // // console.log('Clicked link id:', event.target.id);
                             openModalMosque(data[p])
                         });
                     }
@@ -257,7 +261,7 @@ function loadMusollah() {
     musollahMarkers = new L.MarkerClusterGroup();
     axios.get(musollahURL)
         .then(function (response) {
-            // console.log("MUSOLLAH DATA: ", response.data);
+            // // console.log("MUSOLLAH DATA: ", response.data);
             let data = response.data;
             for (const p in data) {
                 let musollahId = data[p]["id"];
@@ -265,14 +269,14 @@ function loadMusollah() {
                     .bindPopup(`<span>${data[p]["name"]}</span>
                     <br><a href="#" id="musollah-${p}">see more ...</a>`));
 
-                // console.log("musollah-" + p)
+                // // console.log("musollah-" + p)
 
                 map.on('popupopen', () => {
                     const link = document.querySelector(`#musollah-${musollahId}`);
                     if (link) {
                         link.addEventListener('click', (event) => {
                             event.preventDefault();
-                            // console.log('Clicked link id:', event.target.id);
+                            // // console.log('Clicked link id:', event.target.id);
                             openModalMusollah(data[p])
                         });
                     }

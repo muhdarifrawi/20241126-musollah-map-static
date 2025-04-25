@@ -25,6 +25,12 @@
     z-index: 10000;
 }
 
+#large-image-modal {
+    z-index: 10002;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+}
+
 #search-btn {
     position: absolute;
     top: 68px;

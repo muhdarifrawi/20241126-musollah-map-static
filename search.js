@@ -36,14 +36,14 @@ async function fetchData() {
 
     await axios.all(searchEndpoints.map((endpoint) => axios.get(endpoint))).then(
         (response) => {
-            // console.log(response);
+            // // console.log(response);
             // let country = "singapore";
             mosqueData = response[0]["data"];
             musollahData = response[1]["data"];
         }
     );
-    console.log(musollahData);
-    console.log(mosqueData);
+    // console.log(musollahData);
+    // console.log(mosqueData);
     // checkAddress();
     // checkNearby();
 }
@@ -53,38 +53,38 @@ function checkAddress() {
     let searchTerm = "tampi";
     const regex = new RegExp(`/${searchTerm}/`);
     // const testString = "Your word here";
-    // console.log(regex.test(testString)); // true or false
+    // // console.log(regex.test(testString)); // true or false
 
     for (const k in mosqueData) {
         let arrData = mosqueData["singapore"][k]["address"].toLowerCase().split(" ");
 
         arrData.filter((word) => {
             if (regex.test(word)) {
-                console.log("mosque data", k);
-                console.log(word, regex.test(word))
+                // console.log("mosque data", k);
+                // console.log(word, regex.test(word))
             }
 
         });
 
         if (arrData.includes(searchTerm)) {
-            console.log("searchTerm >>>", searchTerm);
-            console.log(mosqueData[k]["address"]);
+            // console.log("searchTerm >>>", searchTerm);
+            // console.log(mosqueData[k]["address"]);
             results.push(mosqueData[k])
         }
     }
     if (results.length == 0) {
-        console.log("No results found.");
+        // console.log("No results found.");
     }
 }
 
 function checkNearby() {
-    console.log("===== Checking Nearby =====");
-    console.log("mosque data >>>");
-    console.log(mosqueData);
-    console.log("===== Mosque Markers ====");
-    console.log(mosqueMarkers);
-    console.log("musollah data >>>");
-    console.log(musollahData);
+    // console.log("===== Checking Nearby =====");
+    // console.log("mosque data >>>");
+    // console.log(mosqueData);
+    // console.log("===== Mosque Markers ====");
+    // console.log(mosqueMarkers);
+    // console.log("musollah data >>>");
+    // console.log(musollahData);
 
     const radius = 3000; // in meters
 
@@ -93,11 +93,11 @@ function checkNearby() {
         const userLocation = L.latLng(position.coords.latitude, position.coords.longitude);
         // let distanceData = {};
         for (mosqueIndex in mosqueData) {
-            // console.log(mosqueIndex);
+            // // console.log(mosqueIndex);
             for (i in mosqueData[mosqueIndex]) {
-                // console.log(mosqueIndex);
+                // // console.log(mosqueIndex);
                 let obj = mosqueData[mosqueIndex];
-                // console.log(obj);
+                // // console.log(obj);
                 let locationName = obj["mosque"] || obj["name"]
                 let lat = obj["coordinates"][0];
                 let long = obj["coordinates"][1];
@@ -111,11 +111,11 @@ function checkNearby() {
         }
 
         for (musollahIndex in musollahData) {
-            // console.log(musollahIndex);
+            // // console.log(musollahIndex);
             for (i in musollahData[musollahIndex]) {
-                // console.log(musollahIndex);
+                // // console.log(musollahIndex);
                 let obj = musollahData[musollahIndex];
-                // console.log(obj);
+                // // console.log(obj);
                 let locationName = obj["mosque"] || obj["name"]
                 let lat = obj["coordinates"][0];
                 let long = obj["coordinates"][1];
@@ -127,21 +127,21 @@ function checkNearby() {
                 }
             }
         }
-        console.log("=== compiled distance data ===");
-        console.log(distanceData);
+        // console.log("=== compiled distance data ===");
+        // console.log(distanceData);
         // renderCards(distanceData);
         sortingData = Object.keys(distanceData)
             .sort((a, b) => {
-                console.log(a, b);
+                // console.log(a, b);
                 return parseInt(a) - parseInt(b);
             })
             .reduce((Obj, key) => {
                 Obj[key] = distanceData[key];
                 return Obj;
             }, {});
-        console.log(">>>", sortedDistData);
+        // console.log(">>>", sortedDistData);
         sortedDistData = sortingData;
-        console.log(">>>", sortedDistData);
+        // console.log(">>>", sortedDistData);
         // renderCards(sortedDistData);
     }, (error) => {
         console.error('Error fetching user location:', error.message);
@@ -155,15 +155,15 @@ function findMarker() {
 function locatePlace(event) {
     let coordinates = event.target.dataset.coordinates;
     let locationId;
-    console.log(event.target.dataset);
+    // console.log(event.target.dataset);
     if (event.target.dataset.mosqueId) {
         locationId = event.target.dataset.mosqueId;
     }
     else if (event.target.dataset.musollahId) {
         locationId = event.target.dataset.musollahId;
     }
-    console.log("LOCATION ID >>>> ", locationId);
-    console.log("LOCATE PLACE COORDINATES >>>", coordinates);
+    // console.log("LOCATION ID >>>> ", locationId);
+    // console.log("LOCATE PLACE COORDINATES >>>", coordinates);
     // map.panTo([coordinates.split(",")[0], coordinates.split(",")[1]]).marker().openPopup();
     map.panTo([coordinates.split(",")[0], coordinates.split(",")[1]]);
     myModal.hide();
@@ -172,20 +172,20 @@ function locatePlace(event) {
 }
 
 function renderCards(sortedData) {
-    console.log("render cards")
+    // console.log("render cards")
     let infoGrp = document.querySelector("#info-group");
-    // console.log(Object.keys(sortedDistData));
-    // console.log(Object.keys(sortedDistData).length == 0);
-    // console.log(Object.keys(sortedDistData).length);
-    console.log(`render count ${renderCount}`);
-    console.log(sortedData);
+    // // console.log(Object.keys(sortedDistData));
+    // // console.log(Object.keys(sortedDistData).length == 0);
+    // // console.log(Object.keys(sortedDistData).length);
+    // console.log(`render count ${renderCount}`);
+    // console.log(sortedData);
     if (Object.keys(sortedData).length != 0) {
         // clear info grp before populating again
         infoGrp.innerHTML = `<h5 class="mb-3">Within 3 km</h5>`;
 
         for (each in sortedData) {
-            console.log(each);
-            console.log("type >>> ", sortedData[each]["type"]);
+            // console.log(each);
+            // console.log("type >>> ", sortedData[each]["type"]);
             let type;
             if (sortedData[each]["type"] == "mosque") {
                 type = "mosque";
@@ -233,7 +233,7 @@ function renderCards(sortedData) {
     else {
         renderCount++;
         setTimeout(() => {
-            console.log("timeout")
+            // console.log("timeout")
             renderCards(sortedDistData);
         }, 5000);
 
@@ -242,25 +242,25 @@ function renderCards(sortedData) {
 }
 
 function renderSearchCards(data) {
-    console.log("render search cards")
+    // console.log("render search cards")
     let searchGrp = document.querySelector("#search-group");
     searchGrp.innerHTML = `<div>
                                 <span class="spinner-border spinner-border-sm" aria-hidden="true" id="spinner"></span>
                                 <span role="status" id="alert-text" class="ms-1">Searching Places Within 3km</span>
                             </div>`;
     
-    // console.log(Object.keys(sortedDistData));
-    // console.log(Object.keys(sortedDistData).length == 0);
-    // console.log(Object.keys(sortedDistData).length);
-    // console.log(`render count ${renderCount}`);
-    console.log(data);
+    // // console.log(Object.keys(sortedDistData));
+    // // console.log(Object.keys(sortedDistData).length == 0);
+    // // console.log(Object.keys(sortedDistData).length);
+    // // console.log(`render count ${renderCount}`);
+    // console.log(data);
     if (Object.keys(data).length != 0) {
         // clear info grp before populating again
         searchGrp.innerHTML = "";
 
         for (each in data) {
-            console.log(each);
-            // console.log("type >>> ", data[each]["type"]);
+            // console.log(each);
+            // // console.log("type >>> ", data[each]["type"]);
             let type;
             let name;
             if (data[each]["mosque"]) {
@@ -305,7 +305,7 @@ function renderSearchCards(data) {
     // else {
     //     renderCount++;
     //     setTimeout(() => {
-    //         console.log("timeout")
+    //         // console.log("timeout")
     //         renderCards(sortedDistData);
     //     }, 5000);
 
@@ -322,7 +322,7 @@ function renderSearchCards(data) {
 }
 
 function search() {
-    console.log("search triggered");
+    // console.log("search triggered");
     let searchString = document.getElementById("search-query").value;
 
     let searchName = true;
@@ -330,15 +330,15 @@ function search() {
 
     let foundInfo = [];
     // let searchString = "Ghufran"
-    // console.log(mosqueData);
+    // // console.log(mosqueData);
     for (each in mosqueData) {
         let mosqueName = mosqueData[each]["mosque"];
         let mosqueAddress = mosqueData[each]["address"];
-        // console.log(mosqueName);
+        // // console.log(mosqueName);
         let searchNameData;
         let searchAddressData;
         if (searchName && mosqueName.toString().toLowerCase().indexOf(searchString.toLowerCase()) >= 0) {
-            console.log("FOUND MOSQUE A >>> ", mosqueData[each]);
+            // console.log("FOUND MOSQUE A >>> ", mosqueData[each]);
             // foundInfo.push(mosqueData[each]);
             // if (!foundInfo.some(info => info.id === mosqueData[each]["id"])) {
             //     foundInfo.push(mosqueData[each]);
@@ -347,7 +347,7 @@ function search() {
         };
 
         if (searchAddress && mosqueAddress.toString().toLowerCase().indexOf(searchString.toLowerCase()) >= 0) {
-            console.log("FOUND MOSQUE B >>> ", mosqueData[each]);
+            // console.log("FOUND MOSQUE B >>> ", mosqueData[each]);
             // foundInfo.push(mosqueData[each]);
             // if (!foundInfo.some(info => info.id === mosqueData[each]["id"])) {
             //     foundInfo.push(mosqueData[each]);
@@ -369,11 +369,11 @@ function search() {
     for (each in musollahData) {
         let musollahName = musollahData[each]["name"];
         let musollahAddress = musollahData[each]["address"];
-        // console.log(mosqueName);
+        // // console.log(mosqueName);
         let searchNameData;
         let searchAddressData;
         if (searchName && musollahName.toString().toLowerCase().indexOf(searchString.toLowerCase()) >= 0) {
-            console.log("FOUND MUSOLLAH A >>> ", musollahData[each]);
+            // console.log("FOUND MUSOLLAH A >>> ", musollahData[each]);
             // foundInfo.push(musollahData[each]);
             // if (!foundInfo.some(info => info.id === musollahData[each]["id"])) {
             //     foundInfo.push(mosqueData[each]);
@@ -382,7 +382,7 @@ function search() {
         };
 
         if (searchAddress && musollahAddress.toString().toLowerCase().indexOf(searchString.toLowerCase()) >= 0) {
-            console.log("FOUND MUSOLLAH B >>> ", musollahData[each]);
+            // console.log("FOUND MUSOLLAH B >>> ", musollahData[each]);
             // foundInfo.push(musollahData[each]);
             // if (!foundInfo.some(info => info.id === musollahData[each]["id"])) {
             //     foundInfo.push(mosqueData[each]);
@@ -401,20 +401,20 @@ function search() {
         }
     }
 
-    console.log(foundInfo);
+    // console.log(foundInfo);
     renderSearchCards(foundInfo);
 }
 
 document.addEventListener("DOMContentLoaded", async () => {
     await fetchData();
 
-    console.log("SEARCH CONTENT LOADING");
+    // console.log("SEARCH CONTENT LOADING");
 
     let searchBtn = document.querySelector("#search-btn");
     let searchModal = document.querySelector("#searchModal");
 
     searchBtn.addEventListener("click", () => {
-        console.log("clicked");
+        // console.log("clicked");
         // checkNearby();
 
         myModal.show();
