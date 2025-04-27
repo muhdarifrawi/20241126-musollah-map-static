@@ -109,7 +109,7 @@ function openModalMusollah(data) {
     let modalBodyEl = document.querySelector("#modal-body");
 
     modalBodyEl.innerHTML = `
-        <h6 class="fw-bold">Images (${data["images"].length}) </h6>
+        <h6 class="fw-bold">Images (${data["images"].length != 0 && data["images"][0] != "" ? data["images"].length : "0"}) </h6>
         <div id="modal-images" class="d-flex overflow-x-scroll"></div>
         <h6 class="fw-bold mt-3">Address</h6>
         <p id="modal-address"></p>
@@ -156,7 +156,7 @@ function openModalMusollah(data) {
     }
 
     modalTitleEl.innerHTML = `${data["name"]} ${statusPill}`;
-    modalImagesEl.innerHTML = `${data["images"].length != 0 ? (data["images"]).map((url)=>{
+    modalImagesEl.innerHTML = `${data["images"].length != 0 && data["images"][0] != "" ? (data["images"]).map((url)=>{
         return (
             `<img src=${url} class="img-thumbnail me-3 my-3" style="height:150px;"/>`
         )
