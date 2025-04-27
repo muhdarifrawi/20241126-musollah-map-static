@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 });
 
 function largeImageModal(url) {
-    console.log("click");
+    // console.log("click");
     // document.querySelectorAll('.modal-backdrop').forEach(el => el.remove());
     // const largeImageModalEl = new bootstrap.Modal('#large-image-modal', {
     //     keyboard: false
@@ -85,7 +85,7 @@ function largeImageModal(url) {
     let closeButton = document.querySelector("#back-to-main");
 
     modalImageBodyEl.innerHTML = `
-        <img src=${url} class="img-fluid w-100"/>
+        <img src=${url} class="img-fluid w-100 border rounded"/>
     `;
 
     closeButton.addEventListener('click', function () {
@@ -109,25 +109,25 @@ function openModalMusollah(data) {
     let modalBodyEl = document.querySelector("#modal-body");
 
     modalBodyEl.innerHTML = `
-        <h6>Images</h6>
+        <h6 class="fw-bold">Images (${data["images"].length}) </h6>
         <div id="modal-images" class="d-flex overflow-x-scroll"></div>
-        <h6>Address</h6>
+        <h6 class="fw-bold mt-3">Address</h6>
         <p id="modal-address"></p>
-        <h6>Opening Hours Information</h6>
+        <h6 class="fw-bold">Opening Hours Information</h6>
         <p id="modal-status-description"></p>
-        <h6>Estimated Capacity per Area</h6>
+        <h6 class="fw-bold">Estimated Capacity per Area</h6>
         <p id="modal-area-capacity"></p>
-        <h6>Layout Type</h6>
+        <h6 class="fw-bold">Layout Type</h6>
         <p id="modal-layout-type"></p>
-        <h6>Layout Description</h6>
+        <h6 class="fw-bold">Layout Description</h6>
         <p id="modal-layout-description"></p>
-        <h6>Wudhu Area</h6>
+        <h6 class="fw-bold">Wudhu Area</h6>
         <p id="modal-wudhu-area"></p>
-        <h6>Directions</h6>
+        <h6 class="fw-bold">Directions</h6>
         <ol id="modal-directions"></ol>
-        <h6>Prayer Items</h6>
+        <h6 class="fw-bold">Prayer Items</h6>
         <p id="modal-prayer-items"></p>
-        <h6>Important Notes</h6>
+        <h6 class="fw-bold">Important Notes</h6>
         <p id="modal-important-notes"></p>
     `;
 
@@ -176,7 +176,7 @@ function openModalMusollah(data) {
     modalButtonsArea.innerHTML = `
                     <a href="http://maps.apple.com/?daddr='${data["address"][0]}'" target="_blank" role="button" class="btn btn-success">Apple Navigation</a>
                     <a href="https://www.google.com/maps/dir/?api=1&destination='${data["address"][0]}'" target="_blank" role="button" class="btn btn-success">Google Navigation</a>
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>`
+                    `
 
     modalImagesEl.addEventListener("click", (event) => {
         // // console.log(event.target.src);
