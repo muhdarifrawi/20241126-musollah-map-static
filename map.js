@@ -67,6 +67,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     // loadMusollah(country);
     loadMosques();
     loadMusollah();
+    // loadTaraweeh();
 });
 
 function largeImageModal(url) {
@@ -211,6 +212,8 @@ function openModalMosque(data) {
     modalMosqueTypeEl.innerText = `${data["mosqueType"]}`;
 }
 
+
+
 function loadMosques() {
     var moqueIcon = L.icon({
         iconUrl: 'icons/mosque.png',
@@ -284,4 +287,5 @@ function loadMusollah() {
             layerControl.addOverlay(musollahMarkers, "Musollah");
         })
 }
+
 

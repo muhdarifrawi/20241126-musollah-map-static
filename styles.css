@@ -48,6 +48,12 @@
     z-index: 1000;
 }
 
+#qaryah-btn {
+    position: absolute;
+    top: 68px;
+    left: 125px;
+    z-index: 1000;
+}
 
 /* index.html */
 #section-1 {
