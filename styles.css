@@ -35,11 +35,11 @@
     width:100vw;
 }
 
-#close-btn-container {
+/* #close-btn-container {
     position:fixed;
     top:20px;
     right:40px;
-}
+} */
 
 #search-btn {
     position: absolute;
