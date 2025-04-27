@@ -80,13 +80,11 @@ function largeImageModal(url) {
     let largeImageModalEl = document.querySelector("#large-image-modal");
     largeImageModalEl.style.display = "block";
     
-    let modalImageBodyEl = document.querySelector("#modal-image-body");
+    let modalImageBodyEl = document.querySelector("#large-modal-image-body");
     let closeButton = document.querySelector("#back-to-main");
 
     modalImageBodyEl.innerHTML = `
-        <div>
-            <img src=${url} class="img-fluid"/>
-        </div>
+        <img src=${url} class="img-fluid w-100"/>
     `;
 
     closeButton.addEventListener('click', function () {
@@ -95,7 +93,7 @@ function largeImageModal(url) {
         // const mainModal = new bootstrap.Modal(document.getElementById('myModal'));
         // mainModal.show();
         // document.querySelectorAll('.modal-backdrop').forEach(el => el.remove());
-        largeImageModalEl.display = "none";
+        largeImageModalEl.style.display = "none";
     })
 }
 
