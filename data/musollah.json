@@ -12,13 +12,18 @@
         "statusDescription": "Opening Hours are as per Mall hours.",
         "wudhuArea": "Wudhu area is along the same corridor. Small, can only fit one at a time.",
         "directions": [
-            "Keep in mind that the Musollah is close to the main entrance lift lobby of the Mall.",
+            "Keep in mind that the Musollah is close to the main entrance lift lobby (Lift Lobby A) of the Mall.",
             "Enter Tampines mall and head to level 3.",
             "Walk past the lift lobby between shops 03-23 and 03-24 (Prism and Uniqlo as of writing) to the toilet entrance.",
             "You will see a cubicle with no doors."
         ],
         "prayerItems": "Yes. But advised to carry your own.",
-        "images": "",
+        "images": [
+            "https://ucarecdn.com/aa552b30-25d9-438e-9e57-a5b192b76877/tampines_mall_photo_1_20240428.jpg",
+            "https://ucarecdn.com/42b51e13-6a85-445a-bca1-7596eebcd441/tampines_mall_photo_2_20240428.jpg",
+            "https://ucarecdn.com/ae204e60-4f58-48db-bd5b-94d790c12641/tampines_mall_photo_3_20240428.jpg",
+            "https://ucarecdn.com/b1b8b115-0203-4be2-b489-94305980e328/tampines_mall_photo_4_20240428.jpg"
+        ],
         "importantNotes": "",
         "coordinates": [
             1.3527084189572554,
@@ -48,7 +53,6 @@
         ],
         "prayerItems": "Yes. But advised to carry your own.",
         "images": [
-            "https://ucarecdn.com/85d00500-afb1-4105-919f-c3ad72b02634/international_plaza_photo_3_20241127_120600.jpg",
             "https://ucarecdn.com/0505115b-bdeb-431d-9da7-4dbfc88d3188/international_plaza_photo_2_20241127_120600.jpg",
             "https://ucarecdn.com/30fa6fac-7ba0-46c1-99d6-5776d9949e29/international_plaza_photo_1_20241127_120600.jpg",
             "https://ucarecdn.com/17e53dd7-c6dc-454c-8dba-dbaa488ccbba/international_plaza_photo_4_20241127_120600.jpg"
@@ -73,10 +77,20 @@
         "statusDescription": "Opening Hours are as per Mall hours.",
         "wudhuArea": "Built-In",
         "directions": [
-            "In SGH Campus."
+            "In SGH Campus located behind Houseman's Canteen.",
+            "Muslimah entrance is located at the top of the stairs before Houseman's Canteen. However they can also access through the Muslimin entrance.",
+            "To access the Muslimin / Main entrance, walk towards Houseman's Canteen to where the carpark entrance is.",
+            "Walk up the slope past Houseman's Canteen. You should see the Surau Entrance."
         ],
         "prayerItems": "Provided. But advised to carry your own.",
-        "images": [],
+        "images": [
+            "https://ucarecdn.com/38e4c165-fa34-4a06-acd5-3f3c11c773de/surau_sgh_photo_1_20250428.jpg",
+            "https://ucarecdn.com/81b19aa5-e19d-4c71-9db4-88445d249112/surau_sgh_photo_2_20250428.jpg",
+            "https://ucarecdn.com/af652edf-cbbc-429b-8205-8ba480542173/surau_sgh_photo_3_20250428.jpg",
+            "https://ucarecdn.com/c166be36-4608-4ecf-8f1a-ba8960e5d4c1/surau_sgh_photo_4_20250428.jpg",
+            "https://ucarecdn.com/5131aad6-f1c2-41a9-b8f7-6babeaaab892/surau_sgh_photo_5_20250428.jpg",
+            "https://ucarecdn.com/ace4a82f-19e0-4d8e-9ca6-b26c16c64415/surau_sgh_photo_6_20250428.jpg"
+        ],
         "importantNotes": "",
         "coordinates": [
             1.2818897,
@@ -175,5 +189,68 @@
         ],
         "country": "singapore",
         "id": "5"
+    },
+    "6": {
+        "name": "Singapore Expo",
+        "address": [
+            "21 Changi South Ave 1, #01-02, Singapore 486065",
+            "2nd Floor"
+        ],
+        "areaCapacity": "15",
+        "layoutType": "separated (within area)",
+        "layoutDescription": "Separate entrance for Muslimin and Muslimah. ",
+        "status": "opened",
+        "statusDescription": "Musollah / Prayer area is opened during Expo operation hours. ",
+        "wudhuArea": "nearest toilet",
+        "directions": [
+            "Coming out from the Expo MRT station, turn left and walk into Expo.",
+            "As you enter the doors, you should see an escalator. Take the escalator if it's operational.",
+            "There is also a lift behind but it may not be operational most times. ",
+            "The common option is to walk towards hall 1. Just before you enter hall 1 area, you should see a door with \"Prayer Room\" printed in purple on it.",
+            "Open the door and you'll see stairs.",
+            "Take the stairs up to second floor.",
+            "Turn right and walk straight. You should see the musollah along your left side."
+        ],
+        "prayerItems": "Provided. But advised to carry your own.",
+        "images": [
+            "https://ucarecdn.com/81787d5d-2756-4b9f-9a57-d9aaffd39735/expo_photo_1_20240428.jpg",
+            "https://ucarecdn.com/ab51680d-503f-4a2c-ac62-4cde21361136/expo_photo_2_20240428.jpg",
+            "https://ucarecdn.com/f54a29ef-c940-477a-a475-095884b0e20d/expo_photo_3_20240428.jpg"
+        ],
+        "importantNotes": "",
+        "coordinates": [
+            "1.3354626421603775",
+            "103.96061192666227"
+        ],
+        "country": "singapore",
+        "id": "6"
+    },
+    "7": {
+        "name": "Century Square",
+        "address": [
+            "2 Tampines Central 5, Singapore 529509",
+            "Muslimin: Basement 1, Muslimah: Level 2"
+        ],
+        "areaCapacity": "2",
+        "layoutType": "separated (different areas)",
+        "layoutDescription": "Separate entrance for Muslimin and Muslimah. Area is slightly small. ",
+        "status": "opened",
+        "statusDescription": "Musollah / Prayer area is opened during Mall operating hours. ",
+        "wudhuArea": "built-in",
+        "directions": [
+            "Both Muslimin and Muslimah areas are easily accessed via Service lift. ",
+            "Via the service lift, turn left and exit. You should see the prayer area immeadietly."
+        ],
+        "prayerItems": "Provided. But advised to carry your own.",
+        "images": [
+            ""
+        ],
+        "importantNotes": "",
+        "coordinates": [
+            "1.3527884196425997",
+            "103.94368128684837"
+        ],
+        "country": "singapore",
+        "id": "7"
     }
 }
