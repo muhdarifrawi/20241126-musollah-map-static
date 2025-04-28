@@ -77,10 +77,20 @@
         "statusDescription": "Opening Hours are as per Mall hours.",
         "wudhuArea": "Built-In",
         "directions": [
-            "In SGH Campus."
+            "In SGH Campus located behind Houseman's Canteen.",
+            "Muslimah entrance is located at the top of the stairs before Houseman's Canteen. However they can also access through the Muslimin entrance.",
+            "To access the Muslimin / Main entrance, walk towards Houseman's Canteen to where the carpark entrance is.",
+            "Walk up the slope past Houseman's Canteen. You should see the Surau Entrance."
         ],
         "prayerItems": "Provided. But advised to carry your own.",
-        "images": [],
+        "images": [
+            "https://ucarecdn.com/38e4c165-fa34-4a06-acd5-3f3c11c773de/surau_sgh_photo_1_20250428.jpg",
+            "https://ucarecdn.com/81b19aa5-e19d-4c71-9db4-88445d249112/surau_sgh_photo_2_20250428.jpg",
+            "https://ucarecdn.com/af652edf-cbbc-429b-8205-8ba480542173/surau_sgh_photo_3_20250428.jpg",
+            "https://ucarecdn.com/c166be36-4608-4ecf-8f1a-ba8960e5d4c1/surau_sgh_photo_4_20250428.jpg",
+            "https://ucarecdn.com/5131aad6-f1c2-41a9-b8f7-6babeaaab892/surau_sgh_photo_5_20250428.jpg",
+            "https://ucarecdn.com/ace4a82f-19e0-4d8e-9ca6-b26c16c64415/surau_sgh_photo_6_20250428.jpg"
+        ],
         "importantNotes": "",
         "coordinates": [
             1.2818897,
