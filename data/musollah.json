@@ -18,7 +18,12 @@
             "You will see a cubicle with no doors."
         ],
         "prayerItems": "Yes. But advised to carry your own.",
-        "images": "",
+        "images": [
+            "https://ucarecdn.com/aa552b30-25d9-438e-9e57-a5b192b76877/tampines_mall_photo_1_20240428.jpg",
+            "https://ucarecdn.com/42b51e13-6a85-445a-bca1-7596eebcd441/tampines_mall_photo_2_20240428.jpg",
+            "https://ucarecdn.com/ae204e60-4f58-48db-bd5b-94d790c12641/tampines_mall_photo_3_20240428.jpg",
+            "https://ucarecdn.com/b1b8b115-0203-4be2-b489-94305980e328/tampines_mall_photo_4_20240428.jpg"
+        ],
         "importantNotes": "",
         "coordinates": [
             1.3527084189572554,
@@ -174,5 +179,40 @@
         ],
         "country": "singapore",
         "id": "5"
+    },
+    "6": {
+        "name": "Singapore Expo",
+        "address": [
+            "21 Changi South Ave 1, #01-02, Singapore 486065",
+            "2nd Floor"
+        ],
+        "areaCapacity": "15",
+        "layoutType": "separated (within area)",
+        "layoutDescription": "Separate entrance for Muslimin and Muslimah. ",
+        "status": "opened",
+        "statusDescription": "Musollah / Prayer area is opened during Expo operation hours. ",
+        "wudhuArea": "nearest toilet",
+        "directions": [
+            "Coming out from the Expo MRT station, turn left and walk into Expo.",
+            "As you enter the doors, you should see an escalator. Take the escalator if it's operational.",
+            "There is also a lift behind but it may not be operational most times. ",
+            "The common option is to walk towards hall 1. Just before you enter hall 1 area, you should see a door with \"Prayer Room\" printed in purple on it.",
+            "Open the door and you'll see stairs.",
+            "Take the stairs up to second floor.",
+            "Turn right and walk straight. You should see the musollah along your left side."
+        ],
+        "prayerItems": "Provided. But advised to carry your own.",
+        "images": [
+            "https://ucarecdn.com/81787d5d-2756-4b9f-9a57-d9aaffd39735/expo_photo_1_20240428.jpg",
+            "https://ucarecdn.com/ab51680d-503f-4a2c-ac62-4cde21361136/expo_photo_2_20240428.jpg",
+            "https://ucarecdn.com/f54a29ef-c940-477a-a475-095884b0e20d/expo_photo_3_20240428.jpg"
+        ],
+        "importantNotes": "",
+        "coordinates": [
+            "1.3354626421603775",
+            "103.96061192666227"
+        ],
+        "country": "singapore",
+        "id": "6"
     }
 }
