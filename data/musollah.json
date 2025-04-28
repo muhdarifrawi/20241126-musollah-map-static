@@ -224,5 +224,33 @@
         ],
         "country": "singapore",
         "id": "6"
+    },
+    "7": {
+        "name": "Century Square",
+        "address": [
+            "2 Tampines Central 5, Singapore 529509",
+            "Muslimin: Basement 1, Muslimah: Level 2"
+        ],
+        "areaCapacity": "2",
+        "layoutType": "separated (different areas)",
+        "layoutDescription": "Separate entrance for Muslimin and Muslimah. Area is slightly small. ",
+        "status": "opened",
+        "statusDescription": "Musollah / Prayer area is opened during Mall operating hours. ",
+        "wudhuArea": "built-in",
+        "directions": [
+            "Both Muslimin and Muslimah areas are easily accessed via Service lift. ",
+            "Via the service lift, turn left and exit. You should see the prayer area immeadietly."
+        ],
+        "prayerItems": "Provided. But advised to carry your own.",
+        "images": [
+            ""
+        ],
+        "importantNotes": "",
+        "coordinates": [
+            "1.3527884196425997",
+            "103.94368128684837"
+        ],
+        "country": "singapore",
+        "id": "7"
     }
 }
