@@ -25,6 +25,14 @@
     z-index: 10000;
 }
 
+#modal-body h6 {
+    margin-bottom: 0.5rem !important;
+}
+
+#modal-body p {
+    margin-bottom: 0.5rem !important;
+}
+
 #large-image-modal {
     position:absolute;
     top:0;

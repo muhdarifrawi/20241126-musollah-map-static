@@ -115,7 +115,7 @@ function openModalMusollah(data) {
         <p id="modal-address"></p>
         <h6 class="fw-bold">Opening Hours Information</h6>
         <p id="modal-status-description"></p>
-        <h6 class="fw-bold">Estimated Capacity per Area</h6>
+        <h6 class="fw-bold">Estimated Capacity</h6>
         <p id="modal-area-capacity"></p>
         <h6 class="fw-bold">Layout Type</h6>
         <p id="modal-layout-type"></p>
@@ -158,12 +158,12 @@ function openModalMusollah(data) {
     modalTitleEl.innerHTML = `${data["name"]} ${statusPill}`;
     modalImagesEl.innerHTML = `${data["images"].length != 0 && data["images"][0] != "" ? (data["images"]).map((url)=>{
         return (
-            `<img src=${url} class="img-thumbnail me-3 my-3" style="height:150px;"/>`
+            `<img src=${url} class="img-thumbnail me-2 my-2" style="height:150px;"/>`
         )
     }).join("") : "No Images"}`
     modalAddressEl.innerText = `${data["address"][0]}, ${data["address"][1]}`;
     modalStatusDescriptionEl.innerText = `${data["statusDescription"]}`;
-    modalAreaCapacityEl.innerText = `${data["areaCapacity"]} pax per area`
+    modalAreaCapacityEl.innerText = `${data["areaCapacity"]} pax`
     modalLayoutTypeEl.innerText = `${data["layoutType"]}`;
     modalLayoutDescriptionEl.innerText = `${data["layoutDescription"]}`;
     modalWudhuAreaEl.innerText = `${data["wudhuArea"]}`;
