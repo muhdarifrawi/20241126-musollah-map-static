@@ -252,5 +252,38 @@
         ],
         "country": "singapore",
         "id": "7"
+    },
+    "8": {
+        "name": "Suntec City Convention Center",
+        "address": [
+            "1 Raffles Blvd, Singapore 039593",
+            "3rd Floor"
+        ],
+        "areaCapacity": "3",
+        "layoutType": "separated (within area)",
+        "layoutDescription": "Musollah is made using blackout curtains. There are separate entry points for Muslimin and Muslimah indicated by a standing sign.",
+        "status": "opened",
+        "statusDescription": "Opening hours are dependant on mall operating hours.",
+        "wudhuArea": "nearest toilet",
+        "directions": [
+            "If you are coming in through Suntec City mall, locate the the escalator on the second floor next to #02-313.",
+            "Take the escalator and turn right.",
+            "You should see a black blackout curtain behind the massage chairs."
+        ],
+        "prayerItems": "Provided. But advised to carry your own.",
+        "images": [
+            "https://ucarecdn.com/cb1462e2-42f7-4304-8511-fec751fbfcbe/suntec_convention_photo_1_20250502.jpg",
+            "https://ucarecdn.com/980306b3-2339-48c7-ba50-aec32ee0b76b/suntec_convention_photo_2_20250502.jpg",
+            "https://ucarecdn.com/f73f4f7d-43ba-42eb-9077-52da93fd0400/suntec_convention_photo_3_20250502.jpg",
+            "https://ucarecdn.com/12359195-5135-47cf-aec9-94209d36e8cb/suntec_convention_photo_4_20250502.jpg",
+            "https://ucarecdn.com/2d6742e8-bb31-4451-bc20-13af62bee947/suntec_convention_photo_5_20250502.jpg"
+        ],
+        "importantNotes": "",
+        "coordinates": [
+            "1.2938585442454074",
+            "103.8573053321859"
+        ],
+        "country": "Singapore",
+        "id": "8"
     }
 }
