@@ -285,5 +285,35 @@
         ],
         "country": "Singapore",
         "id": "8"
+    },
+    "9": {
+        "name": "Suntec City Tower 3",
+        "address": [
+            "1 Raffles Blvd, Singapore 039593",
+            "3rd Floor"
+        ],
+        "areaCapacity": "5",
+        "layoutType": "shared (partitioned)",
+        "layoutDescription": "There is a shared entryway with a narrow corridor which leads to Muslimin and Muslimah entrances.",
+        "status": "opened",
+        "statusDescription": "Opening hours are dependant on mall operating hours.",
+        "wudhuArea": "nearest toilet",
+        "directions": [
+            "If you take the lift from Tower 3 Lift Lobby, you should see the Musollah entrance when you exit the lift.",
+            "Alternatively, in Tower 3, make your way to level 3.",
+            "Walk towards the lift lobby past #03-383 (Singapore Post as of writing)",
+            "The musollah entrance is a white door with the musollah signage on it."
+        ],
+        "prayerItems": "Provided. But advised to carry your own.",
+        "images": [
+            ""
+        ],
+        "importantNotes": "",
+        "coordinates": [
+            "1.295272599834372",
+            "103.85970972317014"
+        ],
+        "country": "Singapore",
+        "id": "9"
     }
 }
