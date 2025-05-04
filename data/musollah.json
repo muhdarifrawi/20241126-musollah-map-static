@@ -315,5 +315,36 @@
         ],
         "country": "Singapore",
         "id": "9"
+    },
+    "10": {
+        "name": "Kallang Wave Mall",
+        "address": [
+            "1 Stadium Pl, Singapore 397628",
+            "1st Floor"
+        ],
+        "areaCapacity": "5",
+        "layoutType": "separated (within area)",
+        "layoutDescription": "A stretch of walkway repurposed for praying.",
+        "status": "opened",
+        "statusDescription": "Opening hours are dependent on mall operating hours.",
+        "wudhuArea": "nearest toilet",
+        "directions": [
+            "Walk towards the main Entrance of FairPrice Xtra. There you will see an ATM.",
+            "Walk towards the direction of the toilet and stop when you see an Emergency Door.",
+            "You should be able to open the door.",
+            "There should be prayer mats and slippers to use. ",
+            "The immediate vicinity is for Muslimin. Muslimah area is at the end of the walkway."
+        ],
+        "prayerItems": "",
+        "images": [
+            ""
+        ],
+        "importantNotes": "",
+        "coordinates": [
+            "1.3028390500635718",
+            "103.87370835581375"
+        ],
+        "country": "Singapore",
+        "id": "10"
     }
 }
